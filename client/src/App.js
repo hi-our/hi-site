@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <Router history={createBrowserHistory({ basename: process.env.PUBLIC_URL })}>
           <div className="route">
-            <Header />
+            {/* <Header /> */}
             <Route exact path="/" component={Home} />
           </div>
         </Router>

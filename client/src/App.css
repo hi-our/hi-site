@@ -1,5 +1,8 @@
-.App {
-  text-align: center;
+body {
+  background: url(./img/page-bg.jpg) no-repeat center top;
+  background-size: 1600px auto;
+  background-attachment: fixed;
+  
 }
 
 .App-logo {

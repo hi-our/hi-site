@@ -4,11 +4,10 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "gh-pages": "^2.0.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "react-router-dom": "^4.3.1"
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "3.4.1"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1"

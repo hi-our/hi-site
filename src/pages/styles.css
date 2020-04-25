@@ -219,6 +219,7 @@
   .footer-main {
     max-width: 1200px;
     padding: 70px 0;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
   }

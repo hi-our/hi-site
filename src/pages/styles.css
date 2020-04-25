@@ -259,6 +259,12 @@
   }
 
 }
+
+@media (min-width: 640px) {
+  .page-home #root {
+    background-size: 1000px auto;
+  }
+}
 @media (min-width: 1024px) {
   .page-home #root {
     background-size: 1600px auto;

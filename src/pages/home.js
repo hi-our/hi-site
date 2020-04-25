@@ -37,7 +37,9 @@ export default class Home extends Component {
                 <div className="button-try">
                   快速体验
                   <div className="qrcode-mask">
-                    <img className="hiface-qrcode" src={require('../img/hiface-qrcode.jpg')} alt="Hi头像小程序码" />
+                    <div className="qrcode-mask-inner">
+                      <img className="hiface-qrcode" src={require('../img/hiface-qrcode.jpg')} alt="Hi头像小程序码" />
+                    </div>
                   </div>
                 </div>
                 <a className="button-github" href="https://github.com/hi-our/hi-face">GitHub</a>

@@ -121,13 +121,14 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: 180px;
   padding-top: 10px;
 }
 
 .page-home .hiface-wrap .qrcode-mask-inner {
+  width: 180px;
   padding: 10px;
   background: #fff;
+  border-radius: 10px;
 }
 
 .page-home .hiface-wrap .qrcode-mask img {

@@ -41,7 +41,7 @@
 }
 
 .header-main .main-nav a + a {
-  margin-left: 52px;
+  margin-left: 26px;
 }
 
 .header-main .main-nav a:hover {
@@ -163,13 +163,17 @@
 .footer-main .footer-links dl {
   padding-left: 40px;
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-main .footer-links dt {
+  width: 100%;
   font-size: 16px;
   line-height: 1.33;
   color: #000;
-  text-indent: -40px;
+  text-indent: -32px;
+  margin-bottom: 10px;
 }
 
 .footer-main .footer-links dt > img {
@@ -180,12 +184,8 @@
   margin: -3px 10px 0 0;
 }
 
-.footer-main .footer-links dt + dd {
-  margin-top: 20px;
-}
-
 .footer-main .footer-links dd {
-  margin-top: 10px;
+  margin-right: 10px;
 }
 .footer-main .footer-links dd a {
   font-size: 12px;
@@ -212,6 +212,10 @@
 
   .header-main .main-nav a {
     font-size: 24px;
+  }
+
+  .header-main .main-nav a + a {
+    margin-left: 52px;
   }
 }
 
@@ -242,6 +246,7 @@
 
   .footer-main .footer-links dt {
     font-size: 24px;
+    text-indent: -40px;
   }
 
   .footer-main .footer-links dt > img {
@@ -274,16 +279,13 @@
 
   .page-home .hiface-wrap {
     padding: 120px 0 570px;
-    text-align: left;
-  }
-
-  .page-home .hiface-wrap .hiface-main {
-    overflow: hidden;
     width: 800px;
+    text-align: left;
+    display: flex;
+    flex-direction: row-reverse;
   }
 
   .page-home .hiface-wrap .hiface-logo {
-    float: right;
     margin: -35px 0 0;
   }
 
@@ -294,11 +296,7 @@
 
   .page-home .hiface-wrap p {
     font-size: 36px;
-  }
-
-  .page-home .hiface-wrap .button-wrap {
-    position: relative;
-    top: -60px;
+    margin-bottom: 60px;
   }
 
   .page-home .hiface-wrap .button-try,

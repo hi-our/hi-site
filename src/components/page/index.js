@@ -22,7 +22,7 @@ export default class Page extends React.Component {
   }
 
   componentDidMount() {
-    const { pageClassName, isShowIphoneXBottom } = this.props
+    const { pageClassName } = this.props
     if (pageClassName && this.htmlNode) {
       addClass(this.htmlNode, pageClassName)
     }

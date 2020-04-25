@@ -1,6 +1,6 @@
 {
-  "short_name": "HiOur",
-  "name": "HiOur-Hi头像出品方",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",

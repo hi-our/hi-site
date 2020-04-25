@@ -1,6 +1,6 @@
 .header-main {
   width: 1200px;
-  padding: 33px 0 0;
+  padding: 30px 0;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -17,10 +17,13 @@
 }
 
 .main-nav a {
-  padding: 0 26px;
   font-size: 24px;
   line-height: 1.33;
   color: #fff;
+}
+
+.main-nav a + a {
+  margin-left: 52px;
 }
 
 .main-nav a:hover {
@@ -44,7 +47,6 @@
 }
 
 .footer-main {
-  height: 300px;
   width: 1200px;
   padding: 70px 0;
   margin: 0 auto;
@@ -60,4 +62,52 @@
   background-size: contain;
   text-indent: -9999px;
   overflow: hidden;
+}
+
+.footer-links {
+  display: flex;
+}
+
+.footer-links dl {
+  margin-left: 60px;
+}
+
+.footer-links dl {
+  padding-left: 40px;
+}
+
+.footer-links dl:first-child {
+  margin-left: 0;
+}
+
+.footer-links dt {
+  font-size: 24px;
+  line-height: 1.33;
+  color: #000;
+  text-indent: -40px;
+}
+
+.footer-links dt > img {
+  display: inline-block;
+  width: auto;
+  height: 30px;
+  vertical-align: middle;
+  margin: -3px 10px 0 0;
+}
+
+.footer-links dt + dd {
+  margin-top: 40px;
+}
+
+.footer-links dd {
+  margin-top: 20px;
+}
+.footer-links dd a {
+  font-size: 18px;
+  line-height: 1.33;
+  color: #000;
+}
+
+.footer-links dd a:hover {
+  color: #0000C2;
 }

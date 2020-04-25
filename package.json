@@ -1,30 +1,29 @@
 {
-  "name": "quickly-mask",
+  "name": "hi-site",
   "version": "1.0.0",
   "description": "Example on using create-react-app with a Node Express Backend",
   "author": {
-    "name": "shenghanqin",
-    "url": "https://xiaoxili.com"
+    "name": "hi-our",
+    "url": "https://hi-our.com"
   },
   "license": "MIT",
   "scripts": {
-    "client": "cd client && yarn start",
-    "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "dev:server": "cd client && yarn build && cd .. && yarn start",
-    "start": "NODE_ENV=production node server.js",
-    "dev:server:taro": "cd taro && npm run release:h5 && cd .. && yarn start:taro",
-    "start:taro": "NODE_ENV=production node server-taro.js",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shenghanqin/quickly-mask.git"
+    "url": "https://github.com/hi-our/hi-site.git"
   },
   "bugs": {
-    "url": "https://github.com/shenghanqin/quickly-mask/issues"
+    "url": "https://github.com/hi-our/hi-site/issues"
   },
   "keywords": [
     "node",
@@ -35,6 +34,22 @@
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "3.4.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

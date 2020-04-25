@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { addClass, removeClass } from '../../utils/dom-utils';
+import DocumentMeta from '../document-meta';
 
 
 export default class Page extends React.Component {
@@ -36,7 +37,7 @@ export default class Page extends React.Component {
   }
 
   render() {
-    const { title, description, keywords,  }
+    const { title, description, keywords, meta } = this.props
     return (
       <Fragment>
         <DocumentMeta
@@ -46,6 +47,7 @@ export default class Page extends React.Component {
           keywords={keywords}
           {...meta}
         />
+        {this.props.children}
       </Fragment>
     )
   }

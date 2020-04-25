@@ -49,9 +49,94 @@
 
 
 
-.feature-1 {
+.page-home .page-wrap {
   flex: 1;
 }
+
+.page-home .page-main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-home .hiface-wrap {
+  padding: 11.5% 0 47.5%;
+  display: flex;
+}
+
+.page-home .hiface-wrap h2 {
+  font-size:72px;
+  color:#fff;
+  line-height:1.33;
+  margin-bottom: 30px;
+}
+.page-home .hiface-wrap p {
+  font-size:36px;
+  color:#fff;
+  line-height:1.33;
+  margin-bottom: 60px;
+}
+
+.page-home .hiface-wrap .button-try,
+.page-home .hiface-wrap .button-github {
+  display: inline-block;
+  width: 200px;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  border-radius:30px;
+  font-size: 24px;
+}
+
+.page-home .hiface-wrap .button-try {
+  position: relative;
+  background:linear-gradient(70deg,rgba(5,177,189,1) 0%,rgba(37,210,147,1) 100%);
+  cursor: pointer;
+}
+
+.page-home .hiface-wrap .button-github {
+  margin-left: 48px;
+  box-shadow: inset 0 0 0 1px #177DCA;
+}
+
+
+.page-home .hiface-wrap .qrcode-mask {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 180px;
+  padding-top: 10px;
+}
+
+.page-home .hiface-wrap .qrcode-mask-inner {
+  padding: 10px;
+  background: #fff;
+}
+
+.page-home .hiface-wrap .qrcode-mask img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.page-home .hiface-wrap .button-try:hover .qrcode-mask {
+  display: block;
+}
+
+
+.page-home .hiface-wrap .hiface-logo {
+  top: -50px;
+  position: relative;
+  width: 350px;
+  height: auto;
+}
+
+.page-home .hiface-wrap .hiface-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 
 
 .footer {

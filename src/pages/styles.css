@@ -1,3 +1,20 @@
+
+.page-home #root {
+  background: url(../img/page-bg.jpg) no-repeat center top;
+  background-size: 1600px auto;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* IE 11兼容 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .page-home #root {
+    display: block;
+  }
+}
+
 .header-main {
   width: 1200px;
   padding: 30px 0;
@@ -30,16 +47,11 @@
   color: #0000C2;
 }
 
-.page-home > body {
-  background: url(../img/page-bg.jpg) no-repeat center top;
-  background-size: 1600px auto;
-  background-attachment: fixed;
-  
-}
 
-/* .feature-1 {
-  height: 1037px;
-} */
+
+.feature-1 {
+  flex: 1;
+}
 
 
 .footer {

@@ -1,6 +1,6 @@
 
 .page-home #root {
-  background: url(../img/page-bg.jpg) no-repeat center top;
+  background: #fff url(../img/page-bg.jpg) no-repeat center top;
   background-size: auto 100vh;
   min-height: 100vh;
   background-attachment: fixed;
@@ -161,7 +161,7 @@
 
 
 .footer-main .footer-links dl {
-  padding-left: 40px;
+  padding-left: 30px;
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -239,6 +239,9 @@
 
   .footer-main .footer-links dl {
     margin-top: 0;
+    padding-left: 40px;
+    display: block;
+    flex-wrap: nowrap;
   }
   .footer-main .footer-links dl + dl {
     margin-left: 60px;
@@ -274,19 +277,20 @@
 }
 @media (min-width: 1024px) {
   .page-home #root {
-    background-size: 1600px auto;
+    background-size: 1680px auto;
   }
 
   .page-home .hiface-wrap {
     padding: 120px 0 570px;
-    width: 800px;
     text-align: left;
     display: flex;
     flex-direction: row-reverse;
+    justify-content: flex-end;
   }
 
   .page-home .hiface-wrap .hiface-logo {
-    margin: -35px 0 0;
+    margin: -65px 0 20px;
+    width: 350px;
   }
 
   .page-home .hiface-wrap h2 {

@@ -197,6 +197,19 @@
   color: #0000C2;
 }
 
+.footer-copyright {
+  padding: 20px 0;
+  background:rgba(107,140,199,1);
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-copyright a {
+  color: #fff;
+}
+
 
 
 @media (min-width: 1024px) {
@@ -266,6 +279,10 @@
 
   .footer-main .footer-links dd a {
     font-size: 18px;
+  }
+
+  .footer-copyright > br {
+    display: none;
   }
 
 }

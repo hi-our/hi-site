@@ -13,7 +13,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "node ./gh-pages"
+    "deploy": "node ./gh-pages",
+    "server": "NODE_ENV=production pm2 start --watch ecosystem.config.js"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1"

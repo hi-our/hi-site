@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = process.env.PORT || 8768;
+const port = process.env.PORT || 8769;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -26,11 +26,11 @@ if (process.env.NODE_ENV) {
 if (process.env.NODE_ENV === 'production') {
   console.log('编译正式环境的效果 :');
   // Serve any static files
-  app.use(express.static(path.join(__dirname, 'client/build')));
+  app.use(express.static(path.join(__dirname, 'build')));
 
   // Handle React routing, return all requests to React app
   app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
   });
 }
 

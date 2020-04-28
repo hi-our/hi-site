@@ -277,6 +277,7 @@
 }
 @media (min-width: 1024px) {
   .page-home #root {
+    background-image: url(../img/page-bg@2x.jpg);
     background-size: 1680px auto;
   }
 

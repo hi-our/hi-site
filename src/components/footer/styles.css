@@ -1,5 +1,5 @@
 .footer {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .footer-main {
@@ -56,7 +56,7 @@
 
 .footer-copyright {
   padding: 20px 0;
-  background:rgba(107,140,199,1);
+  background: #6B8CC7;
   text-align: center;
   color: #fff;
   font-size: 14px;
@@ -71,7 +71,7 @@
 @media (min-width: 1024px) {
   .footer-main {
     max-width: 1200px;
-    padding: 70px 0;
+    padding: 70px 16px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

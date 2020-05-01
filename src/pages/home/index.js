@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Page from '../components/page';
+import Page from '../../components/page';
 
 import './styles.css';
 
@@ -14,7 +14,7 @@ export default class Home extends Component {
           <div className="page-main">
             <section className="hiface-wrap">
               <div className="hiface-logo">
-                <img src={require('../img/hiface-logo.png')} alt="Hi头像" />
+                <img src={require('../../img/hiface-logo.png')} alt="Hi头像" />
               </div>
               <div className="hiface-main">
                 <h2>Hi头像</h2>
@@ -24,7 +24,7 @@ export default class Home extends Component {
                     快速体验
                     <div className="qrcode-mask">
                       <div className="qrcode-mask-inner">
-                        <img className="hiface-qrcode" src={require('../img/hiface-qrcode.jpg')} alt="Hi头像小程序码" />
+                        <img className="hiface-qrcode" src={require('../../img/hiface-qrcode.jpg')} alt="Hi头像小程序码" />
                       </div>
                     </div>
                   </div>

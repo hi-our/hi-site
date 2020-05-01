@@ -1,6 +1,6 @@
 
 .page-home #root {
-  background: #fff url(../img/page-bg.jpg) no-repeat center top;
+  background: #fff url(../../img/page-bg.jpg) no-repeat center top;
   background-size: auto 100vh;
   min-height: 100vh;
   background-attachment: fixed;
@@ -113,7 +113,7 @@
 }
 @media (min-width: 1024px) {
   .page-home #root {
-    background-image: url(../img/page-bg@2x.jpg);
+    background-image: url(../../img/page-bg@2x.jpg);
     background-size: 1680px auto;
   }
 

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Route, Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-import Home from './pages/home';
+import Home from './pages/home/';
 import './App.css';
 
 class App extends Component {

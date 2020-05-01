@@ -12,8 +12,8 @@ export default class Page extends React.Component {
             <h1>Hi Our</h1>
           </Link>
           <nav className="main-nav">
-            <Link to='/'>首页</Link>
-            <Link to='/' title="about us">关于</Link>
+            <a href='/'>首页</a>
+            <a href='/about' title="about us">关于</a>
             <a href='/hi-face' title="Hi头像教程">小册</a>
           </nav>
         </div>

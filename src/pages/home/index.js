@@ -20,6 +20,7 @@ export default class Home extends Component {
                 <h2>Hi头像</h2>
                 <p>记录生活的点滴</p>
                 <div className="button-wrap">
+                  <a className="button-github" href="https://github.com/hi-our/hi-face">GitHub</a>
                   <div className="button-try">
                     快速体验
                     <div className="qrcode-mask">
@@ -28,7 +29,6 @@ export default class Home extends Component {
                       </div>
                     </div>
                   </div>
-                  <a className="button-github" href="https://github.com/hi-our/hi-face">GitHub</a>
                 </div>
               </div>
               

@@ -34,6 +34,7 @@ export default class Page extends React.Component {
 
   componentDidUpdate(prevProps) {
 
+    console.log('prevProps.pageClassName !== this.props.pageClassName :>> ', prevProps.pageClassName, this.props.pageClassName);
     if (prevProps.pageClassName !== this.props.pageClassName) {
       removeClass(this.htmlNode, prevProps.pageClassName)
       addClass(this.htmlNode, this.props.pageClassName)

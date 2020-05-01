@@ -1,0 +1,179 @@
+.page-about #root {
+  background: #fff url(../../img/taro-bg-2.svg) no-repeat center 205px;
+  background-size: auto 100vh;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* IE 11兼容 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .page-about #root {
+    display: block;
+  }
+}
+
+
+.page-about .page-wrap {
+  flex: 1;
+}
+
+.page-about .page-main {
+  max-width: 1200px;
+  padding: 30px 16px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .page-about #root {
+    background-size: 1000px auto;
+  }
+}
+@media (min-width: 1024px) {
+  .page-about #root {
+    background-size: auto;
+  }
+}
+
+.page-about .page-module {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.page-about .page-module:first-child {
+  margin-top: 0;
+}
+
+
+.page-module:before {
+  float: left;
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+
+.page-about .module-about:before {
+  background-image: url(../../img/icon-about@2x.png);
+  background-size: contain;
+}
+
+
+.page-about .module-contact:before {
+  background-image: url(../../img/icon-contact@2x.png);
+  background-size: contain;
+}
+
+
+.page-about .module-join:before {
+  background-image: url(../../img/icon-flower@2x.png);
+  background-size: contain;
+}
+
+
+.page-about .page-module h2 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.page-about .page-module p {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.page-about .page-module p {
+  margin-top: 5px;
+}
+
+.page-about .member-list {
+  margin-top: 20px;
+  display: flex;
+}
+
+.page-about .member-item {
+  width: 32%;
+  text-align: center;
+}
+
+.page-about .member-item + .member-item {
+  margin-left: 4%;
+}
+
+.page-about .member-item > img {
+  margin: 0 auto;
+  display: block;
+  width: auto;
+  height: 152px;
+}
+
+.page-about .member-item h3 {
+  margin-top: 5px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.page-about .member-item p {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (min-width: 1024px) {
+
+  .page-module:before {
+    width: 90px;
+    height: 90px;
+    margin-right: 30px;
+  }
+
+  .page-about .page-module .module-main {
+    overflow: hidden;
+  }
+
+  .page-about .page-module h2 {
+    padding-top: 10px;
+    font-size: 24px;
+  }
+
+  
+  .page-about .page-module p {
+    font-size: 16px;
+  }
+
+  .page-about .member-list {
+    padding-left: 120px;
+    display: block;
+    overflow: hidden;
+  }
+  .page-about .member-item {
+    float: left;
+    text-align: left;
+    width: 270px;
+  }
+
+  .page-about .member-item + .member-item {
+    margin-left: 110px;
+  }
+
+  .page-about .member-item > img {
+    margin-right: 20px;
+    float: left;
+  }
+
+  .page-about .member-item .item-main {
+    overflow: hidden;
+  }
+
+  .page-about .member-item h3 {
+    margin-top: 0;
+    font-size: 36px;
+  }
+
+  .page-about .member-item p {
+    margin-top: 0;
+    font-size: 18px;
+  }
+}

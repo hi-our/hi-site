@@ -35,7 +35,7 @@ export default class Page extends React.Component {
             </dl>
           </section>
         </div>
-        <div class="footer-copyright">
+        <div className="footer-copyright">
           Copyright © 2020. All Rights Reserved.<br /><a href="http://www.beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">苏ICP备18042648号-3</a>
         </div>
 

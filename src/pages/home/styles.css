@@ -1,0 +1,174 @@
+
+.page-home #root {
+  background: #fff url(../../img/taro-bg.svg) no-repeat center top;
+  background-size: auto 100vh;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* IE 11兼容 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .page-home #root {
+    display: block;
+  }
+}
+
+.page-home header {
+  background: transparent;
+}
+
+.page-home .header-main .logo {
+  background-image: url(../../img/logo-white@2x.png);
+}
+
+.page-home .main-nav a {
+  color: #FFF;
+}
+
+.page-home .page-wrap {
+  flex: 1;
+}
+
+.page-home .page-main {
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.page-home .hiface-wrap {
+  padding: 0 0 40px;
+  text-align: center;
+  /* display: flex; */
+}
+
+.page-home .hiface-wrap .hiface-logo {
+  width: 300px;
+  margin: 0 auto 15px;
+  height: auto;
+}
+
+.page-home .hiface-wrap .hiface-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.page-home .hiface-wrap h2 {
+  font-size: 36px;
+  color:#fff;
+  line-height:1.33;
+  margin-bottom: 15px;
+}
+.page-home .hiface-wrap p {
+  font-size:16px;
+  color:#fff;
+  line-height:1.33;
+  margin-bottom: 30px;
+}
+
+.page-home .hiface-wrap .button-try,
+.page-home .hiface-wrap .button-github {
+  display: inline-block;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  border-radius:30px;
+  font-size: 14px;
+  width: 48%;
+}
+
+.page-home .hiface-wrap .button-try {
+  margin-left: 2%;
+  position: relative;
+  background:linear-gradient(70deg,rgba(5,177,189,1) 0%,rgba(37,210,147,1) 100%);
+  cursor: pointer;
+}
+
+.page-home .hiface-wrap .button-github {
+  box-shadow: inset 0 0 0 1px #177DCA;
+}
+
+.page-home .hiface-wrap .button-github:hover {
+  background: #6B8CC7;
+}
+
+
+
+
+.page-home .hiface-wrap .qrcode-mask {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-top: 10px;
+}
+
+.page-home .hiface-wrap .qrcode-mask-inner {
+  width: 180px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.page-home .hiface-wrap .qrcode-mask img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.page-home .hiface-wrap .button-try:hover .qrcode-mask {
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .page-home #root {
+    background-size: 1000px auto;
+  }
+}
+@media (min-width: 1024px) {
+  .page-home #root {
+    background-size: auto;
+  }
+
+  .page-home .hiface-wrap {
+    padding: 120px 0 250px;
+    text-align: left;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .page-home .hiface-wrap .hiface-logo {
+    margin: -65px 0 20px;
+    width: 350px;
+  }
+
+  .page-home .hiface-wrap h2 {
+    font-size: 72px;
+    margin-bottom: 30px;
+  }
+
+  .page-home .hiface-wrap p {
+    font-size: 36px;
+    margin-bottom: 60px;
+  }
+
+  .page-home .hiface-wrap .button-try,
+  .page-home .hiface-wrap .button-github {
+    display: inline-block;
+    width: 200px;
+    line-height: 60px;
+    color: #fff;
+    border-radius:30px;
+    font-size: 24px;
+  }
+
+  .page-home .hiface-wrap .button-try {
+    margin-left: 48px;
+  }
+}
+
+

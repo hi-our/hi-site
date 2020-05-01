@@ -1,0 +1,53 @@
+header {
+  background: #E2EEFF;
+}
+.header-main {
+  max-width: 1200px;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-main .logo {
+  display: block;
+  width: 120px;
+  height: 34px;
+  background: url(../../img/logo-blue@2x.png) no-repeat;
+  background-size: contain;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.header-main .main-nav a {
+  font-size: 16px;
+  line-height: 1.33;
+  color: #6B8CC7;
+}
+
+.header-main .main-nav a + a {
+  margin-left: 16px;
+}
+
+.header-main .main-nav a:hover {
+  color: #6B8CC7;
+}
+
+
+@media (min-width: 1024px) {
+
+  .header-main .logo {
+    width: 241px;
+    height: 68px;
+  }
+
+  .header-main .main-nav a {
+    font-size: 24px;
+  }
+
+  .header-main .main-nav a + a {
+    margin-left: 52px;
+  }
+}

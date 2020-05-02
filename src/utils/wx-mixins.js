@@ -40,8 +40,9 @@ export default {
    
 
     wx.checkJsApi({
-      jsApiList: ["updateTimelineShareData", "updateAppMessageShareData"], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+      jsApiList: ["onMenuShareQQ", "onMenuShareTimeline"], // 需要检测的JS接口列表，所有JS接口列表见附录2,
       success: function (res) {
+        console.log('checkJsApi res :>> ', res);
         // 以键值对的形式返回，可用的api值true，不可用为false
         // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
       }
@@ -61,6 +62,7 @@ export default {
     onMenuShareTimelineCancel
   }) {
     console.log('window.wx :>> ', window.wx);
+
     if (!window.wx) return 
 
     let shareData = {
@@ -76,6 +78,7 @@ export default {
       }
     }
     window.wx.ready(() => {
+
       // 分享给朋友
       window.wx.onMenuShareAppMessage(shareData)
       // 分享到朋友圈

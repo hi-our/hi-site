@@ -41,7 +41,7 @@ export default {
    
 
     wx.checkJsApi({
-      jsApiList: ["onMenuShareQQ", "onMenuShareTimeline"], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+      jsApiList: ["onMenuShareQQ", "onMenuShareTimeline", 'onMenuShareAppMessage', 'onMenuShareWeibo'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
       success: function (res) {
         console.log('checkJsApi res :>> ', res);
         // 以键值对的形式返回，可用的api值true，不可用为false
@@ -79,8 +79,6 @@ export default {
       }
     }
     window.wx.ready(() => {
-
-      debugger
       // 分享给朋友
       window.wx.onMenuShareAppMessage(shareData)
       // 分享到朋友圈
@@ -94,7 +92,6 @@ export default {
 
   // 自定义“分享给朋友”及“分享到QQ”按钮的分享内容
   updateAppMessageShareData() {
-    debugger
     wx.updateAppMessageShareData({
       // TODO: 以下根据实际情况填写
       title: "xxx",

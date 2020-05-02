@@ -14,7 +14,7 @@ export default class Home extends Component {
           <div className="page-main">
             <section className="hiface-wrap">
               <div className="hiface-logo">
-                <img src={require('../../img/hiface-logo.png')} alt="Hi头像" />
+                <img src={require('../../img/hiface-logo.png')} alt="Hi头像 " />
               </div>
               <div className="hiface-main">
                 <h2>Hi头像</h2>

@@ -28,20 +28,25 @@ export default class Page extends React.Component {
 
   componentDidMount() {
     
-    const { pageClassName, title } = this.props
+    const { pageClassName } = this.props
     if (pageClassName && this.htmlNode) {
       addClass(this.htmlNode, pageClassName)
     }
 
     if (navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == "micromessenger") {
-      wxUitls.wxConfig()
-      
-      wxUitls.setWechatShareConfig({
-        shareTitle: title,
-        descContent: 'HiOur，Hi头像用起来！',
-        shareImg: DEFAULT_SHARE_COVER,
-      })
+      this.setWechatShare()
     }
+  }
+
+  setWechatShare = async () => {
+    const { title } = this.props
+    await wxUitls.wxConfig()
+
+    wxUitls.setWechatShareConfig({
+      shareTitle: title,
+      descContent: 'HiOur，Hi头像用起来！',
+      shareImg: DEFAULT_SHARE_COVER,
+    })
   }
 
   componentDidUpdate(prevProps) {

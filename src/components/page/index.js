@@ -3,8 +3,9 @@ import { addClass, removeClass } from '../../utils/dom-utils';
 import DocumentMeta from '../document-meta';
 import Header from '../header';
 import Footer from '../footer';
+import wxUitls from '../../utils/wx-mixins';
 
-
+const DEFAULT_SHARE_COVER = 'https://n1image.hjfile.cn/res7/2020/04/26/2041af2867f22e62f8fce32b29cd1fb0.png'
 export default class Page extends React.Component {
 
   static defaultProps = {
@@ -26,9 +27,20 @@ export default class Page extends React.Component {
   }
 
   componentDidMount() {
-    const { pageClassName } = this.props
+    
+    const { pageClassName, title } = this.props
     if (pageClassName && this.htmlNode) {
       addClass(this.htmlNode, pageClassName)
+    }
+
+    if (navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == "micromessenger") {
+      wxUitls.wxConfig()
+      
+      wxUitls.setWechatShareConfig({
+        shareTitle: title,
+        descContent: 'HiOur，Hi头像用起来！',
+        shareImg: DEFAULT_SHARE_COVER,
+      })
     }
   }
 

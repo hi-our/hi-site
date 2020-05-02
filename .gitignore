@@ -23,3 +23,5 @@ yarn-error.log*
 .env
 
 wx-config.json
+
+MP_v.txt

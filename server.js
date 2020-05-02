@@ -35,7 +35,7 @@ app.post('/api/world', (req, res) => {
 app.get('/api/signature', async (req, res) => {
   const { url } = req
   try {
-    const result = await wechatSDK.getSignature(url)
+    const result = await wechatSDK.getSignature(decodeURIComponent(urlNow))
 
     console.log('result >> ', result);
     

@@ -31,7 +31,7 @@ export default {
       signature,
 
       // 必填，需要使用的JS接口列表
-      jsApiList: ["updateTimelineShareData", "updateAppMessageShareData"]
+      jsApiList: ["onMenuShareQQ", "onMenuShareTimeline", 'onMenuShareAppMessage', 'onMenuShareWeibo'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
     })
 
     wx.error(function (res) {
@@ -39,15 +39,6 @@ export default {
       console.log("微信验证失败", res)
     })
    
-
-    wx.checkJsApi({
-      jsApiList: ["onMenuShareQQ", "onMenuShareTimeline", 'onMenuShareAppMessage', 'onMenuShareWeibo'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
-      success: function (res) {
-        console.log('checkJsApi res :>> ', res);
-        // 以键值对的形式返回，可用的api值true，不可用为false
-        // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
-      }
-    })
   },
 
   setWechatShareConfig({

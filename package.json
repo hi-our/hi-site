@@ -41,7 +41,8 @@
     "react-dom": "^16.6.3",
     "react-router-dom": "^4.3.1",
     "react-scripts": "3.4.1",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "wechat-web-sdk": "^1.0.8"
   },
   "browserslist": {
     "production": [

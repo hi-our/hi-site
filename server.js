@@ -4,6 +4,29 @@ const bodyParser = require('body-parser');
 const wxConfig = require('./wx-config.json')
 const wechatSDKNpm = require("wechat-web-sdk");
 
+const ARGS_REG = /(\?.*(?:$))/
+
+/* 获取url参数 */
+function getQueryString(name, url) {
+
+  // 在获取queryString先需要将hash去掉
+  let originHash = url.indexOf('#') > 0 ? url.split('#')[1] : ''
+  let hash = `${originHash ? '#' : ''}${originHash}`
+  if (hash) {
+    url = url.replace(hash, '')
+  }
+
+  let argsStr = url.match(ARGS_REG)
+  let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
+  let res = argsStr ? argsStr[1].substr(1).match(reg) : null
+
+  if (res != null) {
+    return decodeURIComponent(res[2])
+  }
+
+  return null
+}
+
 const app = express();
 const port = process.env.PORT || 8769;
 
@@ -34,8 +57,12 @@ app.post('/api/world', (req, res) => {
 });
 app.get('/api/signature', async (req, res) => {
   const { url } = req
+
+  const urlNow = getQueryString('url', url)
+
+  console.log('url :>> ', urlNow);
   try {
-    const result = await wechatSDK.getSignature(url)
+    const result = await wechatSDK.getSignature(urlNow)
 
     console.log('result >> ', result);
     

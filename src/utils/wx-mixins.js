@@ -1,9 +1,10 @@
 import axios from "axios"
 const wx = window.wx
+
 export default {
   async wxConfig() {
     const res = await axios.get(
-      `http://hi-our.com/api/signature?url=${window.location.href}`,
+      `${window.location.protocol}//hi-our.com/api/signature?url=${window.location.href}`,
       // {
       //   // TODO: 根据实际接口填写
       //   baseURL: "https://xxx.xxx.xxx/xxx/",
@@ -79,6 +80,7 @@ export default {
     }
     window.wx.ready(() => {
 
+      debugger
       // 分享给朋友
       window.wx.onMenuShareAppMessage(shareData)
       // 分享到朋友圈

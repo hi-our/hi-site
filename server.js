@@ -1,50 +1,16 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const wxConfig = require('./wx-config.json')
-const wechatSDKNpm = require("wechat-web-sdk");
 const loadEnv = require('./load-env')
 
 loadEnv()
 
-const ARGS_REG = /(\?.*(?:$))/
-
-/* 获取url参数 */
-function getQueryString(name, url) {
-
-  // 在获取queryString先需要将hash去掉
-  let originHash = url.indexOf('#') > 0 ? url.split('#')[1] : ''
-  let hash = `${originHash ? '#' : ''}${originHash}`
-  if (hash) {
-    url = url.replace(hash, '')
-  }
-
-  let argsStr = url.match(ARGS_REG)
-  let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
-  let res = argsStr ? argsStr[1].substr(1).match(reg) : null
-
-  if (res != null) {
-    return decodeURIComponent(res[2])
-  }
-
-  return null
-}
-
 const app = express();
 const port = process.env.PORT || 8769;
-
-const { appID: wxAppID, appSecret: wxAppSecret } = wxConfig
-
-console.log('object :>> ', wxAppID, wxAppSecret);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, 'build')));
-
-const wechatSDK = wechatSDKNpm.getInstance({
-  appid: wxAppID,
-  secret: wxAppSecret
-})
 
 
 // API calls
@@ -57,32 +23,6 @@ app.post('/api/world', (req, res) => {
   res.send(
     `I received your POST request. This is what you sent me: ${req.body.post}`,
   );
-});
-app.get('/api/signature', async (req, res) => {
-  const { url } = req
-
-  const urlNow = getQueryString('url', url)
-
-  console.log('url :>> ', urlNow);
-  try {
-    const result = await wechatSDK.getSignature(decodeURIComponent(urlNow))
-
-    console.log('result >> ', result);
-    
-    res.send({
-      data: result || {},
-      status: 0,
-      message: '',
-      time: new Date()
-    })
-  } catch (error) {
-    const { errcode = -10086, errmsg = '调用有错误' } = error || {}
-    res.send({
-      data: {},
-      status: errcode,
-      message: errmsg + ': ' + JSON.stringify(error)
-    })
-  }
 });
 
 app.get('/*', function (req, res) {

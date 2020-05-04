@@ -3,9 +3,9 @@ import { addClass, removeClass } from '../../utils/dom-utils';
 import DocumentMeta from '../document-meta';
 import Header from '../header';
 import Footer from '../footer';
-import wxUitls from '../../utils/wx-utils';
+// import wxUitls from '../../utils/wx-utils';
 
-const DEFAULT_SHARE_COVER = 'https://n1image.hjfile.cn/res7/2020/04/26/2041af2867f22e62f8fce32b29cd1fb0.png'
+// const DEFAULT_SHARE_COVER = 'https://n1image.hjfile.cn/res7/2020/04/26/2041af2867f22e62f8fce32b29cd1fb0.png'
 export default class Page extends React.Component {
 
   static defaultProps = {
@@ -33,21 +33,21 @@ export default class Page extends React.Component {
       addClass(this.htmlNode, pageClassName)
     }
 
-    if (navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == "micromessenger") {
-      this.setWechatShare()
-    }
+    // if (navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == "micromessenger") {
+    //   this.setWechatShare()
+    // }
   }
 
-  setWechatShare = async () => {
-    const { title } = this.props
-    await wxUitls.wxConfig()
+  // setWechatShare = async () => {
+  //   const { title } = this.props
+  //   await wxUitls.wxConfig()
 
-    wxUitls.setWechatShareConfig({
-      shareTitle: title,
-      descContent: 'HiOur，Hi头像用起来！',
-      shareImg: DEFAULT_SHARE_COVER,
-    })
-  }
+  //   wxUitls.setWechatShareConfig({
+  //     shareTitle: title,
+  //     descContent: 'HiOur，Hi头像用起来！',
+  //     shareImg: DEFAULT_SHARE_COVER,
+  //   })
+  // }
 
   componentDidUpdate(prevProps) {
 

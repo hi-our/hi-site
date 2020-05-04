@@ -3,6 +3,9 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const wxConfig = require('./wx-config.json')
 const wechatSDKNpm = require("wechat-web-sdk");
+const loadEnv = require('./load-env')
+
+loadEnv()
 
 const ARGS_REG = /(\?.*(?:$))/
 
@@ -63,6 +66,7 @@ app.get('/api/signature', async (req, res) => {
   console.log('url :>> ', urlNow);
   try {
     const result = await wechatSDK.getSignature(urlNow)
+    const result = await wechatSDK.getSignature(decodeURIComponent(urlNow))
 
     console.log('result >> ', result);
     

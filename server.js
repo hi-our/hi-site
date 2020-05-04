@@ -3,6 +3,9 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const wxConfig = require('./wx-config.json')
 const wechatSDKNpm = require("wechat-web-sdk");
+const loadEnv = require('./load-env')
+
+loadEnv()
 
 const app = express();
 const port = process.env.PORT || 8769;

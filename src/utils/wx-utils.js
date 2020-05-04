@@ -1,12 +1,6 @@
 import axios from "axios"
 const wx = window.wx
 
-<<<<<<< HEAD:src/utils/wx-mixins.js
-export default {
-  async wxConfig() {
-    const res = await axios.get(
-      `${window.location.protocol}//hi-our.com/api/signature?url=${window.location.href}`,
-=======
 let jsApiList = ['checkJsApi', 'onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'hideMenuItems', 'showMenuItems',
   'hideAllNonBaseMenuItem', 'showAllNonBaseMenuItem', 'translateVoice', 'startRecord', 'stopRecord', 'onRecordEnd', 'playVoice', 'pauseVoice',
   'stopVoice', 'uploadVoice', 'downloadVoice', 'chooseImage', 'previewImage', 'uploadImage', 'downloadImage', 'getNetworkType', 'openLocation',
@@ -17,7 +11,6 @@ export default {
   async wxConfig() {
     const res = await axios.get(
       `${window.location.protocol}//hi-our.com/api/signature?url=${encodeURIComponent(window.location.href)}`,
->>>>>>> 797bd92a23c6b3862daff268a21cb973ead8f9ea:src/utils/wx-utils.js
       // {
       //   // TODO: 根据实际接口填写
       //   baseURL: "https://xxx.xxx.xxx/xxx/",
@@ -26,28 +19,6 @@ export default {
     )
     // 接口反
     const { appId, timestamp, nonceStr, signature } = res.data && res.data.data
-<<<<<<< HEAD:src/utils/wx-mixins.js
-    await wx.config({
-      // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-      // debug: true,
-
-
-      // 必填，公众号的唯一标识
-      appId,
-
-      // 必填，生成签名的时间戳
-      timestamp,
-
-      // 必填，生成签名的随机串
-      nonceStr,
-
-      // 必填，签名
-      signature,
-
-      // 必填，需要使用的JS接口列表
-      jsApiList: ["onMenuShareQQ", "onMenuShareTimeline", 'onMenuShareAppMessage', 'onMenuShareWeibo'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
-    })
-=======
     console.log('appId, timestamp, nonceStr, signature :>> ', appId, timestamp, nonceStr, signature);
     console.log('wx config :>> ');
     try {
@@ -75,15 +46,11 @@ export default {
     } catch (error) {
       console.log('error :>> ', error);
     }
->>>>>>> 797bd92a23c6b3862daff268a21cb973ead8f9ea:src/utils/wx-utils.js
 
     wx.error(function (res) {
       // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
       console.log("微信验证失败", res)
     })
-<<<<<<< HEAD:src/utils/wx-mixins.js
-   
-=======
 
     
     setTimeout(() => {
@@ -105,7 +72,6 @@ export default {
         // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
       }
     })
->>>>>>> 797bd92a23c6b3862daff268a21cb973ead8f9ea:src/utils/wx-utils.js
   },
 
   setWechatShareConfig({

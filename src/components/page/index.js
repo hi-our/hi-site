@@ -3,7 +3,7 @@ import { addClass, removeClass } from '../../utils/dom-utils';
 import DocumentMeta from '../document-meta';
 import Header from '../header';
 import Footer from '../footer';
-import wxUitls from '../../utils/wx-mixins';
+import wxUitls from '../../utils/wx-utils';
 
 const DEFAULT_SHARE_COVER = 'https://n1image.hjfile.cn/res7/2020/04/26/2041af2867f22e62f8fce32b29cd1fb0.png'
 export default class Page extends React.Component {

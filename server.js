@@ -65,7 +65,6 @@ app.get('/api/signature', async (req, res) => {
 
   console.log('url :>> ', urlNow);
   try {
-    const result = await wechatSDK.getSignature(urlNow)
     const result = await wechatSDK.getSignature(decodeURIComponent(urlNow))
 
     console.log('result >> ', result);

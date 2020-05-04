@@ -10,7 +10,7 @@ let jsApiList = ['checkJsApi', 'onMenuShareTimeline', 'onMenuShareAppMessage', '
 export default {
   async wxConfig() {
     const res = await axios.get(
-      `${window.location.protocol}//hi-our.com/api/signature?url=${encodeURIComponent(window.location.href)}`,
+      `/api/signature?url=${encodeURIComponent(window.location.href)}`,
       // {
       //   // TODO: 根据实际接口填写
       //   baseURL: "https://xxx.xxx.xxx/xxx/",

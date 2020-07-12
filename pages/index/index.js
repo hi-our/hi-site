@@ -8,11 +8,9 @@ import './styles.styl'
 export default class Home extends PureComponent {
   render() {
     const { title, list = [] } = this.props
-    const { isShow } = this.state
-  
     return (
       <Fragment>
-        <DocumentMeta title="Way Art" />
+        <DocumentMeta />
         <Header />
         
         <Footer />

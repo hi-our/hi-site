@@ -11,17 +11,12 @@ export default class Footer extends React.Component {
           </a>
           <section className="footer-links">
             <dl>
-              {/* <dt><img src={require("../../img/footer-about@2x.png")} alt="关于我们" />关于我们</dt> */}
+              <dt><img src="https://image-hosting.xiaoxili.com/img/20200712164455.png" alt="关于我们" />关于</dt>
               <dd><Link href="/about">关于小溪里</Link></dd>
               <dd><Link href="/about#hi-our">关于 Hi Our</Link></dd>
             </dl>
-            {/* <dl>
-                <dt>社区</dt>
-                <dd>GitHub</dd>
-                <dd>微信</dd>
-              </dl> */}
             <dl>
-              {/* <dt><img src={require("../../img/footer-resource@2x.png")} alt="相关资源" />相关资源</dt> */}
+              <dt><img src="https://image-hosting.xiaoxili.com/img/20200712164456.png" alt="相关资源" />社区</dt>
               <dd><a href="https://cloudbase.net">云开发 CloudBase</a></dd>
               <dd><a href="https://taro.jd.com">Taro</a></dd>
               <dd><a href="https://tuture.co">图雀社区</a></dd>

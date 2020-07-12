@@ -23,11 +23,20 @@ export default class Page extends React.Component {
     this.htmlNode = document.getElementsByTagName('html')[0]
   
     const { pageClassName } = this.props
-    console.log('pageClassName :>> ', pageClassName);
+
     if (pageClassName && this.htmlNode) {
       addClass(this.htmlNode, pageClassName)
     }
   }
+
+  componentDidUpdate(prevProps) {
+
+    if (prevProps.pageClassName !== this.props.pageClassName) {
+      removeClass(this.htmlNode, prevProps.pageClassName)
+      addClass(this.htmlNode, this.props.pageClassName)
+    }
+  }
+
 
   componentWillUnmount() {
     const { pageClassName, isShowIphoneXBottom } = this.props
@@ -55,12 +64,7 @@ export default class Page extends React.Component {
   }
 }
 
-export async function getStaticProps(context) {
-  console.log('context :>> ', context);
-  // Get external data from the file system, API, DB, etc.
-  const data = {
-
-  }
+export async function getStaticProps() {
 
   // The value of the `props` key will be
   //  passed to the `Home` component

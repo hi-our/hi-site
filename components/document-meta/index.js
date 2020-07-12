@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 export default function DocumentMeta(props) {
   const { title = '小溪里 - 前端技术' } = props
-  console.log('DocumentMeta title :>> ', title);
+
   return (
     <Head>
       {title ? <title>{title || ''}</title> : ''}

@@ -72,11 +72,9 @@ export default function About() {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   // Get external data from the file system, API, DB, etc.
   // const data = {}
-  const { pathname } = context || {}
-  console.log('pathname :>> ', pathname);
 
   // The value of the `props` key will be
   //  passed to the `Home` component

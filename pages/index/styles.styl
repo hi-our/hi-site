@@ -1,0 +1,153 @@
+@media (max-width 1024px)
+
+  .home-serivice
+    margin 30px 18px
+    & > img
+      max-width 100%
+      height auto
+
+  .home-list
+
+    .home-item
+      position relative
+      cursor pointer
+      & > img 
+        width 100%
+        height auto
+        display block
+
+
+    .home-item-desc
+      position absolute
+      left 0
+      right 0
+      bottom 0
+      background rgba(255, 255, 255, 0.56)
+
+      h2
+        color #0C0C0C
+        font-size 22px
+        line-height 1.5
+        text-align center
+      
+      p
+        display none
+        color #0C0C0C
+        font-size 12px
+        line-height 1.5
+
+        &:first-letter
+          font-size 22px
+      
+
+    .home-item:hover .home-item-desc
+      background rgba(109,109,109, 0.5)
+      padding 30px 50px 50px
+
+      h2
+        color #ffffff
+      
+      p
+        display block
+        color #ffffff
+
+
+    
+@media (min-width 1025px)
+  .home-serivice
+    margin 30px 65px
+    & > img
+      width 467px
+      height auto
+  .home-list
+    display flex
+    flex-direction column
+    height 846px
+    flex-wrap wrap
+    align-content center
+
+    .home-item-desc
+      position absolute
+      left 0
+      right 0
+      bottom 0
+      background rgba(255, 255, 255, 0.56)
+      transition background 0.15s, height  0.15s
+
+      h2
+        color #0C0C0C
+        font-size 33px
+        line-height 1.5
+        text-align center
+        transition color 0.15s
+      
+      p
+        height 1px
+        overflow hidden
+        color #0C0C0C
+        font-size 14px
+        line-height 2
+        transition color 0.15s, height 0.15s
+
+        &:first-letter
+          font-size 25px
+      
+
+    .home-item:hover .home-item-desc
+      background rgba(109,109,109, 0.5)
+
+      h2
+        color #ffffff
+      
+      p
+        height auto
+        color #ffffff
+
+    .home-item
+      position relative
+      cursor pointer
+      & > img 
+        max-width 100%
+        height auto
+        display block
+
+      &:nth-child(1)
+      &:nth-child(2)
+        width 635px
+
+        .home-item-desc
+          padding 50px 135px
+          h2
+            font-size 33px
+            line-height 1.5
+          
+          p
+            font-size 14px
+            line-height 2
+
+            &:first-letter
+              font-size 25px
+
+
+
+      &:nth-child(3)
+      &:nth-child(4)
+      &:nth-child(5)
+        width 423px
+
+        .home-item-desc
+          padding 30px 50px 50px
+
+          h2
+            font-size 22px
+            line-height 1.5
+          
+          p
+            font-size 12px
+            line-height 1.5
+
+            &:first-letter
+              font-size 22px
+    
+
+

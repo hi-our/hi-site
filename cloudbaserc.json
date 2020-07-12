@@ -1,0 +1,15 @@
+{
+  "envId": "env-hqngehhw",
+  "framework": {
+    "plugins": {
+      "static": {
+        "use": "@cloudbase/framework-plugin-website",
+        "inputs": {
+          "buildCommand": "npm run build",
+          "outputPath": "out",
+          "cloudPath": "/"
+        }
+      }
+    }
+  }
+}

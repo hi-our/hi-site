@@ -1,60 +1,19 @@
 {
-  "name": "hi-site",
-  "version": "1.0.0",
-  "description": "Example on using create-react-app with a Node Express Backend",
-  "author": {
-    "name": "hi-our",
-    "url": "https://hi-our.com"
-  },
-  "license": "MIT",
+  "name": "my-next-app",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "node ./gh-pages",
-    "server": "NODE_ENV=production pm2 start --watch ecosystem.config.js"
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "deploy": "cloudbase framework:deploy"
   },
-  "devDependencies": {
-    "gh-pages": "^2.0.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hi-our/hi-site.git"
-  },
-  "bugs": {
-    "url": "https://github.com/hi-our/hi-site/issues"
-  },
-  "keywords": [
-    "node",
-    "express",
-    "create-react-app"
-  ],
-  "homepage": "https://hi-our.github.io/",
   "dependencies": {
-    "axios": "^0.19.2",
-    "body-parser": "^1.19.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "react": "^16.8.6",
-    "react-document-meta": "^3.0.0-beta.2",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "3.4.1",
-    "request": "^2.88.0",
-    "wechat-web-sdk": "^1.0.8"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "@zeit/next-stylus": "^1.0.1",
+    "classnames": "^2.2.6",
+    "next": "9.4.4",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "stylus": "^0.54.7"
   }
 }

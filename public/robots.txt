@@ -1,0 +1,10 @@
+# robots.txt generated at http://tool.chinaz.com/robots/ 
+User-agent: *
+Disallow: 
+Crawl-delay: 120
+
+Sitemap: http://xiaoxili.com/sitemap.xml
+Sitemap: http://xiaoxili.com/baidusitemap.html
+
+Sitemap: http://xiaoxili.com/blog/sitemap.xml
+Sitemap: http://xiaoxili.com/blog/baidusitemap.xml

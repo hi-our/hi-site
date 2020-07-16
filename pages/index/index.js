@@ -21,7 +21,8 @@ export default class Home extends PureComponent {
                 </div>
                 <div className="hiface-main">
                   <h2>Hi头像</h2>
-                  <p>记录生活的点滴</p>
+                  <p>让头像更有趣一点</p>
+                  <p style={{ display: 'none' }}>基于 Taro、腾讯云云开发、腾讯云人工智能</p>
                   <div className="button-wrap">
                     <a className="button-github" href="https://github.com/hi-our/hi-face">GitHub</a>
                     <div className="button-try">

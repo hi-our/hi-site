@@ -6,7 +6,7 @@
       "client": {
         "use": "@cloudbase/framework-plugin-container",
         "inputs": {
-          "serviceName": "test",
+          "serviceName": "test-2",
           "servicePath": "/",
           "localPath": "./"
         }

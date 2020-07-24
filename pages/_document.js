@@ -10,7 +10,7 @@ class MyDocument extends Document {
   render() {
     const { pageName } = this.props
     return (
-      <Html className={`page-${pageName || 'home'}`}>
+      <Html className={`page-${pageName || 'home'}`} lang='zh'>
         <Head />
         <body>
           <Main />

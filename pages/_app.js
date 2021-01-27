@@ -1,6 +1,6 @@
 import React from 'react'
 import App from 'next/app'
-import './_app.styl'
+import '../styles/_app.styl'
 
 class MyApp extends App {
   render() {

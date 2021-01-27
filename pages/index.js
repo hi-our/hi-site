@@ -1,7 +1,8 @@
 import React, { Fragment, PureComponent } from 'react'
-import Page from '../../components/page';
+import Image from 'next/image'
+import Page from '../components/page';
 
-import './styles.styl'
+import '../styles/index.styl'
 
 export default class Home extends PureComponent {
   render() {
@@ -29,7 +30,9 @@ export default class Home extends PureComponent {
                       快速体验
                     <div className="qrcode-mask">
                         <div className="qrcode-mask-inner">
-                          <img className="hiface-qrcode" src="https://image-hosting.xiaoxili.com/img/20200712182459.jpg" alt="Hi头像小程序码" />
+                          <div className="hiface-qrcode">
+                            <Image src="https://image-hosting.xiaoxili.com/img/20200712182459.jpg" alt="Hi头像小程序码"  width="350" height="350" />
+                          </div>
                         </div>
                       </div>
                     </div>

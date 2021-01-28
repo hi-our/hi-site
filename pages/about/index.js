@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
 import Image from 'next/image'
-import Page from '../components/page'
+import Page from '../../components/page'
 
-import '../styles/about.styl'
+import './styles.styl'
 
 export default function About() {
 

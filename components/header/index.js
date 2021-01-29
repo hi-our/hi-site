@@ -6,21 +6,42 @@ import Link from '../link-html'
 export default class Page extends React.Component {
   render() {
     return (
-      <header>
-        <div className="header-main">
-          <h1 className="logo">
-            <Link href='/' addHtml={false}>
-              小溪里 xiaoxili.com
-            </Link>
-          </h1>
-          <nav className="main-nav">
-            <Link href='/' addHtml={false}>首页</Link>
-            <a href='/blog' title="小溪里博客">博客</a>
-            <a href='/hi-face' title="Hi头像教程">小册</a>
-            <Link href='/about' addHtml>关于</Link>
-          </nav>
+      <>
+        {/* 头部 */}
+        <header className="header">
+          <img className="header-logo" src="/images/logo.png" alt="logo"/>
+          <div className="header-menu" ref={this.menuLogo}>
+            <div></div>
+            <div></div>
+          </div>
+        </header>
+        {/* 导航菜单 */}
+        <div className="navigation">
+          <div className="navigation-menu">
+            <div></div>
+            <div></div>
+          </div>
+          <ul className="navigation-links">
+            <li>
+              <a href="" className="navigation-links-active">首页</a>
+            </li>
+            <li>
+              <a href="">博客文章</a>
+            </li>
+            <li>
+              <a href="">技术分享</a>
+            </li>
+            <li>
+              <a href="">关于我们</a>
+            </li>
+          </ul>
+          <div className="navigation-operation">
+            <img src="/images/themoom.png" alt="月亮"/>
+            <img src="/images/language.png" alt="语言"/>
+            <img src="/images/subscribe.png" alt="订阅"/>
+          </div>
         </div>
-      </header>
+      </>
     )
   }
 }

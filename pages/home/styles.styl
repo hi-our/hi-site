@@ -1,0 +1,108 @@
+.page-home {
+  .module-header {
+    position: relative;
+    top: -1px;
+    width 100%;
+    background-color #0D5AFE;
+    // 线条
+    > .line {
+      width: 64px;
+      border-bottom 1px solid #ffffff;
+      margin auto;
+    }
+    // 小程序创意动画
+    .animation {
+      padding 0 32px;
+      text-align center;
+      color #ffffff;
+      .animation-module {
+        .animation-module-title {
+          margin-top 30px;
+          font-weight normal;
+          font-size 28px;
+        }
+        .animation-module-text{
+          margin-top 16px;
+          font-size 20px;
+        }
+        .animation-module-go {
+          width 120px;
+          height 36px;
+          margin-top 16px;
+          border 1px solid #ffffff;
+          color #ffffff;
+          outline none;
+          background-color transparent;
+        }  
+      }
+      .animation-little {
+        width auto;
+        height 277px;
+        margin 29px auto 0;
+      }
+    }
+    // 小程序创意动画类别
+    .program-category {
+      position relative;
+      bottom 20px;
+      display flex;
+      flex-wrap wrap;
+      justify-content space-between;
+      padding 0 16px;
+      .program-category-item {
+        &:nth-child(1),
+        &:nth-child(2) {
+          margin-bottom 15px;
+        }
+        width 48%;
+        padding 16px;
+        box-sizing border-box;
+        background-color #fff;
+        > img {
+          display block;
+          width 48px;
+          height: 50px;
+        }
+        > h4 {
+          width: 73px;
+          margin-top 8px;
+          font-size: 18px;
+          font-weight 400;
+          color #333333;
+          line-height 25px;
+          &::after {
+            content "";
+            display block;
+            width 48px;
+            height 1px;
+            background-color #0D5AFE;
+            margin-top  4px;
+          }
+        }
+        > p {
+          font-size 16px;
+          font-weight 400;
+          color #777777;
+          line-height 22px;
+          margin-top 7px;
+        }
+      }
+    }
+  }
+}
+// 头部导航
+.header-menu {
+  display flex;
+  flex-flow column;
+  justify-content space-between;
+  width 24px;
+  height 15px;
+  margin-right 16px;
+  > div {
+    position relative;
+    width 100%;
+    height 3px;
+    background-color #fff;
+    border-radius 5px;
+  }
+}

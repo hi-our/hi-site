@@ -1,5 +1,4 @@
 .footer {
-  width 100%;
   background-color #F9FBFF;
   padding 25px;
   box-sizing border-box;
@@ -7,43 +6,41 @@
     display block;
     width 145px;
     height 62px;
+    img {
+      width 100%;
+      height 100%;
+    }
   }
   > .footer-thank {
     font-size: 16px;
-    font-family: PingFangSC-Regular, PingFang SC;
-    font-weight: 400;
     color: #333333;
     line-height: 22px;
-    margin-top 13px;
-    margin-bottom 20px;
+    margin: 13px 0 20px;
   }
   > .footer-links {
     .footer-links-item {
       margin-bottom 20px;
-      > p, > span {
-        display inline-block;
-      }
-      > p {
-        font-size: 16px;
-        font-family: PingFangSC-Medium, PingFang SC;
-        font-weight: 500;
-        color: #0D5AFE;
-        line-height: 22px;
-        margin-right 10px;
-      }
-      > span {
-        margin-right 8px;
-        font-size: 12px;
-        font-family: PingFangSC-Regular, PingFang SC;
-        font-weight: 400;
-        color: #333333;
-        line-height: 17px;
-        &:last-child {
-          margin-right 0;
-        }
-      }
       &:last-child {
         margin-bottom 0;
+      }
+      dd {
+        display inline-block;
+        > p, > span {
+          display inline-block;
+        }
+        > p {
+          font-size: 16px;
+          font-weight: 500;
+          color: #0D5AFE;
+          line-height: 22px;
+          margin-right 10px;
+        }
+        > span {
+          margin-right 8px;
+          font-size: 12px;
+          color: #333333;
+          line-height: 17px;
+        }
       }
     }
   }

@@ -47,46 +47,46 @@ export default class Home extends PureComponent {
     return (
       <>
         <DocumentMeta />
-        <div className={'page-home'}>
+        <div className="page-home">
           {/* 模块头部 */}
-          <section className={'module-header'}>
-            {/*头部*/}
-            <header className={'header'}>
-              <img className={'header-logo'} src="/images/logo.png" alt="logo"/>
-              <div className={'header-menu'} ref={this.menuLogo} onClick={() => this.setState({menuStatus: !menuStatus})}>
+          <section className="module-header">
+            {/*头部 全局组件 */}
+            <header className="header">
+              <img className="header-logo" src="/images/logo.png" alt="logo"/>
+              <div className="header-menu" ref={this.menuLogo} onClick={() => this.setState({menuStatus: !menuStatus})}>
                 <div></div>
                 <div></div>
               </div>
             </header>
             {/* 线条 */}
-            <div className={'line'}></div>
+            <div className="line"></div>
             {/* 小程序创意动画 */}
-            <section className={'applet-animation'}>
-              <div className={'module'}>
-                <h3 className={'title'}>小程序 TabBar 创意动画</h3>
-                <p className={'text'}>精美小巧的动画，让你耳目一新</p>
-                <button className={'go-see'}>去看看</button>
+            <section className="animation">
+              <div className="animation-module">
+                <h3 className="animation-module-title">小程序 TabBar 创意动画</h3>
+                <p className="animation-module-text">精美小巧的动画，让你耳目一新</p>
+                <button className="animation-module-go">去看看</button>
               </div>
-              <img className={'applet-animation-little'} src="/images/little-people.png" alt="小人"/>
+              <img className="animation-little" src="/images/little-people.png" alt="小人"/>
             </section>
             {/* 小程序创意动画类别 */}
-            <ul className={'program-category'}>
-              <li className={'program-category-item'}>
+            <ul className="program-category">
+              <li className="program-category-item">
                 <img src="/images/notebook.png" alt="用户体验"/>
                 <h4>用户体验</h4>
                 <p>擅长响应式设计 精准还原设计稿 强调组件化开发</p>
               </li>
-              <li className={'program-category-item'}>
+              <li className="program-category-item">
                 <img src="/images/stars.png" alt="用户体验"/>
                 <h4>用户体验</h4>
                 <p>擅长响应式设计 精准还原设计稿 强调组件化开发</p>
               </li>
-              <li className={'program-category-item'}>
+              <li className="program-category-item">
                 <img src="/images/animation.png" alt="交互动画"/>
                 <h4>交互动画</h4>
                 <p>熟悉基础动画 创新动画专题 分享动画心得</p>
               </li>
-              <li className={'program-category-item'}>
+              <li className="program-category-item">
                 <img src="/images/created.png" alt="开源创造"/>
                 <h4>开源创造</h4>
                 <p>参与开源组织 开源精巧组件 热心开发者群体</p>
@@ -95,14 +95,14 @@ export default class Home extends PureComponent {
           </section>
         </div>
         {/* 导航菜单 */}
-        <div className={'navigation_menu'} style={{display: menuStatus ? 'block' : 'none'}}>
-          <div className={'header-menu'} onClick={() => this.setState({menuStatus: false})}>
+        <div className="navigation" style={{display: menuStatus ? 'block' : 'none'}}>
+          <div className="navigation-menu" onClick={() => this.setState({menuStatus: false})}>
             <div></div>
             <div></div>
           </div>
-          <ul className={'links'}>
+          <ul className="navigation-links">
             <li>
-              <a href="" className={'active'}>首页</a>
+              <a href="" className="navigation-links-active">首页</a>
             </li>
             <li>
               <a href="">博客文章</a>
@@ -114,7 +114,7 @@ export default class Home extends PureComponent {
               <a href="">关于我们</a>
             </li>
           </ul>
-          <div className={'operation'}>
+          <div className="navigation-operation">
             <img src="/images/themoom.png" alt="月亮"/>
             <img src="/images/language.png" alt="语言"/>
             <img src="/images/subscribe.png" alt="订阅"/>

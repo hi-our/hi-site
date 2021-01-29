@@ -26,31 +26,33 @@
       background-color: #fff;
     }
     // 小程序创意动画
-    .applet-animation {
+    .animation {
       padding 0 32px;
       text-align center;
       color #ffffff;
-      .title {
-        margin-top 30px;
-        font-weight inherit;
-        font-size 28px;
-        font-family PingFangSC-Medium, sans-serif;
+      .animation-module {
+        .animation-module-title {
+          margin-top 30px;
+          font-weight inherit;
+          font-size 28px;
+          font-family PingFangSC-Medium, sans-serif;
+        }
+        .animation-module-text{
+          margin-top 16px;
+          font-size 20px;
+          font-family PingFangSC-Regular, sans-serif;
+        }
+        .animation-module-go {
+          width 120px;
+          height 36px;
+          margin-top 16px;
+          border 1px solid #ffffff;
+          color #ffffff;
+          outline none;
+          background-color transparent;
+        }  
       }
-      .text {
-        margin-top 16px;
-        font-size 20px;
-        font-family PingFangSC-Regular, sans-serif;
-      }
-      .go-see {
-        width 120px;
-        height 36px;
-        margin-top 16px;
-        border 1px solid #ffffff;
-        color #ffffff;
-        outline none;
-        background-color transparent;
-      }
-      .applet-animation-little {
+      .animation-little {
         position relative;
         left 3px;
         width auto;
@@ -126,7 +128,7 @@
   }
 }
 // 导航菜单
-.navigation_menu {
+.navigation {
   position fixed;
   top 0;
   left 0;
@@ -137,7 +139,7 @@
   padding 31px 31px 31px 40px;
   background-color rgba(13, 90, 254, .9);
   box-sizing border-box;
-  .header-menu {
+  .navigation-menu {
     position absolute;
     right 36px;
     top 25px;
@@ -155,7 +157,7 @@
       }
     }
   }
-  .links {
+  .navigation-links {
     margin 38px 0 36px 0;
     >li {
       margin-bottom 29px;
@@ -167,7 +169,7 @@
         color #f3f3f3;
         line-height 33px;
       }
-      a.active {
+      a.navigation-links-active {
           &::after {
             content "";
             position absolute;
@@ -185,7 +187,7 @@
       }
     }
   }
-  .operation {
+  .navigation-operation {
     img {
       width 24px;
       height 24px;

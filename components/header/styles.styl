@@ -14,6 +14,7 @@
 }
 // 导航菜单
 .navigation {
+  display none;
   position fixed;
   top 0;
   left 0;
@@ -23,6 +24,18 @@
   padding 31px 31px 31px 40px;
   background-color rgba(13, 90, 254, .9);
   box-sizing border-box;
+  animation: 0.5s navigationOpacity;
+  &.active {
+    display block;
+  }
+  @keyframes navigationOpacity {
+    0% {
+      opacity 0;  
+    }
+    100% {
+      opacity 1;  
+    }
+  }
   .navigation-menu {
     position absolute;
     right 36px;
@@ -48,40 +61,132 @@
       &:last-child {
         margin-bottom 0;  
       }
-      a {
-        position relative;
-        font-size 24px;
-        font-weight 500;
-        color #f3f3f3;
-        line-height 33px;
-      }
-      a.navigation-links-active {
-          &::after {
-            content "";
-            position absolute;
-            bottom -5px;
-            right 0;
-            left 0;
-            width 30%;
-            margin auto;
-            border-bottom 2px solid #f3f3f3;
-            border-radius 2px;
-          }
-      }
     }
   }
-  .navigation-operation {
-    img {
-      width 24px;
-      height 24px;
-      &:nth-child(2) {
-        margin: 0 50px;
-      }
+}
+.navigation-operation {
+  img {
+    width 24px;
+    height 24px;
+    &:nth-child(2) {
+      margin: 0 50px;
     }
+  }
+}
+.navigation-links li a, .navbar .navbar-item a{
+  position relative;
+  font-size 24px;
+  font-weight 500;
+  color #f3f3f3;
+  line-height 33px;
+  &.navbar-item-active::after, &.navigation-links-active::after {
+    content "";
+    position absolute;
+    bottom -5px;
+    right 0;
+    left 0;
+    width 30%;
+    margin auto;
+    border-bottom 2px solid #f3f3f3;
+    border-radius 2px;
   }
 }
 // 不让滚动条滚动
 .not_scroll { 
   position fixed; 
   overflow-y scroll;
+}
+// 导航杠杠的样式
+.header-menu, .navigation-menu {
+  display flex;
+  flex-flow column;
+  justify-content space-between;
+  width 24px;
+  height 15px;
+  transition all 0.5s;
+  > div {
+    position relative;
+    width 100%;
+    height 3px;
+    background-color #fff;
+    border-radius 5px;
+  }
+  &.active {
+    > div:first-of-type {
+      animation: 0.5s leverFirst;
+    }
+    > div:last-child {
+      animation: 0.5s leverSecond;
+    }
+  }
+}
+// 杠杠动画
+@keyframes leverFirst {
+  0% {
+    transform rotate(0deg);
+  }
+  100% {
+    transform rotate(45deg);
+  }
+}
+@keyframes leverSecond {
+  0% {
+    transform rotate(0deg);
+  }
+  100% {
+    transform translateY(-11px) rotate(-45deg);
+  }
+}
+
+// 响应式
+// 兼容320px - 428px手机竖屏宽度
+@media screen and (min-width 320px){
+  .header {
+    // navbar 导航
+    .navbar, .navigation-operation {
+      display none;
+    }
+    .navigation {
+      .navigation-links {
+        margin 10px 0 !important;
+      }
+    }
+  }
+}
+// 兼容568px - 1024px手机横屏宽度
+@media screen and (min-width 568px){
+  .header {
+    padding 16px;
+    .header-logo {
+      width 128px;  
+    }
+    // 隐常横杆图标
+    .header-menu {
+      display none; 
+    }
+    .navigation-operation {
+      display block;  
+    }
+    // navbar 导航
+    .navbar {
+      display flex;
+      .navbar-item {
+        margin-right 35px;
+        a {
+          font-size 22px;
+        }
+        &:last-child {
+          margin-right 0;  
+        }
+      }
+    }
+    .navigation-operation img:nth-child(2) {
+      margin: 0 19px;
+    }
+    .module-header {
+      .line {
+        display none;  
+      }
+    }
+  }
 }

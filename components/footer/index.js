@@ -8,8 +8,8 @@ export default class Footer extends React.Component {
       <footer className="footer">
         <a href="/" className="footer-logo">
           <img src="/images/footer-logo.png" alt="logo"/>
+          <span>感谢阅读！</span>
         </a>
-        <p className="footer-thank">感谢阅读！</p>
         <section className="footer-links">
             <dl className="footer-links-item">
               <dd><p>关于我们</p></dd>

@@ -5,32 +5,29 @@
   > .footer-logo {
     display block;
     width 145px;
-    height 62px;
     img {
       width 100%;
       height 100%;
     }
-  }
-  > .footer-thank {
-    font-size: 16px;
-    color: #333333;
-    line-height: 22px;
-    margin: 13px 0 20px;
+    span {
+      display inline-block;
+      font-size: 16px;
+      color: #333333;
+      line-height: 22px;
+      margin: 13px 0 20px;
+    }
   }
   > .footer-links {
     .footer-links-item {
+      display flex;
       margin-bottom 20px;
       &:last-child {
         margin-bottom 0;
       }
       dd {
-        display inline-block;
-        > p, > span {
-          display inline-block;
-        }
         > p {
           font-size: 16px;
-          font-weight: 500;
+          font-weight: bold;
           color: #0D5AFE;
           line-height: 22px;
           margin-right 10px;
@@ -40,6 +37,55 @@
           font-size: 12px;
           color: #333333;
           line-height: 17px;
+        }
+      }
+    }
+  }
+}
+
+// 响应式
+// 兼容568px - 1024px手机横屏宽度
+@media all and (min-width 568px)  {
+  .footer {
+    display flex;
+    justify-content: space-between;
+    align-items: center;
+    .footer-logo {
+      text-align center;
+      letter-spacing 1px;
+      img {
+        height 58px;
+      }
+      span {
+        margin-bottom 0;
+      }
+    }
+    .footer-links {
+      display flex;
+      justify-content: flex-end;
+      flex 1;
+      .footer-links-item {
+        display inline;
+        margin-bottom 0;
+        margin-right: 3%;
+        dd {
+          span, p {
+            margin-right 0;
+          }
+          p {
+            margin-bottom 14px;
+          }
+          span {
+            display inline-block; 
+            font-size 16px;
+            margin-bottom 10px;
+          }
+          &:last-child span{
+            margin-bottom 0;
+          }
+        }
+        &:last-child {
+          margin-right 0;  
         }
       }
     }

@@ -4,14 +4,12 @@ import Link from '../link-html'
 
 export default class Header extends React.Component {
   state = {
-    menuState: false // 导航菜单的状态 
+    isOpen: false // 导航菜单的状态 
   }
-
-  changeMenuState = state => this.setState({menuState: state})
 
   toggleMenuStatus = () => {
     this.setState({
-      menuState: !this.state.menuState
+      isOpen: !this.state.isOpen
     })
   }
 
@@ -48,7 +46,7 @@ export default class Header extends React.Component {
   }
 
   render() {
-    const {menuState} = this.state
+    const { isOpen } = this.state
     return (
       <>
         {/* 头部 */}
@@ -62,17 +60,17 @@ export default class Header extends React.Component {
             {this.renderMainNav(true)}
             {this.renderMainOperation()}
             {/* 杠杠图标 */}
-            <button
-            className={"navigation-toggle " +  (menuState ? 'active' : '')}
-              onClick={this.toggleMenuStatus}
-            >
-              <div className='text'>菜单切换</div>
-            </button>
           </div>
         </header>
         {/* 导航菜单 */}
+        <button
+        className={"navigation-toggle " +  (isOpen ? 'active' : '')}
+          onClick={this.toggleMenuStatus}
+        >
+          <div className='text'>菜单切换</div>
+        </button>
         <div
-          className={'navigation-pop ' + (menuState ? 'active' : '')}
+          className={'navigation-pop ' + (isOpen ? 'active' : '')}
         >
           {this.renderMainNav()}
           {this.renderMainOperation()}

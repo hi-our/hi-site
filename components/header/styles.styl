@@ -90,21 +90,27 @@
         margin-bottom 0;
 
 .navigation-operation
-  div
+  & > button
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background: transparent;
     display inline-block;
     width 24px;
     height 24px;
-    background-size 100% 100%;
-    &:nth-child(1)
-      background-image url("/images/themoom.png");  
-    
-    &:nth-child(2)
-      margin 0 20px;
-      background-image url("/images/language.png");
-    
-    &:nth-child(3)
-      background-image url("/images/subscribe.png");  
-    
+    background-repeat no-repeat
+    background-size contain
+    outline none
+    cursor pointer
+
+    & + button
+      margin-left 43px
+  .mode
+    background-image url("/images/icon-mode-dark.svg");  
+  .language
+    background-image url("/images/icon-language.svg");  
+  .subscribe
+    background-image url("/images/icon-subscribe.svg");  
 
 .navigation-pc
   display none
@@ -147,26 +153,48 @@
   touch-action none
 
 // 导航杠杠的样式
-.header-menu, .navigation-menu
+.navigation-toggle
   display flex;
   flex-flow column;
   justify-content space-between;
-  width 24px;
-  height 15px;
+  width 44px;
+  height 44px;
   transition all 0.5s;
-  > div
+  background none
+  border none
+  outline none
+  z-index 100
+  .text
+    position absolute
+    overflow hidden
+    clip rect(0px, 0px, 0px, 0px)
+    height 1px
+    width 1px
+    margin -1px
+    padding 0px
+    border 0px
+  &:before
+  &:after
+    content ''
+    display block
     position relative;
-    width 100%;
+    width 24px;
     height 3px;
+    margin auto
     background-color #fff;
-    border-radius 5px;
+    border-radius 3px;
+    transition 0.5s;
+  
+  &:before
+    margin-top 15px
+  &:after
+    margin-bottom 15px
   
   &.active
-    > div:first-of-type
-      animation: 0.5s leverFirst;
-    
-    > div:last-child
-      animation: 0.5s leverSecond;
+    &:before
+      transform translateY(6px) rotate(45deg)
+    &:after
+      transform  translateY(-5px) rotate(-45deg)
     
   
 

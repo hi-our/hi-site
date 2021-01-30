@@ -37,6 +37,16 @@ export default class Header extends React.Component {
     )
   }
 
+  renderMainOperation = () => {
+    return (
+      <div className="navigation-operation">
+        <button className="mode"></button>
+        <button className="language"></button>
+        <button className="subscribe"></button>
+      </div>
+    )
+  }
+
   render() {
     const {menuState} = this.state
     return (
@@ -50,19 +60,14 @@ export default class Header extends React.Component {
               </Link>
             </h1>
             {this.renderMainNav(true)}
-            <div className="navigation-operation">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
+            {this.renderMainOperation()}
             {/* 杠杠图标 */}
-            <div 
-              className={(menuState ? 'active' : '') + ' header-menu'}
+            <button
+            className={"navigation-toggle " +  (menuState ? 'active' : '')}
               onClick={this.toggleMenuStatus}
             >
-              <div></div>
-              <div></div>
-            </div>
+              <div className='text'>菜单切换</div>
+            </button>
           </div>
         </header>
         {/* 导航菜单 */}
@@ -74,11 +79,7 @@ export default class Header extends React.Component {
             <div></div>
           </div>
           {this.renderMainNav()}
-          <div className="navigation-operation">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+          {this.renderMainOperation()}
         </div>
       </>
     )

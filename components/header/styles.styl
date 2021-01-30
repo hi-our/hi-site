@@ -161,6 +161,16 @@
 
     .navigation-mobile li
       transform translate3d(0, 0, 0)
+      &:nth-child(1)
+        transition-delay: 0.4s
+      &:nth-child(2)
+        transition-delay: 0.5s
+      &:nth-child(3)
+        transition-delay: 0.6s
+      &:nth-child(4)
+        transition-delay: 0.7s
+      &:nth-child(5)
+        transition-delay: 0.8s
     
     .navigation-operation
       opacity 1
@@ -181,17 +191,6 @@
       transition: 0.4s
       &:last-child
         margin-bottom 0;
-      
-      &:nth-child(1)
-        transition-delay: 0.4s
-      &:nth-child(2)
-        transition-delay: 0.5s
-      &:nth-child(3)
-        transition-delay: 0.6s
-      &:nth-child(4)
-        transition-delay: 0.7s
-      &:nth-child(5)
-        transition-delay: 0.8s
 
 // 兼容568px - 1024px手机横屏宽度
 @media (min-width 768px)

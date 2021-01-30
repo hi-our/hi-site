@@ -7,7 +7,9 @@
   .header-main
     display flex;
     align-items center;
-    justify-content space-between;  
+    justify-content space-between;
+    max-width 1200px
+    margin: auto
   
   .logo
     display: block;
@@ -26,6 +28,11 @@
     // background: url(https://image-hosting.xiaoxili.com/img/20200712201537.png) no-repeat;
 
     // background-image: url(https://image-hosting.xiaoxili.com/img/20200712201536.png);
+
+  // navbar 导航
+  .navigation-pc
+  .navigation-operation
+    display none;
   
 
 // 导航菜单
@@ -43,6 +50,9 @@
   animation: 0.5s navigationOpacity;
   &.active
     display block;
+  
+    .navigation-mobile a
+      font-size 20px;  
   
   @keyframes navigationOpacity
     0%
@@ -70,19 +80,14 @@
       
     
   
-  .navigation-links
+  .navigation-mobile
     margin 38px 0 36px 0;
-    > li
+    li
+      display block
       margin-bottom 29px;
       font-size 16px;  
       &:last-child
-        margin-bottom 0;  
-      
-    
-  
-  &.active .navigation-links li a
-    font-size 20px;  
-  
+        margin-bottom 0;
 
 .navigation-operation
   div
@@ -100,27 +105,42 @@
     &:nth-child(3)
       background-image url("/images/subscribe.png");  
     
-  
 
-.navigation-links li a
-.navigation-pc > a
+.navigation-pc
+  display none
+
+  & > ul
+    display flex
+  li
+    margin-right 35px;
+    &:last-child
+      margin-right 0;  
+
+.navigation-mobile li > a
+.navigation-pc li > a
   position relative;
   font-weight 500;
   color #fff;
   line-height 33px;
   font-size 16px;
+
+  &:after
+    content "";
+    display none
+    position absolute;
+    bottom -5px;
+    right 0;
+    left 0;
+    width 16px;
+    margin auto;
+    background: #f3f3f3;
+    height 2px
+    border-radius 2px;
+
+
   &.active
     &::after
-      content "";
-      position absolute;
-      bottom -5px;
-      right 0;
-      left 0;
-      width 30%;
-      margin auto;
-      background: #f3f3f3;
-      height 2px
-      border-radius 2px;
+      display block
 
 // 不让滚动条滚动
 .not_scroll 
@@ -171,17 +191,9 @@
 // 响应式
 // 兼容320px - 428px手机竖屏宽度
 @media (min-width 320px)
-  .header
-    // navbar 导航
-    .navigation-pc, .navigation-operation
-      display none;
-    
-    .navigation
-      .navigation-links
-        margin 10px 0 !important;
-      
-    
-  
+  .navigation
+    .navigation-links
+      margin 10px 0 !important;
 
 // 兼容568px - 1024px手机横屏宽度
 @media (min-width 768px)
@@ -197,22 +209,15 @@
     .navigation-operation
       display block;  
     
-    // navbar 导航
     .navigation-pc
-      display flex;
-      & > a
-        margin-right 35px;
-        &:last-child
-          margin-right 0;  
-        
-      
+      display block;
     
     .navigation-operation img:nth-child(2)
       margin: 0 19px;
     
-    .module-header
-      .line
-        display none;  
+    // .module-header
+    //   .line
+    //     display none;  
       
     
   
@@ -220,13 +225,7 @@
 // PC端
 @media (min-width 900px)
   .header
-    padding 20px 0; 
-    .header-main
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width 80%;
-      margin auto;
+    padding 20px 0
     
    .navigation-operation
       margin-right 5%;

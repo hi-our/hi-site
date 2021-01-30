@@ -15,6 +15,28 @@ export default class Header extends React.Component {
     })
   }
 
+  renderMainNav = (isPC) => {
+    return (
+      <nav className={isPC ? 'navigation-pc' : 'navigation-mobile'}>
+        <ul>
+          <li>
+            <Link href='/' isActive={true} addHtml={false}>首页</Link>
+          </li>
+          <li>
+            <a href='/blog' title="小溪里博客">博客</a>
+            
+          </li>
+          <li>
+            <a href='/hi-face' title="Hi头像教程">小册</a>
+          </li>
+          <li>
+            <Link href='/about' addHtml>关于</Link>
+          </li>
+        </ul>
+      </nav>
+    )
+  }
+
   render() {
     const {menuState} = this.state
     return (
@@ -27,12 +49,7 @@ export default class Header extends React.Component {
                 小溪里 xiaoxili.com
               </Link>
             </h1>
-            <nav className="navigation-pc">
-              <Link href='/' isActive={true} addHtml={false}>首页</Link>
-              <a href='/blog' title="小溪里博客">博客</a>
-              <a href='/hi-face' title="Hi头像教程">小册</a>
-              <Link href='/about' addHtml>关于</Link>
-            </nav>
+            {this.renderMainNav(true)}
             <div className="navigation-operation">
               <div></div>
               <div></div>
@@ -56,20 +73,7 @@ export default class Header extends React.Component {
             <div></div>
             <div></div>
           </div>
-          <ul className="navigation-links">
-            <li>
-              <a href="" className="navigation-links-active">首页</a>
-            </li>
-            <li>
-              <a href="">博客文章</a>
-            </li>
-            <li>
-              <a href="">技术分享</a>
-            </li>
-            <li>
-              <a href="">关于我们</a>
-            </li>
-          </ul>
+          {this.renderMainNav()}
           <div className="navigation-operation">
             <div></div>
             <div></div>

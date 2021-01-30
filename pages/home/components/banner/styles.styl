@@ -1,33 +1,33 @@
 .home-banner
-  position relative
-  top -1px
-  width 100%
+  padding 1px 0 24px
   background-color #0D5AFE
-  // 线条
-  > .line
-    width 64px
-    border-bottom 1px solid #ffffff
+
+  .banner-main
+    max-width 1200px
     margin auto
+  // 线条
+  .line
+    background #fff
+    width 64px
+    height 1px
+    margin 30px auto
   // 小程序创意动画
   .animation
     overflow hidden
-    padding 0 32px
     text-align center
     color #ffffff
     .animation-module
-        letter-spacing 1px
-      .animation-module-title
-        margin-top 30px
-        font-weight normal
+      letter-spacing 1px
+      h2
         font-size 28px
   
-      .animation-module-text
+      p
         margin-top 16px
         font-size 20px
   
-      .animation-module-go
+      button
         width 120px
-        height 36px
+        line-height 36px
         margin-top 16px
         border 1px solid #ffffff
         color #ffffff
@@ -37,32 +37,41 @@
     
 
     .animation-little
-      width auto
+      background url(/images/little-people.png) no-repeat
+      background-size contain
+      width 304px
       height 277px
       margin 29px auto 0
 
   // 小程序创意动画类别
   .program-category
-    position relative
-    bottom 20px
+    margin-top -20px
+    padding 0 16px
     display flex
     flex-wrap wrap
     justify-content space-between
-    padding 0 16px
-    .program-category-item
-      &:nth-child(1),
-      &:nth-child(2)
-        margin-bottom 15px
-  
-      width 48%
+
+    li
+      width 47.8%
       padding 16px
       box-sizing border-box
       background-color #fff
       cursor pointer
+      @media (max-width 767px)
+        &:nth-child(1),
+        &:nth-child(2)
+          margin-bottom 16px
+
+      &:hover
+        h4
+          color #0D5AFE
+        p
+          color #333
+
       > img
         display block
-        width 48px
-        height 50px
+        width 38px
+        height 40px
   
       > h4
         width 73px
@@ -77,7 +86,7 @@
           width 48px
           height 1px
           background-color #0D5AFE
-          margin-top  4px
+          margin-top 4px
     
   
       > p
@@ -86,119 +95,65 @@
         color #777777
         line-height 22px
         margin-top 7px
-  
-
-// 响应式
-// 兼容320px - 428px手机竖屏宽度
-@media (min-width 320px)
-  .home-banner
-    .animation
-      padding 0 15px
-      .animation-little
-        margin 0 auto
-  
-
-    .program-category
-      .program-category-item
-        padding 10px
-        &:nth-child(1),
-        &:nth-child(2)
-          margin-bottom 10px
-    
-        img
-          width 38px
-          height 40px
-    
-        h4
-          font-size 16px
-    
-        p
-          font-size 14px
     
 // 兼容568px - 1024px手机横屏宽度
 @media (min-width 768px)
-  .module-banner
+  .home-banner
     .line
-      display none  
+      margin-left 0
 
     .animation
+      padding 0 16px
       display flex
       justify-content space-between
       .animation-module
         text-align left
   
       .animation-little
-        width auto
-        height 245px
-        margin 0
-        margin-right 40px
+        width 280px
+        height 233px
+        margin-right 5px
   
 
     .program-category
-      .program-category-item
-        width 23.5%
-        margin-bottom 0 !important
-        img
-          width 50px  
+      li
+        width 21.8%
+        margin-bottom 0
 
 // PC端
-@media (min-width 900px)
-  .page-auto
-    max-width 80%
-    margin auto  
-  .page-home
-    .module-banner
-      height 640px
-      .line
-        position relative
-        top 80px
-        display block
-        margin initial
-  
-      .animation
-        padding 0
-        align-items center
-        .animation-module
-          .animation-module-title
-            margin-top 0
-            font-size 46px
-            line-height 80px
-      
-          .animation-module-text
-            margin 0
-            font-size 25px
-            color #f1f1f1
-      
-          .animation-module-go
-            margin-top 46px
-            width 160px
-            height 48px
-      
+@media (min-width 1024px)
+  .home-banner
+    margin-bottom 140px
+    .animation
+      padding 0 0 0 32px
+      align-items center
+      .animation-module
+        h2
+          margin-top 0
+          font-size 46px
+          line-height 80px
+          white-space nowrap
     
-        .animation-little
-          position relative
+        p
           margin 0
-          width auto
-          height 513px  
+          font-size 25px
+          color #f1f1f1
+    
+        button
+          margin-top 46px
+          width 160px
+          height 48px
     
   
-      .program-category
-        padding 0
-        bottom 0
-        .program-category-item
-          width 23%
-          padding 28px
-          border-bottom 6px solid transparent
-          &:hover
-            border-bottom-color #0D5AFE  
-      
-          >img
-            width 48px
-            height 48px
-      
-    
+      .animation-little
+        margin 0
+        width 511px
+        height 513px
+        background-size auto 100%
   
 
-@media (max-width 1000px)
-  .module-banner .animation .animation-little
-    width 400px  
+    .program-category
+      padding 0 32px
+      margin-bottom -140px
+      
+    

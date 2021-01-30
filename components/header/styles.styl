@@ -194,11 +194,10 @@
 
 // 兼容568px - 1024px手机横屏宽度
 @media (min-width 768px)
+  // 隐常横杆图标
+  .navigation-toggle
+    display none; 
   .header
-    // 隐常横杆图标
-    .navigation-toggle
-      display none; 
-    
     .navigation-operation
       display block;  
     
@@ -208,7 +207,11 @@
     // .module-header
     //   .line
     //     display none;  
-      
+
+@media (min-width 950px)
+  .header
+    padding-left 32px
+    padding-right 32px
 
 @media (min-width 1200px)
   .header

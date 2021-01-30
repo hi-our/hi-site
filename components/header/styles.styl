@@ -67,10 +67,6 @@
     &:last-child
       margin-right 0;  
 
-// 不让滚动条滚动
-.navigation-mobile
-  touch-action none
-
 .navigation-mobile li > a
 .navigation-pc li > a
   position relative;
@@ -99,6 +95,10 @@
 
 // 导航杠杠的样式
 .navigation-toggle
+  position fixed
+  right 20px
+  top 17px
+  z-index 100
   display flex;
   flex-flow column;
   justify-content space-between;
@@ -108,7 +108,6 @@
   background none
   border none
   outline none
-  z-index 100
   .text
     position absolute
     overflow hidden
@@ -143,7 +142,8 @@
 
 // 导航菜单
 .navigation-pop
-  display none;
+  pointer-events none
+  touch-action none
   position fixed;
   top 0;
   left 0;
@@ -153,29 +153,45 @@
   padding 31px 31px 31px 40px;
   background-color rgba(13, 90, 254, .9);
   box-sizing border-box;
-  animation: 0.5s navigationOpacity;
+  transition: 0.5s;
+  opacity 0
   &.active
-    display block;
-  
-    .navigation-mobile a
-      font-size 20px;  
-  
-  @keyframes navigationOpacity
-    0%
-      opacity 0;  
+    opacity 1
+    pointer-events auto
+
+    .navigation-mobile li
+      transform translate3d(0, 0, 0)
     
-    100%
+    .navigation-operation
       opacity 1
+      transition-delay 1.2s
+
     
+  .navigation-operation
+    opacity 0
+    transition: 0.4s
   
   .navigation-mobile
     margin 38px 0 36px 0;
     li
       display block
       margin-bottom 29px;
-      font-size 16px;  
+      font-size 16px;
+      transform translate3d(-100%, 0, 0)
+      transition: 0.4s
       &:last-child
         margin-bottom 0;
+      
+      &:nth-child(1)
+        transition-delay: 0.4s
+      &:nth-child(2)
+        transition-delay: 0.5s
+      &:nth-child(3)
+        transition-delay: 0.6s
+      &:nth-child(4)
+        transition-delay: 0.7s
+      &:nth-child(5)
+        transition-delay: 0.8s
 
 // 兼容568px - 1024px手机横屏宽度
 @media (min-width 768px)

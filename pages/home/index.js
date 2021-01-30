@@ -9,19 +9,21 @@ export default class Home extends PureComponent {
         <div className="page-home">
           {/* 模块头部 */}
           <section className="module-banner">
-            {/* 线条 */}
-            <div className="line"></div>
-            {/* 小程序创意动画 */}
-            <section className="animation">
-              <div className="animation-module">
-                <h3 className="animation-module-title">小程序 TabBar 创意动画</h3>
-                <p className="animation-module-text">精美小巧的动画，让你耳目一新</p>
-                <button className="animation-module-go">去看看</button>
-              </div>
-              <img className="animation-little" src="/images/little-people.png" alt="小人"/>
-            </section>
+            <div className="page-auto">
+              {/* 线条 */}
+              <div className="line"></div>
+              {/* 小程序创意动画 */}
+              <section className="animation">
+                <div className="animation-module">
+                  <h3 className="animation-module-title">小程序 TabBar 创意动画</h3>
+                  <p className="animation-module-text">精美小巧的动画，让你耳目一新</p>
+                  <button className="animation-module-go">去看看</button>
+                </div>
+                <img className="animation-little" src="/images/little-people.png" alt="小人"/>
+              </section>
+            </div>
             {/* 小程序创意动画类别 */}
-            <ul className="program-category">
+            <ul className="program-category page-auto">
               <li className="program-category-item">
                 <img src="/images/notebook.png" alt="用户体验"/>
                 <h4>用户体验</h4>
@@ -44,6 +46,8 @@ export default class Home extends PureComponent {
               </li>
             </ul>
           </section>
+          {/* 占位 */}
+          <div style={{width: '100%', height: '400px'}}></div>
         </div>
       </Page>
     )

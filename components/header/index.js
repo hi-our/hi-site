@@ -13,35 +13,37 @@ export default class Header extends React.Component {
       <>
         {/* 头部 */}
         <header className="header">
-          <h1 className="header-title">
-            <img src="/images/logo.png" alt="logo"/>
-          </h1>
-          <ul className="navbar">
-            <li className="navbar-item">
-              <a href="" className="navbar-item-active">首页</a>
-            </li>
-            <li className="navbar-item">
-              <a href="">博客文章</a>
-            </li>
-            <li className="navbar-item">
-              <a href="">技术分享</a>
-            </li>
-            <li className="navbar-item">
-              <a href="">关于我们</a>
-            </li>
-          </ul>
-          <div className="navigation-operation">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          {/* 杠杠图标 */}
-          <div 
-            className={(menuState ? 'active' : '') + ' header-menu'}
-            onClick={() => this.changeMenuState(true)}
-          >
-            <div></div>
-            <div></div>
+          <div className="header-auto">
+            <h1 className="header-title">
+              <img src="/images/logo.png" alt="logo"/>
+            </h1>
+            <ul className="navbar">
+              <li className="navbar-item">
+                <a href="" className="navbar-item-active">首页</a>
+              </li>
+              <li className="navbar-item">
+                <a href="">博客文章</a>
+              </li>
+              <li className="navbar-item">
+                <a href="">技术分享</a>
+              </li>
+              <li className="navbar-item">
+                <a href="">关于我们</a>
+              </li>
+            </ul>
+            <div className="navigation-operation">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            {/* 杠杠图标 */}
+            <div 
+              className={(menuState ? 'active' : '') + ' header-menu'}
+              onClick={() => this.changeMenuState(true)}
+            >
+              <div></div>
+              <div></div>
+            </div>
           </div>
         </header>
         {/* 导航菜单 */}
@@ -67,9 +69,9 @@ export default class Header extends React.Component {
             </li>
           </ul>
           <div className="navigation-operation">
-            <img src="/images/themoom.png" alt="月亮"/>
-            <img src="/images/language.png" alt="语言"/>
-            <img src="/images/subscribe.png" alt="订阅"/>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
       </>

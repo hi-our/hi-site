@@ -2,7 +2,7 @@
   background-color #F9FBFF;
   padding 25px;
   box-sizing border-box;
-  > .footer-logo {
+  .footer-logo {
     display block;
     width 145px;
     img {
@@ -18,7 +18,7 @@
       margin: 13px 0 20px;
     }
   }
-  > .footer-links {
+  .footer-links {
     .footer-links-item {
       display flex;
       margin-bottom 20px;
@@ -66,7 +66,7 @@
       .footer-links-item {
         display inline;
         margin-bottom 0;
-        margin-right: 3%;
+        margin-right: 60px;
         dt, dd {
           margin-right 0;
         }
@@ -84,6 +84,19 @@
           margin-right 0;  
         }
       }
+    }
+  }
+}
+
+// PC端
+@media (min-width 900px) {
+  .footer {
+    padding 20px 0;
+    .footer-auto {
+      display flex;
+      justify-content space-around;
+      min-width: 80%;
+      margin: auto;  
     }
   }
 }

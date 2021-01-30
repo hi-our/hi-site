@@ -72,12 +72,8 @@ export default class Header extends React.Component {
         </header>
         {/* 导航菜单 */}
         <div
-          className={'navigation ' + (menuState ? 'active' : '')}
+          className={'navigation-pop ' + (menuState ? 'active' : '')}
         >
-          <div className="navigation-menu" onClick={this.toggleMenuStatus}>
-            <div></div>
-            <div></div>
-          </div>
           {this.renderMainNav()}
           {this.renderMainOperation()}
         </div>

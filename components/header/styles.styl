@@ -32,62 +32,7 @@
   // navbar 导航
   .navigation-pc
   .navigation-operation
-    display none;
-  
-
-// 导航菜单
-.navigation
-  display none;
-  position fixed;
-  top 0;
-  left 0;
-  bottom 0;
-  right 0;
-  z-index 10;
-  padding 31px 31px 31px 40px;
-  background-color rgba(13, 90, 254, .9);
-  box-sizing border-box;
-  animation: 0.5s navigationOpacity;
-  &.active
-    display block;
-  
-    .navigation-mobile a
-      font-size 20px;  
-  
-  @keyframes navigationOpacity
-    0%
-      opacity 0;  
-    
-    100%
-      opacity 1;  
-    
-  
-  .navigation-menu
-    position absolute;
-    right 20px;
-    top 26px;
-    margin 0;
-    > div
-      width 32px;
-      background-color #f3f3f3
-      &:nth-child(1)
-        top 12px;
-        transform: rotate(45deg);
-      
-      &:nth-child(2)
-        top 1px;
-        transform: rotate(-45deg);
-      
-    
-  
-  .navigation-mobile
-    margin 38px 0 36px 0;
-    li
-      display block
-      margin-bottom 29px;
-      font-size 16px;  
-      &:last-child
-        margin-bottom 0;
+    display none
 
 .navigation-operation
   & > button
@@ -122,6 +67,10 @@
     &:last-child
       margin-right 0;  
 
+// 不让滚动条滚动
+.navigation-mobile
+  touch-action none
+
 .navigation-mobile li > a
 .navigation-pc li > a
   position relative;
@@ -147,10 +96,6 @@
   &.active
     &::after
       display block
-
-// 不让滚动条滚动
-.not_scroll 
-  touch-action none
 
 // 导航杠杠的样式
 .navigation-toggle
@@ -195,43 +140,48 @@
       transform translateY(6px) rotate(45deg)
     &:after
       transform  translateY(-5px) rotate(-45deg)
+
+// 导航菜单
+.navigation-pop
+  display none;
+  position fixed;
+  top 0;
+  left 0;
+  bottom 0;
+  right 0;
+  z-index 10;
+  padding 31px 31px 31px 40px;
+  background-color rgba(13, 90, 254, .9);
+  box-sizing border-box;
+  animation: 0.5s navigationOpacity;
+  &.active
+    display block;
+  
+    .navigation-mobile a
+      font-size 20px;  
+  
+  @keyframes navigationOpacity
+    0%
+      opacity 0;  
+    
+    100%
+      opacity 1
     
   
-
-// 杠杠动画
-@keyframes leverFirst
-  0%
-    transform rotate(0deg);
-  
-  100%
-    transform rotate(45deg);
-  
-
-@keyframes leverSecond
-  0%
-    transform rotate(0deg);
-  
-  100%
-    transform translateY(-11px) rotate(-45deg);
-  
-
-
-// 响应式
-// 兼容320px - 428px手机竖屏宽度
-@media (min-width 320px)
-  .navigation
-    .navigation-links
-      margin 10px 0 !important;
+  .navigation-mobile
+    margin 38px 0 36px 0;
+    li
+      display block
+      margin-bottom 29px;
+      font-size 16px;  
+      &:last-child
+        margin-bottom 0;
 
 // 兼容568px - 1024px手机横屏宽度
 @media (min-width 768px)
   .header
-    padding 16px;
-    .header-title > img
-      width 128px;  
-    
     // 隐常横杆图标
-    .header-menu
+    .navigation-toggle
       display none; 
     
     .navigation-operation
@@ -240,25 +190,13 @@
     .navigation-pc
       display block;
     
-    .navigation-operation img:nth-child(2)
-      margin: 0 19px;
-    
     // .module-header
     //   .line
     //     display none;  
       
-    
-  
 
-// PC端
-@media (min-width 900px)
+@media (min-width 1200px)
   .header
-    padding 20px 0
-    
-   .navigation-operation
-      margin-right 5%;
-      > div:nth-child(2)
-        margin: 0 46px;
-      
-   
+    padding-left 0
+    padding-right 0
    

@@ -12,24 +12,24 @@ export default class Footer extends React.Component {
         </a>
         <section className="footer-links">
             <dl className="footer-links-item">
-              <dd><p>关于我们</p></dd>
-              <dd><span>关于嘻嘻</span></dd>
-              <dd><span>关于团队</span></dd>
+              <dt>关于我们</dt>
+              <dd>关于嘻嘻</dd>
+              <dd>关于团队</dd>
             </dl>
             <dl className="footer-links-item">
-              <dd><p>社区</p></dd>
-              <dd><span>Taro</span></dd>
-              <dd><span>图雀社区</span></dd>
+              <dt>社区</dt>
+              <dd>Taro</dd>
+              <dd>图雀社区</dd>
             </dl>
             <dl className="footer-links-item">
-              <dd><p>友情链接</p></dd>
-              <dd><span>itclanCoder</span></dd>
-              <dd><span>APPClIP</span></dd>
+              <dt>友情链接</dt>
+              <dd>itclanCoder</dd>
+              <dd>APPClIP</dd>
             </dl>
             <dl className="footer-links-item">
-              <dd><p>联系我们</p></dd>
-              <dd><span>公众号：笑嘻嘻</span></dd>
-              <dd><span>微博：笑嘻嘻</span></dd>
+              <dt>联系我们</dt>
+              <dd>公众号：笑嘻嘻</dd>
+              <dd>微博：笑嘻嘻</dd>
             </dl>
         </section>
       </footer>

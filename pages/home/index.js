@@ -5,10 +5,10 @@ import './styles.styl'
 export default class Home extends PureComponent {
   render() {
     return (
-      <Page>
+      <Page title="小溪里 - 前端技术" pageClassName="page-home">
         <div className="page-home">
           {/* 模块头部 */}
-          <section className="module-header">
+          <section className="module-banner">
             {/* 线条 */}
             <div className="line"></div>
             {/* 小程序创意动画 */}

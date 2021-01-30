@@ -6,7 +6,7 @@
   padding 12px 16px;
   box-sizing border-box;
   background-color #0d5afe;
-  .header-logo {
+  .header-title > img {
     display block
     width 117px;
     height 54px;
@@ -65,11 +65,20 @@
   }
 }
 .navigation-operation {
-  img {
+  div {
+    display inline-block;
     width 24px;
     height 24px;
+    background-size 100% 100%;
+    &:nth-child(1) {
+      background-image url("/images/themoom.png");  
+    }
     &:nth-child(2) {
-      margin: 0 50px;
+      margin 0 20px;
+      background-image url("/images/language.png");
+    }
+    &:nth-child(3) {
+      background-image url("/images/subscribe.png");  
     }
   }
 }
@@ -140,7 +149,7 @@
 
 // 响应式
 // 兼容320px - 428px手机竖屏宽度
-@media screen and (min-width 320px){
+@media (min-width 320px){
   .header {
     // navbar 导航
     .navbar, .navigation-operation {
@@ -154,10 +163,10 @@
   }
 }
 // 兼容568px - 1024px手机横屏宽度
-@media screen and (min-width 568px){
+@media (min-width 768px) {
   .header {
     padding 16px;
-    .header-logo {
+    .header-title > img {
       width 128px;  
     }
     // 隐常横杆图标

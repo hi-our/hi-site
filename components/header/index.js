@@ -2,7 +2,7 @@ import React from 'react'
 import './styles.styl'
 import Link from '../link-html'
 
-export default class Page extends React.Component {
+export default class Header extends React.Component {
   state = {
     menuState: false // 导航菜单的状态 
   }
@@ -13,25 +13,27 @@ export default class Page extends React.Component {
       <>
         {/* 头部 */}
         <header className="header">
-          <img className="header-logo" src="/images/logo.png" alt="logo"/>
-          <nav className="navbar">
-            <section className="navbar-item">
+          <h1 className="header-title">
+            <img src="/images/logo.png" alt="logo"/>
+          </h1>
+          <ul className="navbar">
+            <li className="navbar-item">
               <a href="" className="navbar-item-active">首页</a>
-            </section>
-            <section className="navbar-item">
+            </li>
+            <li className="navbar-item">
               <a href="">博客文章</a>
-            </section>
-            <section className="navbar-item">
+            </li>
+            <li className="navbar-item">
               <a href="">技术分享</a>
-            </section>
-            <section className="navbar-item">
+            </li>
+            <li className="navbar-item">
               <a href="">关于我们</a>
-            </section>
-          </nav>
+            </li>
+          </ul>
           <div className="navigation-operation">
-            <img src="/images/themoom.png" alt="月亮"/>
-            <img src="/images/language.png" alt="语言"/>
-            <img src="/images/subscribe.png" alt="订阅"/>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
           {/* 杠杠图标 */}
           <div 

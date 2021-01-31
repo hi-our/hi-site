@@ -2,9 +2,18 @@ import React from 'react'
 import './styles.styl'
 import Link from '../link-html'
 
-export default function Header(params) {
+import { ConfigContext } from '../config-context'
+
+export default function Header() {
   const [isOpen, setIsOpen ] = React.useState(false)
-  const [isDark, setIsDark] = React.useState(false)
+
+  const { colorMode, setColorMode } = React.useContext(ConfigContext)
+  const isDark = colorMode === 'dark';
+
+  function toggleColorMode(event) {
+    event.preventDefault();
+    setColorMode(isDark ? 'light' : 'dark');
+  }
 
   const toggleMenuStatus = () => setIsOpen(!isOpen)
 
@@ -36,7 +45,7 @@ export default function Header(params) {
 
     return (
       <div className="navigation-operation">
-        <button className="mode" title={modeTitle} aria-label={modeTitle}></button>
+        <button className={"mode " + (isDark ? 'dark' : 'light')} title={modeTitle} aria-label={modeTitle} onClick={toggleColorMode}></button>
         {/* <button className="language"></button>
         <button className="subscribe"></button> */}
       </div>

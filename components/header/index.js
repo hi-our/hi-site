@@ -1,18 +1,17 @@
 import React from 'react'
 import './styles.styl'
 import Link from '../link-html'
-
-import { ConfigContext } from '../config-context'
+import { useTheme } from 'next-themes'
 
 export default function Header() {
   const [isOpen, setIsOpen ] = React.useState(false)
 
-  const { colorMode, setColorMode } = React.useContext(ConfigContext)
-  const isDark = colorMode === 'dark';
+  const { theme, setTheme } = useTheme()
+  const isDark = theme === 'dark';
 
   function toggleColorMode(event) {
     event.preventDefault();
-    setColorMode(isDark ? 'light' : 'dark');
+    setTheme(isDark ? 'light' : 'dark');
   }
 
   const toggleMenuStatus = () => setIsOpen(!isOpen)

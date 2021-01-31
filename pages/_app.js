@@ -1,5 +1,6 @@
 import React from 'react'
 import App from 'next/app'
+import { ThemeProvider } from 'next-themes'
 import './_app.styl'
 import {
   ConfigProvider,
@@ -11,9 +12,9 @@ class MyApp extends App {
     const { Component, pageProps } = this.props
 
     return (
-      <ConfigProvider>
+      <ThemeProvider>
         <Component {...pageProps} />
-      </ConfigProvider>
+      </ThemeProvider>
     )
   }
 }

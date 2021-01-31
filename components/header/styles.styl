@@ -50,14 +50,17 @@
 
     & + button
       margin-left 43px
-  .mode.dark
-    background-image url("/images/icon-mode-dark.svg");  
-  .mode.light
+  .mode
     background-image url("/images/icon-mode-light.svg");  
   .language
     background-image url("/images/icon-language.svg");  
   .subscribe
     background-image url("/images/icon-subscribe.svg");  
+
+html[data-theme='dark']
+  .navigation-operation
+    .mode
+      background-image url("/images/icon-mode-dark.svg");  
 
 .navigation-pc
   display none

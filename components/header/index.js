@@ -40,11 +40,11 @@ export default function Header() {
   }
 
   const renderMainOperation = () => {
-    const modeTitle = isDark ? '开启深色模式' : '开启浅色模式'
+    const modeTitle = '切换主题模式'
 
     return (
       <div className="navigation-operation">
-        <button className={"mode " + (isDark ? 'dark' : 'light')} title={modeTitle} aria-label={modeTitle} onClick={toggleColorMode}></button>
+        <button className={"mode "} title={modeTitle} aria-label={modeTitle} onClick={toggleColorMode}></button>
         {/* <button className="language"></button>
         <button className="subscribe"></button> */}
       </div>

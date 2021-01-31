@@ -12,7 +12,7 @@ class MyApp extends App {
     const { Component, pageProps } = this.props
 
     return (
-      <ThemeProvider>
+      <ThemeProvider defaultTheme='light'>
         <Component {...pageProps} />
       </ThemeProvider>
     )

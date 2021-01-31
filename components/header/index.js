@@ -77,6 +77,7 @@ export default function Header() {
       <div
         className={'navigation-pop ' + (isOpen ? 'active' : '')}
       >
+        <button className="navigation-pop-btn" onClick={toggleMenuStatus}></button>
         {renderMainNav()}
         {renderMainOperation()}
       </div>

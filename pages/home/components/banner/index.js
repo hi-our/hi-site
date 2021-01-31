@@ -22,22 +22,22 @@ export default class Home extends React.PureComponent {
         <ul className="program-category banner-main">
           <li>
             <img src="/images/notebook.png" alt="用户体验" />
-            <h4>用户体验</h4>
+            <h3>用户体验</h3>
             <p>擅长响应式设计<br />精准还原设计稿<br />强调组件化开发</p>
           </li>
           <li>
             <img src="/images/stars.png" alt="用户体验" />
-            <h4>用户体验</h4>
+            <h3>用户体验</h3>
             <p>擅长响应式设计<br />精准还原设计稿<br />强调组件化开发</p>
           </li>
           <li>
             <img src="/images/animation.png" alt="交互动画" />
-            <h4>交互动画</h4>
+            <h3>交互动画</h3>
             <p>熟悉基础动画<br />创新动画专题<br />分享动画心得</p>
           </li>
           <li>
             <img src="/images/created.png" alt="开源创造" />
-            <h4>开源创造</h4>
+            <h3>开源创造</h3>
             <p>参与开源组织<br />开源精巧组件<br />热心开发者群体</p>
           </li>
         </ul>

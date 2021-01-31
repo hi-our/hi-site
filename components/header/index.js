@@ -4,7 +4,8 @@ import Link from '../link-html'
 
 export default class Header extends React.Component {
   state = {
-    isOpen: false // 导航菜单的状态 
+    isOpen: false, // 导航菜单的状态 
+    isDark: false,
   }
 
   toggleMenuStatus = () => {
@@ -36,11 +37,14 @@ export default class Header extends React.Component {
   }
 
   renderMainOperation = () => {
+    const { isDark } = this.state
+    const modeTitle = isDark ? '开启深色模式' : '开启浅色模式'
+
     return (
       <div className="navigation-operation">
-        <button className="mode"></button>
-        <button className="language"></button>
-        <button className="subscribe"></button>
+        <button className="mode" title={modeTitle} aria-label={modeTitle}></button>
+        {/* <button className="language"></button>
+        <button className="subscribe"></button> */}
       </div>
     )
   }
@@ -64,8 +68,9 @@ export default class Header extends React.Component {
         </header>
         {/* 导航菜单 */}
         <button
-        className={"navigation-toggle " +  (isOpen ? 'active' : '')}
+          className={"navigation-toggle " +  (isOpen ? 'active' : '')}
           onClick={this.toggleMenuStatus}
+          aria-label={isOpen ? '关闭菜单' : '打开菜单'}
         >
           <div className='text'>菜单切换</div>
         </button>

@@ -1,17 +1,18 @@
 import React from 'react'
 import './styles.styl'
 import Link from '../link-html'
-import { useTheme } from 'next-themes'
+import { ConfigContext } from "../config-context"
 
 export default function Header() {
   const [isOpen, setIsOpen ] = React.useState(false)
 
-  const { theme, setTheme } = useTheme()
-  const isDark = theme === 'dark';
+  const { colorMode, setColorMode } = React.useContext(ConfigContext)
+
+  const isDark = colorMode === 'dark';
 
   function toggleColorMode(event) {
     event.preventDefault();
-    setTheme(isDark ? 'light' : 'dark');
+    setColorMode(isDark ? 'light' : 'dark');
   }
 
   const toggleMenuStatus = () => setIsOpen(!isOpen)
@@ -40,7 +41,7 @@ export default function Header() {
   }
 
   const renderMainOperation = () => {
-    const modeTitle = '切换主题模式'
+    const modeTitle = '切换颜色模式'
 
     return (
       <div className="navigation-operation">

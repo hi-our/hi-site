@@ -4,6 +4,7 @@
  * - Sound enabled or disabled
  */
 import React from 'react';
+import { addClass, removeClass } from "../../utils/dom-utils";
 
 // This key is used in localStorage to remember theme preferences
 export const PREFERS_DARK_KEY = 'prefers-dark';
@@ -46,6 +47,14 @@ export const ConfigProvider = ({ children }) => {
       const prefersDark = value === 'dark';
       root.style.setProperty(PREFERS_DARK_CSS_PROP, prefersDark);
       rawSetColorMode(value);
+
+      if (prefersDark) {
+        addClass(root, 'mode-dark')
+        removeClass(root, 'mode-light')
+      } else {
+        addClass(root, 'mode-light')
+        removeClass(root, 'mode-dark')
+      }
 
       localStorage.setItem(PREFERS_DARK_KEY, prefersDark);
     };

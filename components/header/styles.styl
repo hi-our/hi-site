@@ -57,7 +57,7 @@
   .subscribe
     background-image url("/images/icon-subscribe.svg");  
 
-html[data-theme='dark']
+html.mode-dark
   .navigation-operation
     .mode
       background-image url("/images/icon-mode-dark.svg");  
@@ -201,7 +201,9 @@ html[data-theme='dark']
   
   .navigation-mobile
     position relative
-    margin 38px 0 36px 0;
+    margin 38px 0 36px 0
+    max-width 400px
+    
     li
       display block
       margin-bottom 29px;

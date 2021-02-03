@@ -42,6 +42,8 @@ export const ConfigProvider = ({ children }) => {
         setAllowColorTransitions(true);
       }
 
+      console.log('value', value)
+
       let root = window.document.documentElement;
 
       const prefersDark = value === 'dark';

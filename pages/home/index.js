@@ -1,18 +1,20 @@
-import React, { PureComponent } from 'react'
-import Page from '../../components/page'
-import Banner from "./components/banner";
-
-import './styles.styl'
+import React, { PureComponent } from 'react';
+import Page from '../../components/page';
+import Banner from './components/banner';
+import OpenResource from './components/openResource';
+import TechShare from './components/techShare';
+import './styles.styl';
 export default class Home extends PureComponent {
   render() {
     return (
       <Page pageClassName="page-home">
         <Banner />
+        <OpenResource />
+        <TechShare />
       </Page>
-    )
+    );
   }
 }
-
 
 // export async function getStaticProps() {
 //   // Get external data from the file system, API, DB, etc.

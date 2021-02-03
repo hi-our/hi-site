@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import HeaderTitle from '../headerTitle';
+import HeaderTitle from '../header-title';
 import './styles.styl';
 class OpenResources extends Component {
   render() {

@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import Page from '../../components/page';
 import Banner from './components/banner';
-import OpenResource from './components/openResource';
-import TechShare from './components/techShare';
+import OpenResource from './components/open-resource';
+import TechShare from './components/tech-sharing';
 import './styles.styl';
 export default class Home extends PureComponent {
   render() {

@@ -16,8 +16,8 @@ function Introduction() {
                 <img className="desc-bitmap" src="/images/bitmap.png" alt="bitmap" />
                 <section className="desc-content">
                     <div className="desc-content-group"></div>
-                    <h3>资深 Web 前端工程师</h3>
-                    <p>嘻师傅，资深 Web 前端工程师，有过多年的大厂工作经验，目前就职于 XX XXX。擅长领域为用户体验、交互动画，在 Web 响应式网页设计、小程序基础架构、多端账户统一登录有所研究。个人作品有 xx 小程序，著有《从0到1开发一个智能头像识别小程》小册。</p>
+                    <h3 className="desc-content-title">资深 Web 前端工程师</h3>
+                    <p className="desc-content-text">嘻师傅，资深 Web 前端工程师，有过多年的大厂工作经验，目前就职于 XX XXX。擅长领域为用户体验、交互动画，在 Web 响应式网页设计、小程序基础架构、多端账户统一登录有所研究。个人作品有 xx 小程序，著有《从0到1开发一个智能头像识别小程》小册。</p>
                     <button className="desc-content-more">MORE</button>
                 </section>
             </div>

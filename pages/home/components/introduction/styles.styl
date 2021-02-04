@@ -1,154 +1,136 @@
 .home-introduction
-  max-width 1200px
-  margin 0 auto
-  // 个人简绍标题
-  .header
-    background-color transparent !important
-    padding 0 !important
+  overflow hidden
+  // 个人简绍 标题
+  .introduction-header
+    margin-bottom 10px
+    margin-top 60px
     text-align center
-    .header-text-model
-      font-size 56px
+    > h2
+      font-size 38px
+      font-weight 600
       color #F3F7FF
-    .header-text-title
-      position relative
-      bottom 40px
+      letter-spacing 2px
+    > h3
       font-size 32px
       font-weight normal
+      transform translateY(-30px) translateX(-10px)
+      letter-spacing 4px
       span:first-child
         color #353535
       span:last-child
         color #125EFE
-  // 个人简绍，简绍描述
+  // 个人简绍 描述
   .desc
-    display flex
-    margin-bottom 40px
     .desc-bitmap
-      width 50%
+      display block
+      width 100%
+      height auto
       outline none
-     .desc-content
-       width 50%
-       padding-left 5%
-       padding-top 2%
-       box-sizing border-box
-       .desc-content-group
-         display block
-         width 32px
-         height 15px
-         background url("/images/group.png") no-repeat 100%
-       .desc-content-title
-         margin 20px 0
-         font-size 24px
-         color #333333
-         line-height 33px
-       .desc-content-text
-         font-size 16px
-         color #333333
-         line-height 22px
-         margin-bottom 38px
-         letter-spacing 1px
-       .desc-content-button
-         float right
-         width 96px
-         height 32px
-         background-color #0D5AFE
-         font-size 16px
-         color #FFFFFF
-         outline none
-         border none
-         cursor pointer
-  // 个人简历 简绍经历
-  .experience
-    display flex
-    justify-content space-between
-    margin-bottom 105px
-    .experience-item
-      width 85px
-      height 100%
-      > img
-        display block
-        width 100%
-        height auto
-        outline none
-        cursor pointer
-      .experience-item-serial
-        font-size 36px
-        color #333333
-        line-height 50px
+    .desc-content
+      overflow hidden
+      padding 0 16px
+      color #333333
+      text-align right
+      > h3
+        margin 40px 0 20px 0
         text-align center
+        font-size 24px
         font-weight normal
-      .experience-item-text
+        letter-spacing 1px
+      > p
+        text-align initial
+        line-height 22px
+        font-size 16px
+        letter-spacing 2px
+      .desc-content-more
+        width 96px
+        height 32px
+        margin 10px 0 17px 0
+        background-color #0D5AFE
+        font-size 16px
+        color #FFFFFF
+        outline none
+        border none
+        cursor pointer
+  // 个人简绍 特色
+  .feature
+    display flex
+    flex-wrap wrap
+    margin-bottom 72px
+    .feature-item
+      width 33%
+      text-align center
+              &:nth-child(1), &:nth-child(2), &:nth-child(3)
+                margin-bottom 21px
+      >img
+        display block
+        outline none
+        margin auto
+      >h3
+        font-size 36px
+        font-weight normal
+        color #333333
+      >p
         font-size 14px
+        font-weight normal
         color #777777
-        line-height 20px
-        text-align center
 
-// 响应式
-@media (max-width 1200px)
+@media (min-width 768px)
   .home-introduction
-    margin 0
-    padding 0 30px
+    padding 0 15px
+    .introduction-header
+      margin-top 60px
+      >h2
+        font-size 56px
+      >h3
+        letter-spacing 3px
+        transform translateY(-40px)
+     .desc
+       display flex
+       min-height 232px
+       .desc-bitmap, .desc-content
+         width: 50%;
+       .desc-content
+         padding 0 0 0 16px
+         >h3
+           margin  0 0 20px 0
+           text-align left
+         .desc-content-more
+           margin 20px 0 0 0
+     .feature
+       justify-content space-between
+       margin 47px 0 61px 0
+       .feature-item
+         width auto
+         text-align center
+         &:nth-child(1), &:nth-child(2), &:nth-child(3)
+          margin-bottom 0
+
+@media (min-width 1024px)
+  .home-introduction
+    padding 0 32px
     .desc
+      min-height 303px
       .desc-content
         padding-left 32px
-        .desc-content-text
-          margin-top 16px
-
-@media (max-width 1024px)
-  .home-introduction
-    padding 0 17px
-    .header
-      overflow hidden
-      .header-text
-        margin-top 60px
-        margin-bottom 10px
-    .desc
-        .desc-content
-            padding-left 16px
-            padding-top 0
-            .desc-content-title
-              margin-top 0
-              font-weight 500
-            .desc-content-text
-              margin-bottom 16px
-            .desc-content-group
-              display none
-    .experience
-      margin-bottom 61px
-
-@media (max-width 768px)
-  .home-introduction
-    padding 0
-    .desc
-      display block
-      .desc-bitmap
-        width 100%
-      .desc-content
-        width 100%
-        margin 0
-        padding 0 16px
-        &::after
-          content ""
-          display block
-          visibility visible
-          clear both
-          height 0
         .desc-content-group
-          display none;
-        .desc-content-title
-          margin-top 36px
-          margin-bottom 20px
-          font-weight 500
-          text-align center
-        .desc-content-text
-          margin-bottom 15px
-    .experience
-      flex-wrap wrap
-      margin-bottom 72px
-      .experience-item
-        width 30%
-        > img
-          display block
-          width auto
-          margin auto
-        &:nth-child(1), &:nth-child(2), &:nth-child(3)
-          margin-bottom 20px
+          width 32px
+          height 15px
+          background url("/images/group.png") no-repeat 100%
+          margin 32px 0
+          cursor pointer
+    .feature
+        margin-bottom 105px
+
+@media (min-width 1440px)
+    .home-introduction
+      padding 0
+      max-width 1200px
+      margin auto
+      .desc
+        .desc-content
+          padding-left 60px
+          .desc-content-group
+            margin 29px 0 20px 0
+          .desc-content-more
+            margin-top 30px

@@ -1,282 +1,88 @@
-.tec-main{
-	    width: 100%
-      background: #fff
-      display: flex
-      justify-content: center
-      align-items: center
-      flex-direction: column
-  .title {
-		 display:flex
-     justify-content: center
-     align-item: center
-     flex-direction: column
-     text-align: center
-     font-family: PingFangSC-Semibold, PingFang SC
-     font-weight: 600
-     padding-bottom: 54px
-	 } 
-   .en-title{
-			font-size: 56px
-			color: #F3F7FF
-			line-height: 78px
-	 }            
-   .cn-title{
-			font-size: 32px
-			line-height: 45px
-			margin-top: -45px
-          span{
-						color: #0D5AFE	
-					} 
-            
-	 }        
-   .tec-content{
-		 .list {
-			  width: 380px
-				height: 233px
-				text-align: center
-				position: relative
-				cursor: pointer
-				.list-img {
-					width: 100%;
-					height: 100%;
-				}
-				.list-bar{
-						width: 266px
-						height: 48px
-						background: #F9FBFF
-						border-radius: 4px
-						background: #F9FBFF
-						border-radius: 4px
-						line-height: 48px
-						position: absolute
-						bottom: 0
-						left: 0
-						right: 0
-						margin: auto
-						z-index: 2
-				}	
-				.list-mark {
-					width: 100%
-					height: 100%
-					background: #0034A2
-					opacity: 0.3
-					position: absolute
-					top: 0
-					left: 0
-					right: 0
-					opacity: 0
-					.list-icon-img {
-						  position: absolute
-              left: 0
-              top:0
-              bottom:0 
-              right: 0
-              margin: auto
-					}	
-				}
-		    &:hover .list-mark {
-					 opacity: 0.4 
-           transition: all 0.5s ease
-				}
-		 }
-						  
-			
-		    
-	} 
-} 
+.tec-main
+  padding 60px 0
+        
+  .tec-content
+    padding 0 16px
+    max-width 1200px
+    margin 0 auto
+    .list
+      text-align: center
+      position: relative
+      cursor: pointer
+      margin-bottom 20px
 
-// 宽度大于375px时
-@media  (min-width 375px){ 
-  .tec-main{
-		padding: 75px 0px 75px 0
-   .title {
-			display:flex
-			justify-content: center
-			align-item: center
-			flex-direction: column
-			padding-bottom: 54px
-	 } 
-   .en-title{			
-			font-size: 38px;
-      color: #f3f7ff;
-      line-height: 53px;
-	 }            
-  .cn-title {
-				font-size: 32px
-				line-height: 45px
-				margin-top: -45px	
-		}       
-   .tec-content{
-		 display: flex
-		 flex-direction:column
-		 justify-content: center
-		 text-align: center
-		 .list {
-			  width: 343px;
-        height: 209px;
-				text-align: center
-				position: relative
-				cursor: pointer
-				margin-bottom: 38px
-				.list-bar{
-						width: 230px;
-						height: 48px;
-						line-height: 48px;
-						top:208px
-				}	
-		 }
-		    
-	} 
-} 
-}
+      &:last-child
+        margin-bottom 0
+      
+      .list-img
+        display block
+        width: 100%;
+        height: auto
+      
+      .list-bar
+        margin: -24px auto 0
+        width: 230px
+        background: #F9FBFF
+        font-size 18px
+        border-radius: 4px
+        line-height: 48px
+        
+      .list-mark
+        width: 100%
+        height: 100%
+        background: #0034A2
+        opacity: 0.3
+        display flex
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        opacity: 0
+        visibility hidden
+
+        .list-icon-img
+          margin: auto
+          
+      
+      &:hover .list-mark
+        opacity: 0.4
+        visibility visible
+        transition: all 0.5s ease
+     
+        
+   
+ 
+
 
 // 宽度大于768px时
-@media  (min-width 768px){  
-  .tec-main{
-		padding: 75px 0px 75px 0
-   .title {
-			display:flex
-			justify-content: center
-			align-item: center
-			flex-direction: column
-			padding-bottom: 54px
-	 } 
-   .en-title{					
-			height: 78px;
-			font-size: 56px;
-      line-height: 78px;
-	 }            
-  .cn-title {
-				font-size: 32px
-				line-height: 45px
-				margin-top: -45px	
-		}       
-   .tec-content{
-		 display: flex
-		 flex-direction:row
-		 justify-content: space-between
-		 text-align: center
-		 .list {
-			  width: 240px;
-        height: 146px;
-				text-align: center
-				position: relative
-				cursor: pointer
-				margin-bottom: 38px
-				.list-bar{
-						width: 230px;
-						height: 48px;
-						line-height: 48px;
-						top:145px
-				}
-				&:nth-child(2) {
-					margin: 0 8px;
-				}	
-		 }
-		    
-	} 
-} 
-}
+@media  (min-width 768px)  
+  .tec-main
+    .tec-content
+      display: flex
+      justify-content: space-between
+      .list
+        width: 240px;
+          
+     
+        
+   
+ 
+
 // 屏幕尺寸大于1024时
-@media  (min-width 768px){  
-  .tec-main{
-		padding: 70px 0px 70px 0
-   .title {
-			display:flex
-			justify-content: center
-			align-item: center
-			flex-direction: column
-			padding-bottom: 54px
-	 } 
-   .en-title{					
-			height: 78px;
-			font-size: 56px;
-      line-height: 78px;
-	 }            
-  .cn-title {
-				font-size: 32px
-				line-height: 45px
-				margin-top: -45px	
-		}       
-   .tec-content{
-		 width: 100%;
-		 display: flex
-		 flex-direction:row
-		 justify-content: center
-		 text-align: center
-		 .list {
-			  width: 300px;
-        height: 183px;
-				text-align: center
-				position: relative
-				cursor: pointer
-				margin-bottom: 38px
-				.list-bar{
-						width: 266px;
-            height: 48px;
-						line-height: 48px;
-						top:212px
-				}
-				&:nth-child(2) {
-					margin: 0 48px;
-				}	
-		 }
-		    
-	} 
-} 
-}
+@media  (min-width 1024px)  
+  .tec-main
+           
+   .tec-content
+     padding 0 32px
+     .list
+        width: 300px;
+        .list-bar
+          width: 266px;
 
 // 屏幕尺寸大于1200时
-@media  (min-width 768px){  
-  .tec-main{
-		padding: 70px 0px 70px 0
-   .title {
-			display:flex
-			justify-content: center
-			align-item: center
-			flex-direction: column
-			padding-bottom: 54px
-	 } 
-   .en-title{					
-			height: 78px;
-			font-size: 56px;
-      line-height: 78px;
-	 }            
-  .cn-title {
-				font-size: 32px
-				line-height: 45px
-				margin-top: -45px	
-		}       
-   .tec-content{
-		 width: 100%;
-		 display: flex
-		 flex-direction:row
-		 justify-content: center
-		 text-align: center
-		 .list {
-			  width: 380px
-        height: 233px;
-				text-align: center
-				position: relative
-				cursor: pointer
-				margin-bottom: 38px
-				.list-bar{
-						width: 266px;
-            height: 48px;
-						line-height: 48px;
-						top:212px
-				}
-				&:nth-child(2) {
-					margin: 0 30px;
-				}	
-		 }
-		    
-	} 
-} 
-}
-
-
-
-
-
-      	
+@media  (min-width 1200px)  
+  .tec-main
+    .tec-content
+      padding 0
+      .list
+        width 380px

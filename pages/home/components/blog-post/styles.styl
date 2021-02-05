@@ -1,5 +1,5 @@
 .blog-post
-  background-color rgba(249, 251, 255, 1)
+  background-color var(--color-module-bg)
   padding 50px 0
 
   .blog-wrap
@@ -9,7 +9,7 @@
 
     .block-news
       cursor pointer
-      background-color #fff
+      background-color var(--color-module-bar)
       padding-bottom: 26px;
 
       .pic
@@ -22,13 +22,13 @@
         font-size 18px
         line-height 1.4
         font-weight 400
-        color #333
+        color var(--color-title)
 
       .info
         padding 0 16px
         line-height 1.4
         font-size 16px
-        color #777
+        color var(--color-text)
 
     .block-list
       .block-item
@@ -38,7 +38,7 @@
         margin-top 20px
         padding 3px 0
         cursor pointer
-        background-color #fff
+        background-color var(--color-module-bar)
 
         .date
           padding 0 25px
@@ -47,7 +47,8 @@
           span
             display block
             font-size 24px
-            color rgba(13, 90, 254, 0.4)
+            color var(--color-primary)
+            opacity 0.4
             font-weight 700
 
             & + span
@@ -56,7 +57,8 @@
         .line
           width 1px
           height 113px
-          background-color rgba(13, 90, 254, 0.4)
+          background-color var(--color-primary)
+          opacity 0.4
 
         .content
           padding 0 25px
@@ -64,7 +66,7 @@
           h3
             padding 5px 0 14px
             font-size 16px
-            color #333
+            color var(--color-title)
             line-height 1.4
 
           .info
@@ -75,14 +77,14 @@
             word-break break-all
             -webkit-line-clamp 2
             font-size 14px
-            color #777
+            color var(--color-text)
             line-height 20px
 
           .more
             float right
             margin 8px 0 0 0
             font-size 12px
-            color #333
+            color var(--color-title)
             line-height 17px
 
             img

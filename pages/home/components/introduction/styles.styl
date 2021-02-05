@@ -1,24 +1,6 @@
 .home-introduction
   overflow hidden
-  // 个人简绍 标题
-  .introduction-header
-    margin-bottom 10px
-    margin-top 60px
-    text-align center
-    > h2
-      font-size 38px
-      font-weight 600
-      color #F3F7FF
-      letter-spacing 2px
-    > h3
-      font-size 32px
-      font-weight normal
-      transform translateY(-30px) translateX(-10px)
-      letter-spacing 4px
-      span:first-child
-        color #353535
-      span:last-child
-        color #125EFE
+  padding 60px 0 0 
   // 个人简绍 描述
   .desc
     .desc-bitmap
@@ -30,24 +12,23 @@
     .desc-content
       overflow hidden
       padding 0 16px
-      color #333333
-      text-align right
-      > .desc-content-title
+      color var(--color-title)
+      > h3
         margin 40px 0 20px 0
-        text-align center
         font-size 24px
+        text-align center
         font-weight normal
         letter-spacing 1px
-      > .desc-content-text
-        text-align initial
+      > p
         line-height 22px
         font-size 16px
         letter-spacing 2px
       .desc-content-more
+        float right
         width 96px
         height 32px
         margin 10px 0 17px 0
-        background-color #0D5AFE
+        background-color var(--color-primary)
         font-size 16px
         color #FFFFFF
         outline none
@@ -70,11 +51,11 @@
       >h3
         font-size 36px
         font-weight normal
-        color #333333
+        color var(--color-title)
       >p
         font-size 14px
         font-weight normal
-        color #777777
+        color var(--color-text)
 
 @media (min-width 768px)
   .home-introduction
@@ -93,7 +74,7 @@
          width: 50%;
        .desc-content
          padding 0 0 0 16px
-         >.desc-content-title
+         >h3
            margin  0 0 20px 0
            text-align left
          .desc-content-more

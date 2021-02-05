@@ -1,16 +1,16 @@
+import ModuleTitle from '../module-title'
+
 import './styles.styl'
 
 function Introduction() {
+    const titleProps = {
+        enTitle: 'ABOUT ME',
+        cnTitleLeft: '个人',
+        cnTitleRight: '介绍',
+    };
     return (
         <div className="home-introduction">
-            {/* 个人简绍标题 */}
-            <header className="introduction-header">
-                <h2>ABOUT ME</h2>
-                <h3>
-                    <span>个人</span>
-                    <span>介绍</span>
-                </h3>
-            </header>
+            <ModuleTitle {...titleProps} />
             {/* 个人简绍 描述 */}
             <div className="desc">
                 <img className="desc-bitmap" src="/images/bitmap.png" alt="bitmap" />

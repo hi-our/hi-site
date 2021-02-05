@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react'
 import Page from '../../components/page'
 import Banner from "./components/banner";
 import Introduction from './components/introduction'
+import BlogPost from "./components/blog-post"
+
 import './styles.styl'
 
 export default class Home extends PureComponent {
@@ -10,6 +12,7 @@ export default class Home extends PureComponent {
       <Page pageClassName="page-home">
         <Banner />
         <Introduction />
+        <BlogPost />
       </Page>
     )
   }

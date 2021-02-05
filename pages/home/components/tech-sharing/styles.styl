@@ -5,6 +5,7 @@
     padding 0 16px
     max-width 1200px
     margin 0 auto
+
     .list
       text-align: center
       position: relative
@@ -44,15 +45,12 @@
           margin: auto
           
       
-      &:hover .list-mark
-        opacity: 0.4
-        visibility visible
-        transition: all 0.5s ease
+      &:hover
+        .list-mark
+          opacity: 0.4
+          visibility visible
+          transition: all 0.5s ease
      
-        
-   
- 
-
 
 // 宽度大于768px时
 @media  (min-width 768px)  
@@ -60,21 +58,16 @@
     .tec-content
       display: flex
       justify-content: space-between
+
       .list
         width: 240px;
-          
-     
-        
-   
- 
 
 // 屏幕尺寸大于1024时
 @media  (min-width 1024px)  
   .tec-main
-           
-   .tec-content
-     padding 0 32px
-     .list
+    .tec-content
+      padding 0 32px
+      .list
         width: 300px;
         .list-bar
           width: 266px;

@@ -5,21 +5,21 @@ import './styles.styl'
 
 export default class BlogPost extends React.PureComponent {
   render() {
-    const moduleTitles = {
-      backgroundText: 'BLOG POST',
-      leftText: '博客',
-      rightText: '文章'
+    const moduleProps = {
+      enTitle: 'BLOG POST',
+      cnTitleLeft: '博客',
+      cnTitleRight: '文章'
     }
 
     return (
       <section className="blog-post">
-        <ModuleTitle title={moduleTitles} />
+        <ModuleTitle {...moduleProps} />
 
         <div className="blog-container">
           <div className="blog-wrap">
             <div className="block-news">
               <img className="pic" src={blogPostNews.pic} alt="news" />
-              <p className="title">{blogPostNews.title}</p>
+              <h3 className="title">{blogPostNews.title}</h3>
               <p className="info">{blogPostNews.info}</p>
             </div>
 
@@ -34,7 +34,7 @@ export default class BlogPost extends React.PureComponent {
                   <div className="line"></div>
 
                   <div className="content">
-                    <p className="title">{item.title}</p>
+                    <h3 className="title">{item.title}</h3>
                     <p className="info">{item.info}</p>
                     <div className="more">
                       更多

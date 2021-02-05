@@ -1,14 +1,13 @@
 import './styles.styl'
 
 const ModuleTitle = props => {
-  const { backgroundText, leftText, rightText } = props.title
+  const { enTitle, cnTitleLeft, cnTitleRight } = props
   return (
     <div className="module-title">
-      {backgroundText}
-      <p className="block-text">
-        <span>{leftText}</span>
-        <span>{rightText}</span>
-      </p>
+      {!!enTitle && <h3>{enTitle}</h3>}
+      <h2 className="block-text">
+        {cnTitleLeft}<strong>{cnTitleRight}</strong>
+      </h2>
     </div>
   )
 }

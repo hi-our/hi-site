@@ -1,6 +1,7 @@
 .home-banner
   padding 1px 0 24px
-  background-color #0D5AFE
+  background-color var(--color-primary)
+  transition background-color 0.5s
 
   .banner-main
     max-width 1200px
@@ -55,7 +56,7 @@
       width 47.8%
       padding 16px
       box-sizing border-box
-      background-color #fff
+      background-color var(--color-module-bg)
       cursor pointer
       @media (max-width 767px)
         &:nth-child(1),
@@ -63,36 +64,36 @@
           margin-bottom 16px
 
       &:hover
-        h4
-          color #0D5AFE
+        h3
+          color var(--color-primary)
         p
-          color #333
+          color var(--color-title)
 
       > img
         display block
         width auto
         height 48px
   
-      > h4
+      > h3
         width 73px
         margin-top 8px
         font-size 18px
         font-weight 400
-        color #333333
+        color var(--color-title)
         line-height 25px
         &::after
           content ""
           display block
           width 48px
           height 1px
-          background-color #0D5AFE
+          background-color var(--color-primary)
           margin-top 4px
     
   
       > p
         font-size 16px
         font-weight 400
-        color #777777
+        color var(--color-text)
         line-height 22px
         margin-top 7px
     

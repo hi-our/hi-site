@@ -7,10 +7,12 @@ export default class Footer extends React.Component {
     return (
       <footer className="footer">
         <div className="footer-main">
-          <a href="/" className="footer-logo">
-            <img src="/images/footer-logo.png" alt="logo"/>
-            <span>感谢阅读！</span>
-          </a>
+          <div className="footer-core">
+            <a href="/" className="footer-logo">
+              <h2>小溪里 xiaoxili.com</h2>
+            </a>
+            <p>感谢阅读</p>
+          </div>
           <section className="footer-links">
             <dl className="footer-links-item">
               <dt>关于我们</dt>

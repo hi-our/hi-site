@@ -1,19 +1,24 @@
 import React from 'react'
 import './styles.styl'
 import Link from '../link-html'
+import { ConfigContext } from "../config-context"
 
-export default class Header extends React.Component {
-  state = {
-    isOpen: false // 导航菜单的状态 
+export default function Header() {
+  const [isOpen, setIsOpen ] = React.useState(false)
+
+  const { colorMode, setColorMode } = React.useContext(ConfigContext)
+
+  const isDark = colorMode === 'dark';
+
+  function toggleColorMode(event) {
+    event.preventDefault();
+    setColorMode(isDark ? 'light' : 'dark');
   }
 
-  toggleMenuStatus = () => {
-    this.setState({
-      isOpen: !this.state.isOpen
-    })
-  }
+  const toggleMenuStatus = () => setIsOpen(!isOpen)
 
-  renderMainNav = (isPC) => {
+  const renderMainNav = (isPC) => {
+
     return (
       <nav className={isPC ? 'navigation-pc' : 'navigation-mobile'}>
         <ul>
@@ -22,7 +27,7 @@ export default class Header extends React.Component {
           </li>
           <li>
             <a href='/blog' title="小溪里博客">博客</a>
-            
+
           </li>
           <li>
             <a href='/hi-face' title="Hi头像教程">小册</a>
@@ -35,47 +40,48 @@ export default class Header extends React.Component {
     )
   }
 
-  renderMainOperation = () => {
+  const renderMainOperation = () => {
+    const modeTitle = '切换颜色模式'
+
     return (
       <div className="navigation-operation">
-        <button className="mode"></button>
-        <button className="language"></button>
-        <button className="subscribe"></button>
+        <button className={"mode "} title={modeTitle} aria-label={modeTitle} onClick={toggleColorMode}></button>
+        {/* <button className="language"></button>
+        <button className="subscribe"></button> */}
       </div>
     )
   }
 
-  render() {
-    const { isOpen } = this.state
-    return (
-      <>
-        {/* 头部 */}
-        <header className="header">
-          <div className="header-main">
-            <h1 className="logo">
-              <Link href='/' addHtml={false}>
-                小溪里 xiaoxili.com
+  return (
+    <>
+      {/* 头部 */}
+      <header className="header">
+        <div className="header-main">
+          <h1 className="logo">
+            <Link href='/' addHtml={false}>
+              小溪里 xiaoxili.com
               </Link>
-            </h1>
-            {this.renderMainNav(true)}
-            {this.renderMainOperation()}
-            {/* 杠杠图标 */}
-          </div>
-        </header>
-        {/* 导航菜单 */}
-        <button
-        className={"navigation-toggle " +  (isOpen ? 'active' : '')}
-          onClick={this.toggleMenuStatus}
-        >
-          <div className='text'>菜单切换</div>
-        </button>
-        <div
-          className={'navigation-pop ' + (isOpen ? 'active' : '')}
-        >
-          {this.renderMainNav()}
-          {this.renderMainOperation()}
+          </h1>
+          {renderMainNav(true)}
+          {renderMainOperation()}
+          {/* 杠杠图标 */}
         </div>
-      </>
-    )
-  }
+      </header>
+      {/* 导航菜单 */}
+      <button
+        className={"navigation-toggle " + (isOpen ? 'active' : '')}
+        onClick={toggleMenuStatus}
+        aria-label={isOpen ? '关闭菜单' : '打开菜单'}
+      >
+        <div className='text'>菜单切换</div>
+      </button>
+      <div
+        className={'navigation-pop ' + (isOpen ? 'active' : '')}
+      >
+        <button className="navigation-pop-btn" onClick={toggleMenuStatus}></button>
+        {renderMainNav()}
+        {renderMainOperation()}
+      </div>
+    </>
+  )
 }

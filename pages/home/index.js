@@ -2,7 +2,9 @@ import React, { PureComponent } from 'react'
 import Page from '../../components/page'
 import Banner from "./components/banner";
 import Introduction from './components/introduction'
+import OpenResource from './components/open-resource';
 import BlogPost from "./components/blog-post"
+import TechShare from './components/tech-sharing';
 
 import './styles.styl'
 
@@ -12,12 +14,13 @@ export default class Home extends PureComponent {
       <Page pageClassName="page-home">
         <Banner />
         <Introduction />
+        <OpenResource />
         <BlogPost />
+        <TechShare />
       </Page>
-    )
+    );
   }
 }
-
 
 // export async function getStaticProps() {
 //   // Get external data from the file system, API, DB, etc.

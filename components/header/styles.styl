@@ -1,59 +1,220 @@
-header {
-  background: #E2EEFF;
-}
-.header-main {
-  max-width: 1200px;
-  padding: 20px 16px;
-  box-sizing: border-box;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+// 头部
+.header
+  padding 12px 16px;
+  box-sizing border-box;
+  background-color #0d5afe;
 
-.header-main .logo {
-  display: block;
-  width: 130px;
-  height: 60px;
-}
+  .header-main
+    display flex;
+    align-items center;
+    justify-content space-between;
+    max-width 1200px
+    margin: auto
+  
+  .logo
+    display: block;
+    width: 130px;
+    height: 60px;
 
-.header-main .logo a {
-  background: url(https://image-hosting.xiaoxili.com/img/20200712201537.png) no-repeat;
-  background-size: contain;
-  text-indent: -9999px;
-  overflow: hidden;
-  display: block;
-  width 100%;
-  height 100%
-}
+    a
+      display: block;
+      width 100%;
+      height 100%
+      background: url(https://image-hosting.xiaoxili.com/img/20200712201536.png) no-repeat;
+      background-size: contain;
+      text-indent: -9999px;
+      overflow: hidden;
 
-.header-main .main-nav a {
-  font-size: 16px;
-  line-height: 1.33;
-  color: #6B8CC7;
-}
+    // background: url(https://image-hosting.xiaoxili.com/img/20200712201537.png) no-repeat;
 
-.header-main .main-nav a + a {
-  margin-left: 16px;
-}
+    // background-image: url(https://image-hosting.xiaoxili.com/img/20200712201536.png);
 
-.header-main .main-nav a:hover {
-  color: #6B8CC7;
-}
+  // navbar 导航
+  .navigation-pc
+  .navigation-operation
+    display none
+
+.navigation-operation
+  & > button
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background: transparent;
+    display inline-block;
+    width 24px;
+    height 24px;
+    background-repeat no-repeat
+    background-size contain
+    outline none
+    cursor pointer
+
+    & + button
+      margin-left 43px
+  .mode
+    background-image url("/images/icon-mode-dark.svg");  
+  .language
+    background-image url("/images/icon-language.svg");  
+  .subscribe
+    background-image url("/images/icon-subscribe.svg");  
+
+.navigation-pc
+  display none
+
+  & > ul
+    display flex
+  li
+    margin-right 35px;
+    &:last-child
+      margin-right 0;  
+
+.navigation-mobile li > a
+.navigation-pc li > a
+  position relative;
+  font-weight 500;
+  color #fff;
+  line-height 33px;
+  font-size 16px;
+
+  &:after
+    content "";
+    display none
+    position absolute;
+    bottom -5px;
+    right 0;
+    left 0;
+    width 16px;
+    margin auto;
+    background: #f3f3f3;
+    height 2px
+    border-radius 2px;
 
 
-@media (min-width: 1024px) {
+  &.active
+    &::after
+      display block
 
-  .header-main .logo {
-    width: 195px;
-    height: 90px;
-  }
+// 导航杠杠的样式
+.navigation-toggle
+  position fixed
+  right 20px
+  top 17px
+  z-index 100
+  display flex;
+  flex-flow column;
+  justify-content space-between;
+  width 44px;
+  height 44px;
+  transition all 0.5s;
+  background none
+  border none
+  outline none
+  .text
+    position absolute
+    overflow hidden
+    clip rect(0px, 0px, 0px, 0px)
+    height 1px
+    width 1px
+    margin -1px
+    padding 0px
+    border 0px
+  &:before
+  &:after
+    content ''
+    display block
+    position relative;
+    width 24px;
+    height 3px;
+    margin auto
+    background-color #fff;
+    border-radius 3px;
+    transition 0.5s;
+  
+  &:before
+    margin-top 15px
+  &:after
+    margin-bottom 15px
+  
+  &.active
+    &:before
+      transform translateY(6px) rotate(45deg)
+    &:after
+      transform  translateY(-5px) rotate(-45deg)
 
-  .header-main .main-nav a {
-    font-size: 24px;
-  }
+// 导航菜单
+.navigation-pop
+  pointer-events none
+  touch-action none
+  position fixed;
+  top 0;
+  left 0;
+  bottom 0;
+  right 0;
+  z-index 10;
+  padding 31px 31px 31px 40px;
+  background-color rgba(13, 90, 254, .9);
+  box-sizing border-box;
+  transition: 0.5s;
+  opacity 0
+  &.active
+    opacity 1
+    pointer-events auto
 
-  .header-main .main-nav a + a {
-    margin-left: 52px;
-  }
-}
+    .navigation-mobile li
+      transform translate3d(0, 0, 0)
+      &:nth-child(1)
+        transition-delay: 0.4s
+      &:nth-child(2)
+        transition-delay: 0.5s
+      &:nth-child(3)
+        transition-delay: 0.6s
+      &:nth-child(4)
+        transition-delay: 0.7s
+      &:nth-child(5)
+        transition-delay: 0.8s
+    
+    .navigation-operation
+      opacity 1
+      transition-delay 1.2s
+
+    
+  .navigation-operation
+    opacity 0
+    transition: 0.4s
+  
+  .navigation-mobile
+    margin 38px 0 36px 0;
+    li
+      display block
+      margin-bottom 29px;
+      font-size 16px;
+      transform translate3d(-100%, 0, 0)
+      transition: 0.4s
+      &:last-child
+        margin-bottom 0;
+
+// 兼容568px - 1024px手机横屏宽度
+@media (min-width 768px)
+  // 隐常横杆图标
+  .navigation-toggle
+    display none; 
+  .header
+    .navigation-operation
+      display block;  
+    
+    .navigation-pc
+      display block;
+    
+    // .module-header
+    //   .line
+    //     display none;  
+
+@media (min-width 1024px)
+  .header
+    padding-left 32px
+    padding-right 32px
+
+@media (min-width 1200px)
+  .header
+    padding-left 0
+    padding-right 0
+   

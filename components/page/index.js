@@ -13,7 +13,7 @@ export default class Page extends React.Component {
     isShowHeader: true,
     isShowFooter: true,
     theme: '',
-    title: '',
+    title: '小溪里 - 前端技术',
     description: '',
     keywords: '',
     meta: {}
@@ -47,10 +47,11 @@ export default class Page extends React.Component {
 
   render() {
     const { title, description, keywords, meta, isShowHeader, isShowFooter } = this.props
+
     return (
       <Fragment>
         <DocumentMeta
-          title={title || ''}
+          title={title}
         />
         {
           isShowHeader && <Header />

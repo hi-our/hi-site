@@ -1,0 +1,169 @@
+.home-banner
+  padding 1px 0 24px
+  background-color #0D5AFE
+
+  .banner-main
+    max-width 1200px
+    margin auto
+  // 线条
+  .line
+    background #fff
+    width 64px
+    height 1px
+    margin 30px auto
+  // 小程序创意动画
+  .animation
+    overflow hidden
+    text-align center
+    color #ffffff
+    .animation-module
+      letter-spacing 1px
+      h2
+        font-size 28px
+  
+      p
+        margin-top 16px
+        font-size 20px
+  
+      button
+        width 120px
+        line-height 36px
+        margin-top 16px
+        border 1px solid #ffffff
+        color #ffffff
+        outline none
+        background-color transparent
+        cursor pointer
+    
+
+    .animation-little
+      background url(/images/little-people.png) no-repeat
+      background-size contain
+      width 304px
+      height 277px
+      margin 29px auto 0
+
+  // 小程序创意动画类别
+  .program-category
+    margin-top -20px
+    padding 0 16px
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+
+    li
+      width 47.8%
+      padding 16px
+      box-sizing border-box
+      background-color #fff
+      cursor pointer
+      @media (max-width 767px)
+        &:nth-child(1),
+        &:nth-child(2)
+          margin-bottom 16px
+
+      &:hover
+        h4
+          color #0D5AFE
+        p
+          color #333
+
+      > img
+        display block
+        width auto
+        height 48px
+  
+      > h4
+        width 73px
+        margin-top 8px
+        font-size 18px
+        font-weight 400
+        color #333333
+        line-height 25px
+        &::after
+          content ""
+          display block
+          width 48px
+          height 1px
+          background-color #0D5AFE
+          margin-top 4px
+    
+  
+      > p
+        font-size 16px
+        font-weight 400
+        color #777777
+        line-height 22px
+        margin-top 7px
+    
+// 兼容568px - 1024px手机横屏宽度
+@media (min-width 768px)
+  .home-banner
+    .line
+      margin-left 0
+
+    .animation
+      padding 0 16px
+      display flex
+      justify-content space-between
+      .animation-module
+        text-align left
+  
+      .animation-little
+        width 280px
+        height 233px
+        margin-right 5px
+  
+
+    .program-category
+      li
+        width 21.8%
+        margin-bottom 0
+
+// PC端
+@media (min-width 1024px)
+  .home-banner
+    margin-bottom 140px
+    .animation
+      padding 0 0 0 32px
+      align-items center
+      .animation-module
+        h2
+          margin-top 0
+          font-size 46px
+          line-height 80px
+          white-space nowrap
+    
+        p
+          margin 0
+          font-size 25px
+          color #f1f1f1
+    
+        button
+          margin-top 46px
+          width 160px
+          height 48px
+    
+  
+      .animation-little
+        margin 0
+        width 511px
+        height 513px
+        background-size auto 100%
+  
+
+    .program-category
+      padding 0 32px
+      margin-bottom -140px
+      
+    
+// PC端
+@media (min-width 1200px)
+  .home-banner
+    .animation
+      padding 0
+      .animation-little
+        margin 0
+        width 564px
+        height 513px
+        background-size auto 100%

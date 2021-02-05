@@ -1,13 +1,15 @@
 import React, { PureComponent } from 'react'
 import Page from '../../components/page'
-import Banner from "./components/banner";
+// import Banner from "./components/banner";  // debug
+import BlogPost from "./components/blog-post";
 
 import './styles.styl'
 export default class Home extends PureComponent {
   render() {
     return (
-      <Page pageClassName="page-home">
-        <Banner />
+      <Page pageClassName="page-home" isShowFooter={false} isShowHeader={false}>
+        {/* <Banner /> // debug */}
+        <BlogPost />
       </Page>
     )
   }

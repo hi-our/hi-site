@@ -1,0 +1,219 @@
+.blog-post
+  background-color rgba(249, 251, 255, 1)
+  box-sizing border-box
+
+  .blog-container
+    display flex
+    align-items center
+    justify-content center
+    margin 50px auto 0
+
+    .blog-wrap
+      display flex
+      align-items center
+      justify-content center
+
+      .block-news
+        cursor pointer
+        background-color #fff
+
+        .pic
+          width 100%
+
+        .title
+          display -webkit-box
+          width 100%
+          box-sizing border-box
+          line-height 25px
+          font-size 18px
+          font-weight 400
+          color #333
+          overflow hidden
+          -webkit-box-orient vertical
+          text-overflow ellipsis
+          word-break break-all
+          line-clamp 2
+          -webkit-line-clamp 2
+
+        .info
+          display -webkit-box
+          width 100%
+          padding 0 19px
+          box-sizing border-box
+          line-height 22px
+          font-size 16px
+          color #777
+          overflow hidden
+          -webkit-box-orient vertical
+          text-overflow ellipsis
+          word-break break-all
+          line-clamp 2
+          -webkit-line-clamp 2
+
+      .block-list
+        .block-item
+          display flex
+          justify-content flex-start
+          align-items center
+          width 100%
+          box-sizing border-box
+          margin-bottom 20px
+          cursor pointer
+          background-color #fff
+
+          &:nth-of-type(3)
+            margin-bottom 0
+
+          .date
+            display flex
+            align-items center
+            justify-content center
+            flex-direction column
+            padding 0 25px
+
+            span
+              font-size 24px
+              color rgba(13, 90, 254, 0.4)
+              font-weight 700
+
+              &:nth-of-type(2)
+                font-size 18px
+
+          .line
+            width 1px
+            height 113px
+            background-color rgba(13, 90, 254, 0.4)
+
+          .content
+            position relative
+            height 100%
+            width 100%
+            padding 0 25px
+            box-sizing border-box
+            overflow hidden
+
+            .title
+              display block
+              padding 5px 0 14px
+              height 22px
+              font-size 16px
+              color #333
+              line-height 22px
+              overflow hidden
+              white-space nowrap
+              text-overflow ellipsis
+
+            .info
+              display -webkit-box
+              overflow hidden
+              -webkit-box-orient vertical
+              text-overflow ellipsis
+              word-break break-all
+              height 40px
+              margin-bottom 20px
+              font-size 14px
+              color #777
+              line-height 20px
+              line-clamp 2
+              -webkit-line-clamp 2
+
+            .more
+              position absolute
+              bottom 0
+              right 26px
+              display flex
+              align-items center
+              justify-content center
+              height 17px
+              font-size 12px
+              color #333
+              line-height 17px
+
+              img
+                width 19.6px
+                height 3.1px
+                margin-left 9px
+
+// 移动端
+@media (max-width 767px)
+  .blog-post
+    padding 50px 0
+
+    .blog-wrap
+      flex-wrap wrap
+      width 100vw
+      padding 0 16px
+      box-sizing border-box
+
+      .block-news
+        max-width 343px
+        height 400px
+        margin-right 0
+        margin-bottom 20px
+
+        .pic
+          margin-bottom 20px
+
+        .title
+          padding 0 16px
+          margin-bottom 8px
+
+      .block-list
+        width 100vw
+        max-width 343px
+
+        .block-item
+          padding 3px 0
+
+// 移动端横屏
+@media (min-width 768px)
+  .blog-post
+    padding 50px
+
+    .blog-wrap
+      max-width 736px
+
+      .block-news
+        max-width 343px
+        height 400px
+        margin-right 20px
+
+        .pic
+          height 252.1px
+          margin-bottom 20px
+
+        .title
+          padding 0 19px
+
+      .block-list
+        width 60vw
+
+        .block-item
+          padding 3px 0
+
+// PC
+@media (min-width 1024px)
+  .blog-post
+    padding 50px
+
+    .blog-wrap
+      max-width 1200px
+
+      .block-news
+        max-width 460px
+        height 490px
+        margin-right 20px
+
+        .pic
+          height 337.21px
+          margin-bottom 35px
+
+        .title
+          padding 0 19px
+
+      .block-list
+        width 60vw
+        min-width 343px
+
+        .block-item
+          padding 18px 0

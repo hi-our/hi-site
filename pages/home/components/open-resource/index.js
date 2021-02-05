@@ -1,18 +1,18 @@
 import React, { Component, Fragment } from 'react';
-import HeaderTitle from '../header-title';
+import ModuleTitle from '../module-title';
 import './styles.styl';
 class OpenResources extends Component {
   render() {
-    const titles = {
-      entitle: 'OPEN SOURCE',
-      cntitle1: '开源',
-      cntitle2: '组件',
+    const titleProps = {
+      enTitle: 'OPEN SOURCE',
+      cnTitleLeft: '开源',
+      cnTitleRight: '组件',
     };
     return (
       <Fragment>
         <div>
           <div className="open-main">
-            <HeaderTitle title={titles} />
+            <ModuleTitle {...titleProps} />
             <div className="content">
               <div className="list">
                 <div className="list-img">
@@ -25,8 +25,8 @@ class OpenResources extends Component {
                   />
                 </div>
                 <div className="list-line"></div>
-                <div className="list-item-desc">轻 3D 图片轮播</div>
-                <div className="list-min-desc">react-slider-3d-cc</div>
+                <h3>轻 3D 图片轮播</h3>
+                <p>react-slider-3d-cc</p>
                 <div className="list-mask">
                   <img
                     src="/images/open-resources/icon-group-mini.png"
@@ -48,8 +48,8 @@ class OpenResources extends Component {
                   />
                 </div>
                 <div className="list-line"></div>
-                <div className="list-item-desc">图片懒加载组件</div>
-                <div className="list-min-desc">react-better-image-c</div>
+                <h3>图片懒加载组件</h3>
+                <p>react-better-image-c</p>
                 <div className="list-mask">
                   <img
                     src="/images/open-resources/icon-group-mini.png"
@@ -71,8 +71,8 @@ class OpenResources extends Component {
                   />
                 </div>
                 <div className="list-line"></div>
-                <div className="list-item-desc">融合响应式组件</div>
-                <div className="list-min-desc">react-ui-mode-cc</div>
+                <h3>融合响应式组件</h3>
+                <p>react-ui-mode-cc</p>
                 <div className="list-mask">
                   <img
                     src="/images/open-resources/icon-group-mini.png"
@@ -94,8 +94,8 @@ class OpenResources extends Component {
                   />
                 </div>
                 <div className="list-line"></div>
-                <div className="list-item-desc">收货地址组件</div>
-                <div className="list-min-desc">react-address-picker</div>
+                <h3>收货地址组件</h3>
+                <p>react-address-picker</p>
                 <div className="list-mask">
                   <img
                     src="/images/open-resources/icon-group-mini.png"

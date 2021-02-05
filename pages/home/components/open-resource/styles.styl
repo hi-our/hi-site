@@ -1,276 +1,118 @@
-.open-main{
-	    width: 100%
-      background: #fff
-      display: flex
-      justify-content: center
-      align-items: center
-      flex-direction: column
-  .title {
-		 display:flex
-     justify-content: center
-     align-item: center
-     flex-direction: column
-     text-align: center
-     font-family: PingFangSC-Semibold, PingFang SC
-     font-weight: 600
-     padding-bottom: 54px
-		 .en-title {
-				color: #F3F7FF
-		 }
-		 .cn-title {
-			    font-size: 32px
-					color: #333
-          line-height: 45px
-          margin-top: -45px
-          span {
-						color: #0D5AFE
-					} 
-            
-		 }        
-          
-	}        
-  .content {
-		  display: flex
-      justify-content: center
-      flex-wrap: wrap
-      .list {
-					background: #FCFDFF
-					display: flex
-					flex-direction:column
-					flex-wrap: wrap
-					align-items: center
-					text-align: center
-					position: relative
-					cursor:pointer
-          
-					&:last-child {
-						margin-right: 0
-					}
-					&:hover .list-mask {
-						opacity: 0.4 
-						transition: all 0.5s ease
-					}  
-					.list-img {
-						  width: 101px
-							height: 96px 
-							background: url(/images/open-resources/3d-swiper-bg-mini.png) no-repeat center center
-							background-size: 100% 
-							text-align: center
-							margin: 38px 0 0px 0	
-					}
-           
-         .list-icon-img {
-					    display:inline-block
-              width: 52px
-              height: 52px
-              margin: 24px
-				 }
-               
-        .list-line {
-              height: 1px
-              background: #0D5AFE
-				} 
-             
-        .list-item-desc {
-					  height: 30px
-            font-family: PingFangSC-Regular, PingFang SC
-            font-weight: 400
-            color: #333333
-				}  
-            
-        .list-min-desc {
-            font-family: PingFangSC-Regular, PingFang SC
-            font-weight: 400
-            color: #777777
-				}       
-            
-        .list-mask {
-					 width: 100%
-           height: 100%
-           background: #000000
-           opacity: 0.4
-           position: absolute
-           left: 0
-           top: 0 
-           text-align: center
-           opacity: 0
-           transition: all 0.5s ease
-					 img {
-						  position: absolute
-              left: 0
-              top:0
-              bottom:0 
-              right: 0
-              margin: auto
-					 } 
-              
-				}
-				
-			} 
-        
-	}
+.open-main
+  padding-bottom 60px
+
+  .content
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding: 0 16px
+    max-width 1200px
+    margin 0 auto
+
+    .list
+      width 47.8%
+      padding 38px 0 33px
+      text-align center
+      background: rgba(13, 90, 254, 0.02)
+      position: relative
+      cursor:pointer
       
-} 
-
-// 宽度大于375px时
-@media  (min-width 375px){ 
-   .open-main{ 
-		  padding: 60px 0 60px 0
-			.title {
-				.en-title {
-					font-size: 38px
-					color: #F3F7FF
-          line-height: 53px;
-		    }
-				.cn-title {
-							font-size: 32px
-							line-height: 45px
-							margin-top: -45px	
-				}  
-			} 
-    .content {
-			  padding: 0 16px 0 16px
-      .list {
-					width: 138px;
-					height: 258px;
-					&:nth-child(2n) {
-					  margin-left:24px
-				  } 
-					.list-line {
-             width: 60px;
-						 margin: 30px auto 14px auto
-				  }
-					.list-item-desc {		  
-            font-size: 16px;			
-            line-height: 22px;
-				  }
-					.list-min-desc {   
-             line-height: 17px;
-             font-size: 12px;
-				  }
-
-			}
+      &:nth-child(3)
+      &:nth-child(4)
+        margin-top 20px
+      
+      &:hover
+        .list-mask
+          opacity: 0.4
+          visibility visible
+          transition: all 0.5s ease
         
-	 }  
- } 
-} 
+      .list-img
+        margin auto
+        display block
+        width: 101px
+        height: 96px 
+        background: url(/images/open-resources/3d-swiper-bg-mini.png) no-repeat center center
+        background-size: 100% 
+      
+        
+      .list-icon-img
+        display:inline-block
+        width: 52px
+        height: 52px
+        margin: 24px
+        
+              
+      .list-line
+        height: 1px
+        background: #0D5AFE
+        width: 60px;
+        margin: 30px auto 14px auto
+        
+            
+      > h3
+        height: 30px
+        font-weight: 400
+        font-size 16px
+        line-height 1.4
+        color: #333333
+        
+          
+      > p
+        font-weight: 400
+        font-size 12px
+        color: #777777
+              
+          
+      .list-mask
+        position: absolute
+        display flex
+        left: 0
+        top: 0 
+        width: 100%
+        height: 100%
+        background: rgba(0, 0, 0, 0.4)
+        text-align: center
+        opacity: 0
+        visibility hidden
+        transition: all 0.5s ease
+
+        img
+          display block
+          margin: auto
 
 // 宽度大于768px时
-@media  (min-width 768px){ 
-   .open-main{
-		  padding: 60px 0 60px 0
-			.title {
-				.en-title {	
-          font-size: 56px;		
-          line-height: 78px;
-		    }
-				.cn-title {
-							font-size: 32px
-							line-height: 45px
-							margin-top: -45px	
-				}  
-			}    
-    .content {
-			  padding: 0 16px 0 16px
-      .list {
-					width: 148px;
-          height: 258px;
-					&:nth-child(1) {
-					  margin-right:32px
-				  }
-					&:nth-child(2) {
-					  margin-right:32px
-				  }
-					&:nth-child(3) {
-					  margin-right: 32px
-				  }  
-					.list-line {
-             width: 60px;
-						 height: 1px;
-						 margin: 30px auto 14px auto
-				  }
-					.list-item-desc {		  
-            font-size: 16px;			
-            line-height: 22px;
-				  }
-					.list-min-desc {   
-             line-height: 17px;
-             font-size: 12px;
-				  }   
-			}
+@media  (min-width 768px) 
+  .open-main
+
+    .content
+      .list
+        width: 148px;
         
-	 }  
- } 
-} 
+        &:nth-child(3)
+        &:nth-child(4)
+          margin-top 0
+ 
 
 // 屏幕尺寸大于1024时
-@media  (min-width 1024px){ 
-   .open-main{
-		 padding: 102px 0 71px 0
-		 .title {
-				.en-title {	
-          font-size: 56px;		
-          line-height: 78px;
-		    }
-				.cn-title {
-							font-size: 32px
-							line-height: 45px
-							margin-top: -45px	
-				}  
-			}        
-    .content {
-			  padding: 0 32px 0 35px
-      .list {
-					width: 263px;
-					height: 258px;
-					&:nth-child(1) {
-					  margin-right:34px
-				  }
-					&:nth-child(2) {
-					  margin-right:34px
-				  }
-					&:nth-child(3) {
-					  margin-right: 34px
-				  }
-					.list-line {
-             width: 56px;
-						 height: 1px;
-						 margin: 30px auto 12px auto
-				  }
-					.list-item-desc {		        
-            font-size: 18px;			     
-            line-height: 25px;
-				  }
-					.list-min-desc {        
-             font-size: 16px;
-             line-height: 22px;
-				  }         
-			}
+@media  (min-width 1024px) 
+  .open-main
+    .content
+      padding: 0 32px
+      .list
+        width: 225px;
         
-	 }  
- } 
-} 
+        > h3            
+          font-size: 18px;           
+        
+        > p        
+          font-size: 16px;
 
 // 屏幕尺寸大于1200时
-@media  (min-width 1200px){ 
-   .open-main{ 
-		 padding: 102px 0 71px 0 
-    .content {
-			  padding: 0 120px 0 120px
-      .list {
-					width: 270px;
-					height: 258px;
-					&:nth-child(1) {
-					  margin-right:39px
-				  }
-					&:nth-child(2) {
-					  margin-right:39px
-				  }
-					&:nth-child(3) {
-					  margin-right: 39px
-				  }   
-			}
-        
-	 }  
- } 
-} 
+@media  (min-width 1200px) 
+   .open-main
+      .content
+        padding: 0
+
+        .list
+          width: 270px;

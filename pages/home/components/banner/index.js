@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles.styl'
+import { Parallax } from 'react-scroll-parallax';
 
 export default class Home extends React.PureComponent {
   render() {
@@ -15,7 +16,11 @@ export default class Home extends React.PureComponent {
               <p>精美小巧的动画，让你耳目一新</p>
               <button>去看看</button>
             </div>
-            <div className="animation-little"></div>
+            <div className="animation-little">
+              <Parallax className="animation-bg" y={['-180px', '120px']}></Parallax>
+              <Parallax className="animation-earphone" y={['-20px', '120px']}></Parallax>
+              <Parallax className="animation-gift" y={['-20px', '60px']}></Parallax>
+            </div>
           </section>
         </div>
         {/* 小程序创意动画类别 */}

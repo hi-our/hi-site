@@ -21,7 +21,6 @@
     margin 30px auto
   // 小程序创意动画
   .animation
-    overflow hidden
     text-align center
     color #ffffff
     .animation-module
@@ -45,14 +44,52 @@
     
 
     .animation-little
-      background url(/images/little-people.png) no-repeat
+      position relative
       background-size contain
       width 304px
       height 277px
       margin 29px auto 0
+      .animation-bg
+        position absolute
+        left 0
+        right 0
+        top 0
+        bottom 0
+
+        .parallax-inner
+          width 100%
+          height 100%
+          background url(/images/banner-man.png) no-repeat
+          background-size auto 100%
+
+      .animation-earphone
+        position absolute
+        left 0
+        right 0
+        top 0
+        height (101 / 511 * 100)%
+      
+
+        .parallax-inner
+          width 100%
+          height 100%
+          background url(/images/banner-earphone.png) no-repeat
+          background-size auto 100%
+      .animation-gift
+        position absolute
+        left 0
+        right 0
+        bottom (65 / 511 * 100)%
+        height (101 / 511 * 100)%
+        .parallax-inner
+          width 100%
+          height 100%
+          background url(/images/banner-gift.png) no-repeat right top
+          background-size auto 100%
 
   // 小程序创意动画类别
   .program-category
+    position relative
     margin-top -20px
     padding 0 16px
     display flex

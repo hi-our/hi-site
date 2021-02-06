@@ -4,16 +4,19 @@ import './_app.styl'
 import {
   ConfigProvider,
   ConfigContext,
-} from '../components/config-context';
+} from '../components/config-context'
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
 
     return (
-      <ConfigProvider>
-        <Component {...pageProps} />
-      </ConfigProvider>
+      <ParallaxProvider>
+        <ConfigProvider>
+          <Component {...pageProps} />
+        </ConfigProvider>
+      </ParallaxProvider>
     )
   }
 }

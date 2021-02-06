@@ -17,7 +17,7 @@ export default class Home extends React.PureComponent {
               <button>去看看</button>
             </div>
             <div className="animation-little">
-              <Parallax className="animation-bg" y={['-180px', '120px']}></Parallax>
+              <Parallax className="animation-bg" y={['-120px', '120px']}></Parallax>
               <Parallax className="animation-earphone" y={['-20px', '120px']}></Parallax>
               <Parallax className="animation-gift" y={['-20px', '60px']}></Parallax>
             </div>

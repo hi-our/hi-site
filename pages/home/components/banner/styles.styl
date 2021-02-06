@@ -3,6 +3,13 @@
   background-color var(--color-primary)
   transition background-color 0.5s
 
+  .icon-color-line
+    fill var(--color-title)
+    transition all 0.5s 0.2s
+  .icon-color-dot
+    fill var(--color-primary)
+    transition all 0.5s 0.2s
+
   .banner-main
     max-width 1200px
     margin auto
@@ -57,7 +64,7 @@
       padding 16px
       box-sizing border-box
       background-color var(--color-module-bg)
-      transition: all 0.5s ease
+      transition: all 0.5s ease 0.1s
       cursor pointer
       @media (max-width 767px)
         &:nth-child(1),
@@ -81,7 +88,7 @@
         font-size 18px
         font-weight 400
         color var(--color-title)
-        transition: all 0.5s ease
+        transition: all 0.5s ease 0.2s
         line-height 25px
         &::after
           content ""
@@ -89,6 +96,7 @@
           width 48px
           height 1px
           background-color var(--color-primary)
+          transition: all 0.5s ease
           margin-top 4px
     
   
@@ -96,7 +104,7 @@
         font-size 16px
         font-weight 400
         color var(--color-text)
-        transition: all 0.5s ease
+        transition: all 0.5s ease 0.2s
         line-height 22px
         margin-top 7px
     

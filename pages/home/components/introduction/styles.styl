@@ -1,6 +1,14 @@
 .home-introduction
   overflow hidden
   padding 60px 0 0 
+
+  .icon-color-line
+    fill var(--color-title)
+    transition all 0.5s 0.2s
+  .icon-color-dot
+    fill var(--color-primary)
+    transition all 0.5s 0.2s
+
   // 个人简绍 描述
   .desc
     .desc-bitmap
@@ -13,7 +21,7 @@
       overflow hidden
       padding 0 16px
       color var(--color-title)
-      transition: all 0.5s ease
+      transition: all 0.5s ease 0.2s
       
       > h3
         margin 40px 0 20px 0
@@ -42,7 +50,7 @@
     display flex
     flex-wrap wrap
     margin-bottom 72px
-    .feature-item
+    > li
       width 33%
       text-align center
       &:nth-child(1)
@@ -57,12 +65,12 @@
         font-size 36px
         font-weight normal
         color var(--color-title)
-        transition: all 0.5s ease
+        transition: all 0.5s ease 0.2s
       >p
         font-size 14px
         font-weight normal
         color var(--color-text)
-        transition: all 0.5s ease
+        transition: all 0.5s ease 0.2s
 
 @media (min-width 768px)
   .home-introduction
@@ -89,7 +97,7 @@
      .feature
        justify-content space-between
        margin 47px 0 61px 0
-       .feature-item
+       > li
          width auto
          &:nth-child(1), &:nth-child(2), &:nth-child(3)
           margin-bottom 0

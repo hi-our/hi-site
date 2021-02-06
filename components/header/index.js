@@ -2,6 +2,7 @@ import React from 'react'
 import './styles.styl'
 import Link from '../link-html'
 import { ConfigContext } from "../config-context"
+import DarkModeToggle from "../dark-mode-toggle";
 
 export default function Header() {
   const [isOpen, setIsOpen ] = React.useState(false)
@@ -10,8 +11,8 @@ export default function Header() {
 
   const isDark = colorMode === 'dark';
 
-  function toggleColorMode(event) {
-    event.preventDefault();
+  function toggleColorMode() {
+    // event.preventDefault();
     setColorMode(isDark ? 'light' : 'dark');
   }
 
@@ -45,7 +46,9 @@ export default function Header() {
 
     return (
       <div className="navigation-operation">
-        <button className={"mode "} title={modeTitle} aria-label={modeTitle} onClick={toggleColorMode}></button>
+        <button className={"mode "} title={modeTitle} aria-label={modeTitle} onClick={toggleColorMode}>
+          <DarkModeToggle checked={isDark} sunColor='white' moonColor='white' />
+        </button>
         {/* <button className="language"></button>
         <button className="subscribe"></button> */}
       </div>

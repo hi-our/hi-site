@@ -1,7 +1,8 @@
 import './styles.styl'
 
 const ModuleTitle = props => {
-  const { backgroundText, leftText, rightText } = props.title
+  const { backgroundText, leftText, rightText } = props
+
   return (
     <div className="module-title">
       {backgroundText}

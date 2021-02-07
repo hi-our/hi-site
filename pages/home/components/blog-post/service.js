@@ -9,7 +9,7 @@ export const blogPostList = [
     id: 1,
     month: 'SEP',
     day: '23',
-    title: 'CSS3动画分享-积分签到',
+    title: 'CSS3动画分享-积分签到CSS3动画分享-积分签到CSS3动画分享-积分签到CSS3动画分享-积分签到CSS3动画分享-积分签到CSS3动画分享-积分签到CSS3动画分享-积分签到',
     info: '本文中会包含一个复合型动画，其项目背景为在 xx 平台签到时会赚取 C 币。'
   },
   {

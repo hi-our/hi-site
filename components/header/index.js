@@ -69,22 +69,22 @@ export default function Header() {
           {renderMainOperation()}
           {/* 杠杠图标 */}
         </div>
+        <button
+          className={"navigation-toggle " + (isOpen ? 'active' : '')}
+          onClick={toggleMenuStatus}
+          aria-label={isOpen ? '关闭菜单' : '打开菜单'}
+        >
+          <div className='text'>菜单切换</div>
+        </button>
+        <div
+          className={'navigation-pop ' + (isOpen ? 'active' : '')}
+        >
+          <button className="navigation-pop-btn" onClick={toggleMenuStatus}></button>
+          {renderMainNav()}
+          {renderMainOperation()}
+        </div>
       </header>
       {/* 导航菜单 */}
-      <button
-        className={"navigation-toggle " + (isOpen ? 'active' : '')}
-        onClick={toggleMenuStatus}
-        aria-label={isOpen ? '关闭菜单' : '打开菜单'}
-      >
-        <div className='text'>菜单切换</div>
-      </button>
-      <div
-        className={'navigation-pop ' + (isOpen ? 'active' : '')}
-      >
-        <button className="navigation-pop-btn" onClick={toggleMenuStatus}></button>
-        {renderMainNav()}
-        {renderMainOperation()}
-      </div>
     </>
   )
 }

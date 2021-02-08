@@ -1,7 +1,12 @@
-.tec-main
+html.mode-dark
+  .tech-main
+    .list .list-img
+      filter invert(1) hue-rotate(180deg)
+
+.tech-main
   padding 60px 0
         
-  .tec-content
+  .tech-content
     padding 0 16px
     max-width 1200px
     margin 0 auto
@@ -56,8 +61,8 @@
 
 // 宽度大于768px时
 @media  (min-width 768px)  
-  .tec-main
-    .tec-content
+  .tech-main
+    .tech-content
       display: flex
       justify-content: space-between
 
@@ -66,8 +71,8 @@
 
 // 屏幕尺寸大于1024时
 @media  (min-width 1024px)  
-  .tec-main
-    .tec-content
+  .tech-main
+    .tech-content
       padding 0 32px
       .list
         width: 300px;
@@ -76,8 +81,8 @@
 
 // 屏幕尺寸大于1200时
 @media  (min-width 1200px)  
-  .tec-main
-    .tec-content
+  .tech-main
+    .tech-content
       padding 0
       .list
         width 380px

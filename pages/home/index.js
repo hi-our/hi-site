@@ -12,11 +12,13 @@ export default class Home extends PureComponent {
   render() {
     return (
       <Page pageClassName="page-home">
-        <Banner />
-        <Introduction />
-        <OpenResource />
-        <BlogPost />
-        <TechShare />
+        <main>
+          <Banner />
+          <Introduction />
+          <OpenResource />
+          <BlogPost />
+          <TechShare />
+        </main>
       </Page>
     );
   }

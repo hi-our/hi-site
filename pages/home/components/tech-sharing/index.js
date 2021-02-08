@@ -5,14 +5,14 @@ import './styles.styl'
 class TechShares extends Component {
   render() {
     const titleProps = {
-      enTitle: 'TEC-SHARING',
+      enTitle: 'TECH-SHARING',
       cnTitleLeft: '技术',
       cnTitleRight: '分享',
     }
     return (
-      <div className="tec-main">
+      <section className="tech-main">
         <ModuleTitle {...titleProps} />
-        <div className="tec-content">
+        <div className="tech-content">
           <div className="list">
             <img
               className="list-img"
@@ -65,7 +65,7 @@ class TechShares extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     )
   }
 }

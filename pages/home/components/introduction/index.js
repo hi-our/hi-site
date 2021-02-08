@@ -9,7 +9,7 @@ function Introduction() {
     cnTitleRight: '介绍',
   };
   return (
-    <div className="home-introduction">
+    <section className="home-introduction">
       <ModuleTitle {...titleProps} />
       {/* 个人简绍 描述 */}
       <div className="desc">
@@ -62,7 +62,7 @@ function Introduction() {
           <p>3个开源贡献</p>
         </li>
       </ul>
-    </div>
+    </section>
   )
 }
 

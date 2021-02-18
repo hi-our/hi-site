@@ -10,12 +10,20 @@ export default function Post({ post = {}, morePosts, preview }) {
     return <ErrorPage statusCode={404} />
   }
 
-  const { title } = post
+  const { title, content } = post
 
   console.log('post', post, morePosts, preview)
   return (
     <Page title={title} pageClassName="page-article">
-      <h1>{title}</h1>
+      <article>
+        <h1>{title}</h1>
+        <main>
+          <div
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
+
+        </main>
+      </article>
     </Page>
   )
 }

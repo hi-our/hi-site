@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import { getPostBySlug, getAllPosts } from '../../../utils/api'
-import markdownToHtml from '../../../utils/markdown-to-html'
+import { markdownToHtml, getMarkdownToTOC } from '../../../utils/markdown'
 import Page from "../../../components/page"
 
 export default function Post({ post = {}, morePosts, preview }) {
@@ -12,7 +12,7 @@ export default function Post({ post = {}, morePosts, preview }) {
 
   const { title, content } = post
 
-  console.log('post', post, morePosts, preview)
+  // console.log('post', post, morePosts, preview)
   return (
     <Page title={title} pageClassName="page-article">
       <article>
@@ -21,7 +21,6 @@ export default function Post({ post = {}, morePosts, preview }) {
           <div
             dangerouslySetInnerHTML={{ __html: content }}
           />
-
         </main>
       </article>
     </Page>
@@ -41,6 +40,9 @@ export async function getStaticProps({ params }) {
     'tags',
   ])
   const content = await markdownToHtml(post.content || '')
+  const toc = await getMarkdownToTOC(post.content || '')
+
+  console.log('toc', toc)
 
   return {
     props: {

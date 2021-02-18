@@ -7,7 +7,7 @@ import './styles.styl'
 export default function Index({ allPosts, allTags }) {
   const heroPost = allPosts[0] || {}
   const morePosts = allPosts.slice(1) || {}
-  console.log('heroPost', heroPost, morePosts, allTags)
+  // console.log('heroPost', heroPost, morePosts, allTags)
 
   return (
     <Page>
@@ -42,7 +42,7 @@ export async function getStaticProps() {
     'tags',
   ])
 
-  console.log('allTags', allTags)
+  // console.log('allTags', allTags)
 
   return {
     props: { allPosts, allTags },

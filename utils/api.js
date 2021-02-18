@@ -64,6 +64,15 @@ export function getAllPosts(fields = []) {
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
   return posts
 }
+export function getAllPostsByTag(tagName, fields = []) {
+  const slugs = getPostSlugs()
+  const posts = slugs
+    .map((slug) => getPostBySlug(slug, fields))
+    // sort posts by date in descending order
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+    .filter(post => posts.tags.includes(tagName))
+  return posts
+}
 
 export function getAllTags(fields = []) {
   const slugs = getPostSlugs()

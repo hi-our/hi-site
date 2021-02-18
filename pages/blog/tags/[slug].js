@@ -1,67 +1,41 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import { getPostBySlug, getAllPosts } from '../../../utils/api'
+import { getPostBySlug, getAllPosts, getTagMd, getAllTags } from '../../../utils/api'
 import { markdownToHtml, getMarkdownToTOC } from '../../../utils/markdown'
 import Page from "../../../components/page"
 
-export default function Post({ post = {}, morePosts, preview }) {
-  const router = useRouter()
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />
-  }
-
-  const { title, content } = post
-
-  // console.log('post', post, morePosts, preview)
+export default function Post({}) {
   return (
-    <Page title={title} pageClassName="page-article">
-      <article>
-        <h1>{title}</h1>
-        <main>
-          <div
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
-        </main>
-      </article>
-    </Page>
+    <></>
   )
 }
 
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug, [
+  const result = getTagMd(params.slug, [
     'title',
-    'date',
-    'slug',
-    'author',
-    'content',
-    'ogImage',
-    'coverImage',
-    'categories',
-    'tags',
+    'type',
   ])
-  const content = await markdownToHtml(post.content || '')
-  const toc = await getMarkdownToTOC(post.content || '')
 
-  console.log('toc', toc)
+  console.log('result')
+
+  // console.log('allTags', allTags)
 
   return {
-    props: {
-      post: {
-        ...post,
-        content,
-      },
-    },
+    props: {}
   }
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const allTags = getAllTags(['tags'])
+  const posts = getAllPosts(['slug', 'tags'])
+  console.log('posts', allTags, posts)
 
   return {
-    paths: posts.map((post) => {
+    paths: allTags.map((tag) => {
+      console.log('tag', tag)
       return {
         params: {
-          slug: post.slug,
+          slug: tag,
         },
       }
     }),

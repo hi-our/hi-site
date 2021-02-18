@@ -2,12 +2,13 @@ import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 
-function unique(arr) {
+export function unique(arr) {
   return Array.from(new Set(arr))
 }
 
 
 const postsDirectory = join(process.cwd(), '_posts')
+const tagsMd = join(process.cwd(), '_source', 'tags.md')
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory)
@@ -35,6 +36,23 @@ export function getPostBySlug(slug, fields = []) {
     }
   })
 
+  return items
+}
+export function getTagMd(slug, fields = []) {
+  const fullPath = tagsMd
+  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const { data, content } = matter(fileContents)
+
+  const items = { slug }
+
+  // Ensure only the minimal needed data is exposed
+  fields.forEach((field) => {
+    if (data[field]) {
+      items[field] = data[field]
+    }
+  })
+
+  console.log('items', items)
   return items
 }
 

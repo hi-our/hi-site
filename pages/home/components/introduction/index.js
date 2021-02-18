@@ -1,4 +1,4 @@
-import ModuleTitle from '../module-title'
+import ModuleTitle from '../../../../components/module-title'
 
 import './styles.styl'
 

@@ -2,6 +2,11 @@ import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 
+function unique(arr) {
+  return Array.from(new Set(arr))
+}
+
+
 const postsDirectory = join(process.cwd(), '_posts')
 
 export function getPostSlugs() {
@@ -40,4 +45,17 @@ export function getAllPosts(fields = []) {
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
   return posts
+}
+
+export function getAllTags(fields = []) {
+  const slugs = getPostSlugs()
+
+  console.log('slugs', slugs)
+  let tags = []
+
+  slugs.forEach(slug => {
+    let post = getPostBySlug(slug, fields)
+    tags = tags.concat(post.tags)
+  })
+  return unique(tags)
 }

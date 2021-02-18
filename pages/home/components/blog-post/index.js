@@ -1,5 +1,5 @@
 import React from 'react'
-import ModuleTitle from '../module-title'
+import ModuleTitle from '../../../../components/module-title'
 import { blogPostNews, blogPostList } from './service'
 import './styles.styl'
 

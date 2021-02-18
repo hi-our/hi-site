@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import ModuleTitle from '../module-title'
+import ModuleTitle from '../../../../components/module-title'
 import './styles.styl'
 
 class TechShares extends Component {

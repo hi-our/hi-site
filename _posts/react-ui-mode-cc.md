@@ -1,6 +1,6 @@
 ---
 title: react-ui-mode-cc：融合响应式设计的 React 组件
-date: 2020-08-02 15:48:32
+date: '2020-08-02 15:48:32'
 categories:
 - 前端
 tags:

@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-// import { getPostBySlug, getAllPosts, getTagMd, getAllTags, getAllPostsByTag } from '../../../utils/api'
+import { getPostBySlug } from '../../../utils/api2'
+import { getAllTags } from '../../../utils/api'
 import { markdownToHtml, getMarkdownToTOC } from '../../../utils/markdown'
 import Page from "../../../components/page"
 
@@ -16,9 +17,11 @@ export default function Post({ post = {}, tagName}) {
 
 export async function getStaticProps({ params }) {
   // console.log('params', params.slug)
-  // const post = getPostBySlug('abc', [
-  //   'title',
-  // ])
+  const post = await getPostBySlug('abc', [
+    'title',
+  ])
+
+  console.log('post', post)
 
   return {
     props: {
@@ -29,7 +32,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  // const allTags = getAllTags(['tags'])
+  const allTags = getAllTags(['tags'])
 
   return {
     // paths: allTags.map((tag) => {

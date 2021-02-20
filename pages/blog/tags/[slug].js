@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import { getPostBySlug } from '../../../utils/api2'
-import { getAllTags } from '../../../utils/api'
+import { getAllTags, getAllPostsByTag, getPostBySlug } from '../../../utils/api'
 import { markdownToHtml, getMarkdownToTOC } from '../../../utils/markdown'
 import Page from "../../../components/page"
 
@@ -21,6 +20,10 @@ export async function getStaticProps({ params }) {
     'title',
   ])
 
+  const allPosts = getAllPostsByTag(params.slug, ['title'])
+
+  console.log('allPosts', allPosts)
+
   console.log('post', post)
 
   return {
@@ -35,17 +38,14 @@ export async function getStaticPaths() {
   const allTags = getAllTags(['tags'])
 
   return {
-    // paths: allTags.map((tag) => {
-    //   console.log('tag', tag)
-    //   return {
-    //     params: {
-    //       slug: tag,
-    //     },
-    //   }
-    // }),
-    paths: [
-      { params: { slug: 'React' }}
-    ],
+    paths: allTags.map((tag) => {
+      console.log('tag', tag)
+      return {
+        params: {
+          slug: tag,
+        },
+      }
+    }),
     fallback: false,
   }
 }

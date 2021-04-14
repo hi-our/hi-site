@@ -13,11 +13,13 @@ export default function Index({ allPosts = [], allTags, allCategoris }) {
   return (
     <Page>
       <div style={{ color: 'var(--color-title)' }}>
-        <article>
-          <h2>{heroPost.title}</h2>
-        </article>
+        <LinkHtml href={`/blog/posts/${heroPost.slug}`}>
+          <article>
+            <h2>{heroPost.title}</h2>
+          </article>
+        </LinkHtml>
         <ModuleTitle enTitle='Categories' cnTitleLeft='文章' cnTitleRight='分类'></ModuleTitle>
-        <ul>
+        <ul className='blog-cateries'>
           {
             allCategoris.map(category => {
               return (
@@ -29,7 +31,7 @@ export default function Index({ allPosts = [], allTags, allCategoris }) {
           }
         </ul>
         <ModuleTitle enTitle='Tags Cloud' cnTitleLeft='标签' cnTitleRight='云'></ModuleTitle>
-        <ul>
+        <ul className='blog-tags-cloud'>
           {
             allTags.map(tag => {
               return (

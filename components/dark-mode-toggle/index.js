@@ -55,8 +55,6 @@ export default function DarkModeSwitch ({
       return Object.assign(defaultProperties, animationProperties);
     }
 
-    console.log(1232)
-
     return animationProperties;
   }, [animationProperties]);
 

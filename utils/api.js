@@ -15,28 +15,34 @@ export function getPostSlugs() {
 }
 
 export function getPostBySlug(slug, fields = []) {
-  const realSlug = slug.replace(/\.md$/, '')
-  const fullPath = join(postsDirectory, `${realSlug}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const { data, content } = matter(fileContents)
-
-  const items = {}
-
-  // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
-    if (field === 'slug') {
-      items[field] = realSlug
-    }
-    if (field === 'content') {
-      items[field] = content
-    }
-
-    if (data[field]) {
-      items[field] = data[field]
-    }
-  })
-
-  return items
+  try {
+    const realSlug = slug.replace(/\.md$/, '')
+    const fullPath = join(postsDirectory, `${realSlug}.md`)
+    const fileContents = fs.readFileSync(fullPath, 'utf8')
+    const { data, content } = matter(fileContents)
+  
+    const items = {}
+  
+    // Ensure only the minimal needed data is exposed
+    fields.forEach((field) => {
+      if (field === 'slug') {
+        items[field] = realSlug
+      }
+      if (field === 'content') {
+        items[field] = content
+      }
+  
+      if (data[field]) {
+        items[field] = data[field]
+      }
+    })
+  
+    return items
+    
+  } catch (error) {
+    console.log(error)
+    return {}
+  }
 }
 export function getTagMd(slug, fields = []) {
   const fullPath = tagsMd
@@ -52,7 +58,6 @@ export function getTagMd(slug, fields = []) {
     }
   })
 
-  console.log('items', items)
   return items
 }
 
@@ -70,14 +75,16 @@ export function getAllPostsByTag(tagName, fields = []) {
     .map((slug) => getPostBySlug(slug, fields))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
-    .filter(post => posts.tags.includes(tagName))
+    .filter(post => {
+      const { tags } = post
+      return tags.includes(tagName)
+    })
   return posts
 }
 
 export function getAllTags(fields = []) {
   const slugs = getPostSlugs()
 
-  console.log('slugs', slugs)
   let tags = []
 
   slugs.forEach(slug => {

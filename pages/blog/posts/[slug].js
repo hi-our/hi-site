@@ -42,7 +42,7 @@ export async function getStaticProps({ params }) {
   const content = await markdownToHtml(post.content || '')
   const toc = await getMarkdownToTOC(post.content || '')
 
-  console.log('toc', toc)
+  // console.log('toc', toc)
 
   return {
     props: {

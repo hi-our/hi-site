@@ -93,3 +93,14 @@ export function getAllTags(fields = []) {
   })
   return unique(tags)
 }
+export function getAllCategoris(fields = []) {
+  const slugs = getPostSlugs()
+
+  let categories = []
+
+  slugs.forEach(slug => {
+    let post = getPostBySlug(slug, fields)
+    categories = categories.concat(post.categories)
+  })
+  return unique(categories)
+}

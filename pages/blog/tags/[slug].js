@@ -1,36 +1,40 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-// import {  } from '../../../utils/api2'
 import { getAllTags, getAllPostsByTag, getPostBySlug } from '../../../utils/api'
 import { markdownToHtml, getMarkdownToTOC } from '../../../utils/markdown'
-// import Page from "../../../components/page"
+import Page from "../../../components/page"
 
-export default function Post({ post = {}, tagName}) {
-  const { title } = post
-  // console.log('title', title)
+export default function Post({ allPosts, tagName}) {
+  console.log('allPosts', allPosts)
   return (
-    <>
-      {tagName}
-    </>
+    <Page title={tagName + ' - 小溪里'}>
+      <h2>标签：{tagName}</h2>
+      <br></br>
+      <ul>
+        {
+          allPosts.map(post => {
+            const { slug, title } = post
+
+            return (
+              <li key={slug}>
+                <a href={`/blog/posts/${slug}`}>{title}</a>
+              </li>
+            )
+          })
+        }
+      </ul>
+    </Page>
   )
 }
 
 export async function getStaticProps({ params }) {
-  // console.log('params', params.slug)
-  // const post = await getPostBySlug('abc', [
-  //   'title',
-  // ])
 
   const allPosts = getAllPostsByTag(params.slug, ['title', 'categories', 'tags', 'slug'])
-
-  console.log('allPosts', allPosts)
-
-  // console.log('post', post)
 
   return {
     props: {
       tagName: params.slug,
-      post: {title: '132'},
+      allPosts
     },
   }
 }

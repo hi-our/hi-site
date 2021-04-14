@@ -1,7 +1,7 @@
 import React from "react";
 import { getAllPosts, getAllTags } from '../../utils/api'
-import Page from "../../components/page"
-import ModuleTitle from "../../components/module-title"
+// import Page from "../../components/page"
+// import ModuleTitle from "../../components/module-title"
 import './styles.styl'
 
 export default function Index({ allPosts, allTags }) {
@@ -10,21 +10,25 @@ export default function Index({ allPosts, allTags }) {
   // console.log('heroPost', heroPost, morePosts, allTags)
 
   return (
-    <Page>
+    // <Page>
       <div style={{ color: 'var(--color-title)' }}>
         <article>
           <h2>{heroPost.title}</h2>
         </article>
-        <ModuleTitle enTitle='Tags Cloud' cnTitleLeft='标签' cnTitleRight='云'></ModuleTitle>
+        {/* <ModuleTitle enTitle='Tags Cloud' cnTitleLeft='标签' cnTitleRight='云'></ModuleTitle> */}
         <ul>
           {
             allTags.map(tag => {
-              return <li key={tag}>{tag}</li>
+              return (
+                <li key={tag}>
+                  <a href={`/blog/tags/${tag}`}>{tag}</a>  
+                </li>
+              )
             })
           }
         </ul>
       </div>
-    </Page>
+    // </Page>
   )
 }
 

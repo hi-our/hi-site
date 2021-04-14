@@ -5,7 +5,7 @@ import ModuleTitle from "../../components/module-title"
 import './styles.styl'
 import LinkHtml from "../../components/link-html";
 
-export default function Index({ allPosts, allTags, allCategoris }) {
+export default function Index({ allPosts = [], allTags, allCategoris }) {
   const heroPost = allPosts[0] || {}
   const morePosts = allPosts.slice(1) || {}
   // console.log('heroPost', heroPost, morePosts, allTags)

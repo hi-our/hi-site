@@ -6,10 +6,10 @@ import ModuleTitle from "../../components/module-title"
 import './styles.styl'
 import LinkHtml from "../../components/link-html"
 
-export default function Index({ allPosts = [], allTags, allCategoris }) {
+export default function Index({ allPosts = [], allTags, allCategoris, colorMap }) {
   const heroPost = allPosts[0] || {}
   const morePosts = allPosts.slice(1) || {}
-  // console.log('heroPost', heroPost, morePosts, allTags)
+  console.log('heroPost', colorMap)
 
   return (
     <Page title='博客 - 小溪里'>
@@ -29,11 +29,9 @@ export default function Index({ allPosts = [], allTags, allCategoris }) {
         <ul className='blog-cateries'>
           {
             allCategoris.map(category => {
-              let textColor = getRandomColor()
-              let bgColor = hexToRgba(textColor, Math.random() > 0.5 ? 0.3 : 0.15)
               return (
                 <li key={category}>
-                  <LinkHtml href={`/blog/categories/${category}`} style={{ color: textColor, background: bgColor.rgba }}>{category}</LinkHtml>
+                  <LinkHtml href={`/blog/categories/${category}`} style={colorMap[category]}>{category}</LinkHtml>
                 </li>
               )
             })
@@ -43,11 +41,9 @@ export default function Index({ allPosts = [], allTags, allCategoris }) {
         <ul className='blog-tags-cloud'>
           {
             allTags.map(tag => {
-              let textColor = getRandomColor()
-              let bgColor = hexToRgba(textColor, Math.random() > 0.5 ? 0.3 : 0.15)
               return (
                 <li key={tag}>
-                  <LinkHtml href={`/blog/tags/${tag}`} style={{ color: textColor, background: bgColor.rgba }}>
+                  <LinkHtml href={`/blog/tags/${tag}`} style={colorMap[tag]}>
                     {tag}
                   </LinkHtml>
                 </li>
@@ -67,7 +63,7 @@ export default function Index({ allPosts = [], allTags, allCategoris }) {
                     <div className='tag-list'>
                       {
                         tags.map(tag => {
-                          return <span key={tag}>{tag}</span>
+                          return <span key={tag} style={colorMap[tag]}>{tag}</span>
                         })
                       }
                     </div>
@@ -100,9 +96,19 @@ export async function getStaticProps() {
     'tags',
   ])
 
+  const colorMap = {}
+  let colorArr = allTags.concat(allCategoris)
+  colorArr.forEach(element => {
+    let textColor = getRandomColor()
+    colorMap[element] = {
+      color: textColor,
+      background: (hexToRgba(textColor, Math.random() > 0.5 ? 0.3 : 0.15)).rgba
+    }
+  })
+
   console.log('allTags', allTags, allCategoris)
 
   return {
-    props: { allPosts, allTags, allCategoris},
+    props: { allPosts, allTags, allCategoris, colorMap},
   }
 }

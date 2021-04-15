@@ -1,6 +1,7 @@
 ---
 title: 【Taro 版】小程序 TabBar 创意动画
 date: '2020-10-18 19:24:56'
+summary: Hi 头像最近进行了 v2 版大改版，其中的交互动画得到了不少好友的称赞。今天我就来分享一些关于小程序 TabBar 创意动画，将从 TabBar 类型、完整的 TabBar 创意动画进行分析。
 categories:
 - 前端
 tags:

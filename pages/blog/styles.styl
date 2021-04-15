@@ -1,12 +1,87 @@
+.blog-hero-post
+  background-color var(--color-module-bar) 
+.blog-hero-main
+  background url('https://image-hosting.xiaoxili.com/img/img/20210415/f826bcdfe3c123980af70c522a88a3a8-56d197.png') no-repeat right bottom
+  background-size 100% auto
+  padding 16px 16px 50%
+  
+  
+
+  h2
+    font-size 28px
+    color var(--color-title)
+  h3
+    font-size 16px
+    color var(--color-title)
+  
+  button
+    margin-top 30px
+    background-color transparent
+    width: 160px;
+    height: 48px;
+    border: 1px solid var(--color-primary)
+    color var(--color-primary)
+
+
 .blog-cateries
 .blog-tags-cloud
   display flex
   flex-wrap wrap
+  justify-content center
 
   li
-    margin 0 3px 5px
+    margin 0 8px 10px
 
     a
-      border 1px solid #ccc
       display block
       padding 0 10px
+      line-height 1.8
+
+
+.blog-posts
+  h3
+    font-size 24px
+    color var(--color-title)
+  .tag-list
+    margin 0 -8px
+    span
+      margin 0 8px 10px
+      color var(--color-title)
+      border: 1px solid var(--color-title)
+      padding 0 10px
+  p
+    color var(--color-text)
+
+
+
+// 移动端横屏
+@media (min-width 768px)
+  .blog-hero-main
+    background-size 899px auto
+    padding 16px 16px 50%
+
+
+    h2
+      font-size 56px
+    h3
+      font-size 32px
+// 移动端横屏
+@media (min-width 1024px)
+  .blog-hero-main
+    background-size 899px auto
+    background-position right center
+    padding 32px 32px
+    height 463px
+  
+    h2
+    h3
+      width 56%
+
+@media (min-width 1200px)
+    
+  .blog-hero-main
+    padding 32px 0
+    width 1200px
+    margin 0 auto
+    display flex
+    align-items center

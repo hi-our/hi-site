@@ -1,8 +1,10 @@
 import React from 'react'
 import './styles.styl'
 import Link from '../link-html'
+import dynamic from 'next/dynamic'
 import { ConfigContext } from "../config-context"
-import DarkModeToggle from "../dark-mode-toggle";
+
+const DarkModeToggle = dynamic(() => import('../dark-mode-toggle'), { ssr: false })
 
 export default function Header() {
   const [isOpen, setIsOpen ] = React.useState(false)

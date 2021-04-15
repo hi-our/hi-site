@@ -4,6 +4,10 @@ import { useSpring, animated } from 'react-spring';
 // study React Toggle Dark Mode
 // https://github.com/JoseRFelix/react-toggle-dark-mode
 
+// FrameLoop `r.willAdvance is not a function`
+// https://github.com/pmndrs/react-spring/issues/1078
+
+
 const defaultProperties = {
   dark: {
     circle: {
@@ -56,9 +60,7 @@ export default function DarkModeSwitch ({
     }
 
     return animationProperties;
-  }, [animationProperties]);
-
-  console.log('checked', checked)
+  }, [animationProperties])
   
 
   let { circle, svg, lines, mask } = properties[checked ? 'dark' : 'light'];
@@ -80,6 +82,8 @@ export default function DarkModeSwitch ({
     config: animationProperties.springConfig,
   });
 
+  const idRandom = 'myMask-' + parseInt(Math.random() * 100000)
+
 
   return (
     <animated.svg
@@ -100,7 +104,7 @@ export default function DarkModeSwitch ({
       }}
       {...rest}
     >
-      <mask id="myMask2">
+      <mask id={idRandom}>
         <rect x="0" y="0" width="100%" height="100%" fill="white" />
         <animated.circle
           // @ts-ignore
@@ -116,7 +120,7 @@ export default function DarkModeSwitch ({
         fill={checked ? moonColor : sunColor}
         // @ts-ignore
         style={centerCircleProps}
-        mask="url(#myMask2)"
+        mask={`url(#${idRandom})`}
       />
       <animated.g stroke="currentColor" style={linesProps}>
         <line x1="12" y1="1" x2="12" y2="3" />

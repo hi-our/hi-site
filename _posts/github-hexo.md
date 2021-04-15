@@ -2,7 +2,7 @@
 title: github-hexo
 date: '2015-06-01 15:26:59'
 categories:
-- 博客
+- 前端
 tags:
 - hexo
 ---

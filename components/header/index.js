@@ -6,7 +6,8 @@ import { ConfigContext } from "../config-context"
 
 const DarkModeToggle = dynamic(() => import('../dark-mode-toggle'), { ssr: false })
 
-export default function Header() {
+export default function Header({ navName }) {
+  console.log('navName', navName)
   const [isOpen, setIsOpen ] = React.useState(false)
 
   const { colorMode, setColorMode } = React.useContext(ConfigContext)
@@ -26,11 +27,10 @@ export default function Header() {
       <nav className={isPC ? 'navigation-pc' : 'navigation-mobile'}>
         <ul>
           <li>
-            <Link href='/' isActive={true} addHtml={false}>首页</Link>
+            <Link href='/' isActive={navName === 'home'} addHtml={false}>首页</Link>
           </li>
           <li>
-            <a href='/blog' title="小溪里博客">博客</a>
-
+            <Link href='/blog' isActive={navName === 'blog'} title="小溪里博客">博客</Link>
           </li>
           <li>
             <a href='/hi-face' title="Hi头像教程">小册</a>

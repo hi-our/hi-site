@@ -7,6 +7,7 @@ categories:
 tags:
 - Webp
 - 图片懒加载
+- React
 ---
 
 # 正文——《官网首页图片体积降低 70% 的秘诀》

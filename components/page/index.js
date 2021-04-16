@@ -46,7 +46,7 @@ export default class Page extends React.Component {
   }
 
   render() {
-    const { title, description, keywords, meta, isShowHeader, isShowFooter } = this.props
+    const { title, description, keywords, meta, isShowHeader, isShowFooter, navName } = this.props
 
     return (
       <Fragment>
@@ -54,7 +54,7 @@ export default class Page extends React.Component {
           title={title}
         />
         {
-          isShowHeader && <Header />
+          isShowHeader && <Header navName={navName} />
         }
         {this.props.children}
         {

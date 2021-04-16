@@ -11,7 +11,7 @@ import './styles.styl'
 export default class Home extends PureComponent {
   render() {
     return (
-      <Page pageClassName="page-home">
+      <Page pageClassName="page-home" navName='home'>
         <main>
           <Banner />
           <Introduction />

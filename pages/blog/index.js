@@ -5,6 +5,7 @@ import Page from "../../components/page"
 import ModuleTitle from "../../components/module-title"
 import './styles.styl'
 import LinkHtml from "../../components/link-html"
+import PostList from "../../components/post-list"
 
 export default function Index({ allPosts = [], allTags, allCategoris, colorMap }) {
   const heroPost = allPosts[0] || {}
@@ -12,7 +13,7 @@ export default function Index({ allPosts = [], allTags, allCategoris, colorMap }
   console.log('heroPost', colorMap)
 
   return (
-    <Page title='博客 - 小溪里'>
+    <Page title='博客 - 小溪里' navName='blog'>
       <section className='blog-hero-post'>
         <div className='blog-hero-main'>
           <LinkHtml href={`/blog/posts/${heroPost.slug}`}>
@@ -55,30 +56,7 @@ export default function Index({ allPosts = [], allTags, allCategoris, colorMap }
         </section>
         <section className='blog-module'>
           <ModuleTitle enTitle='Stories' cnTitleLeft='文章' cnTitleRight='列表'></ModuleTitle>
-          <ul className='blog-posts'>
-            {
-              morePosts.map(post => {
-                const { slug, title, date, tags = [], summary } = post
-                return (
-                  <li key={slug}>
-                    <LinkHtml href={`/blog/posts/${slug}`}>
-                      <h3>{title}</h3>
-                      <div className='tag-list'>
-                        {
-                          tags.map(tag => {
-                            return <span key={tag} style={colorMap[tag]}>{tag}</span>
-                          })
-                        }
-                      </div>
-                      <p>{summary}</p>
-                      <div className='read-more'>阅读更多</div>
-                      {/* <time>{date}</time> */}
-                    </LinkHtml>
-                  </li>
-                )
-              })
-            }
-          </ul>
+          <PostList posts={morePosts} colorMap={colorMap} />
         </section>
       </div>
    </Page>

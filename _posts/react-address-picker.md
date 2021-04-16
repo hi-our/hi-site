@@ -5,7 +5,8 @@ summary: 仿京东移动端地址选择组件、适配触屏和PC、有异步获
 categories:
 - 前端
 tags:
-- 移动Web
+- React
+- 前端插件
 ---
 
 

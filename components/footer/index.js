@@ -13,7 +13,7 @@ export default class Footer extends React.Component {
             </a>
             <p>感谢阅读</p>
           </div>
-          <section className="footer-links">
+          {/* <section className="footer-links">
             <dl className="footer-links-item">
               <dt>关于我们</dt>
               <dd>关于嘻嘻</dd>
@@ -27,14 +27,13 @@ export default class Footer extends React.Component {
             <dl className="footer-links-item">
               <dt>友情链接</dt>
               <dd>itclanCoder</dd>
-              <dd>APPClIP</dd>
             </dl>
             <dl className="footer-links-item">
               <dt>联系我们</dt>
               <dd>公众号：笑嘻嘻</dd>
               <dd>微博：笑嘻嘻</dd>
             </dl>
-          </section>
+          </section> */}
         </div>
       </footer>
     )

@@ -5,7 +5,7 @@ categories:
 - 前端
 tags:
 - TweenMax
-- 动画
+- 创意动画
 ---
 
 最近 Html5 动画非常火，小溪里也在某一个网页中发现了它的踪迹。[DEMO](http://www.smartisan.com/wechat/anniversary.html  "真正的光芒，需要一点点时间")（建议在手机微信或者iPad微信上观看）

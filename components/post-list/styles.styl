@@ -1,0 +1,46 @@
+.blog-posts
+  padding-bottom 32px
+  > li
+    margin 16px
+  h3
+    margin-bottom 8px
+    font-size 22px
+    color var(--color-title)
+  .tag-list
+    margin 0 -8px 8px
+    span
+      display inline-block
+      margin 0 8px 4px
+      padding 0 10px
+      line-height 1.8
+      font-size 12px
+  p
+    color var(--color-text)
+    font-size 14px
+  
+  .read-more
+    margin-top 12px
+    background-color transparent
+    text-align center
+    width: 80px;
+    line-height: 28px;
+    font-size 12px
+    border: 1px solid var(--color-primary)
+    color var(--color-primary)
+  
+
+// 移动端横屏
+@media (min-width 1024px)
+  .blog-posts
+    padding-bottom 64px
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 32px;
+
+    > li
+      margin 0
+
+@media (min-width 1200px)
+  .blog-posts
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 64px;

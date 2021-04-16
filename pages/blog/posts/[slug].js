@@ -14,7 +14,7 @@ export default function Post({ post = {}, morePosts, preview }) {
 
   // console.log('post', post, morePosts, preview)
   return (
-    <Page title={title} pageClassName="page-article">
+    <Page title={title} pageClassName="page-article" navName='blog'>
       <article>
         <h1>{title}</h1>
         <main>

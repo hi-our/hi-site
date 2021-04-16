@@ -1,6 +1,7 @@
 ---
 title: 响应式布局新方案——融合响应式设计
 date: '2020-07-30 20:48:32'
+summary: 利用 JavaScript 和 CSS 来进行媒体查询，是响应式设计与自适应设计结合的方案，我这里给起一个好记的名字叫做融合响应式设计（ Fusion Web Design，简称 FWD ）。 
 categories:
 - 前端
 tags:

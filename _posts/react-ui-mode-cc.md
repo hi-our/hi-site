@@ -1,6 +1,7 @@
 ---
 title: react-ui-mode-cc：融合响应式设计的 React 组件
 date: '2020-08-02 15:48:32'
+summary: 独创性的融合响应式设计思维，轻量的代码，让响应式设计有了更多可能性。
 categories:
 - 前端
 tags:
@@ -12,7 +13,7 @@ tags:
 
 `react-ui-mode-cc` 是融合响应式设计的 React 版实现，基于 [create-react-library](https://github.com/transitive-bullshit/create-react-library)构建，使用 [云开发 CloudBase Framework](https://github.com/TencentCloudBase/cloudbase-framework)部署到腾讯云静态网站托管。
 
-可以访问 [示例网站](https://www.xiaoxili.com/packages/react-ui-mode-cc)来查看效果，源码细节在 [https://github.com/shenghanqin/react-address-picker-cc](https://github.com/shenghanqin/react-address-picker-cc)。
+可以访问 [示例网站](https://www.xiaoxili.com/packages/react-ui-mode-cc)来查看效果，源码细节在 [https://github.com/shenghanqin/react-ui-mode-cc](https://github.com/shenghanqin/react-ui-mode-cc)。
 
 融合响应式设计，利用 JavaScript 判断 和 CSS 来进行媒体查询，是响应式设计与自适应设计结合的方案。
 

@@ -103,7 +103,7 @@ export function getAllTags(fields = []) {
     let post = getPostBySlug(slug, fields)
     tags = tags.concat(post.tags)
   })
-  return unique(tags)
+  return unique(tags).reverse()
 }
 export function getAllCategoris(fields = []) {
   const slugs = getPostSlugs()

@@ -4,7 +4,7 @@ date: '2015-06-01 15:26:59'
 categories:
 - 前端
 tags:
-- hexo
+- Hexo
 ---
 
 **为嘛用它**

@@ -5,7 +5,7 @@ summary: 利用 JavaScript 和 CSS 来进行媒体查询，是响应式设计与
 categories:
 - 前端
 tags:
-- 响应式布局
+- 响应式设计
 - 网页适配
 ---
 

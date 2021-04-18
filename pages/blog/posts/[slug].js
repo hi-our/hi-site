@@ -3,6 +3,7 @@ import ErrorPage from 'next/error'
 import { getPostBySlug, getAllPosts } from '../../../utils/api'
 import { markdownToHtml, getMarkdownToTOC } from '../../../utils/markdown'
 import Page from "../../../components/page"
+import './styles.styl'
 
 export default function Post({ post = {}, morePosts, preview }) {
   const router = useRouter()
@@ -15,7 +16,7 @@ export default function Post({ post = {}, morePosts, preview }) {
   // console.log('post', post, morePosts, preview)
   return (
     <Page title={title} pageClassName="page-article" navName='blog'>
-      <article>
+      <article className='single-article'>
         <h1>{title}</h1>
         <main>
           <div

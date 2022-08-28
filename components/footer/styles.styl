@@ -1,124 +1,93 @@
-.footer {
-  background: rgba(255, 255, 255, 0.8);
-}
+.footer
+  background-color #F9FBFF
+  padding 25px
 
-.footer-main {
-  padding: 30px 16px;
-}
+  .footer-main
+    max-width 1200px
+    margin 0 auto
 
-.footer-main .footer-logo {
-  display: block;
-  width: 130px;
-  height: 60px;
-  background: url(https://image-hosting.xiaoxili.com/img/20200712201537.png) no-repeat;
-  background-size: contain;
-  text-indent: -9999px;
-  overflow: hidden;
-}
+  .footer-logo
+    display block
+    width 145px
+    img
+      display block
+      width 100%
+      height auto
+    
+    span
+      display inline-block
+      font-size 16px
+      color #333333
+      line-height 22px
+      margin 13px 0 20px
+  
+  .footer-links
+    .footer-links-item
+      display flex
+      margin-bottom 20px
+      align-items baseline
 
+      &:last-child
+        margin-bottom 0
+      
+      dt
+        font-size 16px
+        font-weight bold
+        color #0D5AFE
+        line-height 22px
+        margin-right 10px
+      
+      dd
+        margin-right 8px
+        font-size 12px
+        color #333333
+        line-height 17px
 
-.footer-main .footer-links dl {
-  padding-left: 30px;
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
+// 响应式
+// 兼容568px - 1024px手机横屏宽度
+@media (min-width 768px)
+  .footer-main
+    display flex
+    justify-content space-between
+    align-items center
 
-.footer-main .footer-links dt {
-  width: 100%;
-  font-size: 16px;
-  line-height: 1.33;
-  color: #000;
-  text-indent: -32px;
-  margin-bottom: 10px;
-}
+    .footer-logo
+      text-align center
+      letter-spacing 1px
+      img
+        height 58px
+      
+      span
+        margin-bottom 0
+    
+    .footer-links
+      display flex
 
-.footer-main .footer-links dt > img {
-  display: inline-block;
-  width: auto;
-  height: 20px;
-  vertical-align: middle;
-  margin: -3px 10px 0 0;
-}
+      .footer-links-item
+        display block
+        margin-bottom 0
+        margin-right 60px
+        &:last-child
+          margin-right 0  
 
-.footer-main .footer-links dd {
-  margin-right: 10px;
-}
-.footer-main .footer-links dd a {
-  font-size: 12px;
-  line-height: 1.33;
-  color: #000;
-}
+        dt, dd
+          margin-right 0
+        
+        dt
+          margin-bottom 14px
+        
+        dd
+          font-size 16px
+          margin-bottom 10px
+          &:last-child
+            margin-bottom 0
 
-.footer-main .footer-links dd a:hover {
-  color: #0000C2;
-}
+@media (min-width 950px)
+  .footer
+    padding-left 32px
+    padding-right 32px
 
-.footer-copyright {
-  padding: 20px 0;
-  background: #0000C2;
-  text-align: center;
-  color: #fff;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.footer-copyright a {
-  color: #fff;
-}
-
-
-@media (min-width: 1024px) {
-  .footer-main {
-    max-width: 1200px;
-    padding: 70px 16px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-  }
-
-
-  .footer-main .footer-logo {
-    width: 195px;
-    height: 90px;
-  }
-  .footer-main .footer-links {
-    display: flex;
-  }
-
-  .footer-main .footer-links dl {
-    margin-top: 0;
-    padding-left: 40px;
-    display: block;
-    flex-wrap: nowrap;
-  }
-  .footer-main .footer-links dl + dl {
-    margin-left: 60px;
-  }
-
-  .footer-main .footer-links dt {
-    font-size: 24px;
-    text-indent: -40px;
-  }
-
-  .footer-main .footer-links dt > img {
-    height: 30px;
-  }
-
-  .footer-main .footer-links dt + dd {
-    margin-top: 40px;
-  }
-
-  .footer-main .footer-links dd {
-    margin-top: 20px;
-  }
-
-  .footer-main .footer-links dd a {
-    font-size: 18px;
-  }
-
-  .footer-copyright > br {
-    display: none;
-  }
-
-}
+// PC端
+@media (min-width 1200px)
+  .footer
+    padding 20px 0
